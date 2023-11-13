@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Dự án 1</h1>
-    <h2>Nguyễn Văn Dương</h2>
-</body>
-
-</html>
+<?php
+include "view/header.php";
+include "view/home.php";
+include "view/footer.php";

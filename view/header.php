@@ -25,28 +25,28 @@
             <div class=" menu">
                 <ul>
                     <li>
-                        <i class="fa-solid fa-house-user"></i>
-                        <a href="index.php?act=home" class="active" style="--i:1;">Trang Chủ</a>
+                        <a href="index.php?act=home" class="active" style="--i:1;">
+                            <i class="fa-solid fa-house-user"></i> Trang Chủ</a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-plane-departure"></i>
-                        <a href="index.php?act=about" style="--i:2">Chuyến Bay Của Tôi</a>
+                        <a href="index.php?act=about" style="--i:2">
+                            <i class="fa-solid fa-plane-departure"></i> Chuyến Bay Của Tôi</a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-road-circle-check"></i>
-                        <a href="index.php?act=contact" style="--i:3;">Check-In</a>
+                        <a href="index.php?act=contact" style="--i:3;">
+                            <i class="fa-solid fa-road-circle-check"></i> Check-In</a>
                     </li>
                     <li>
-                        <i class="fa-brands fa-servicestack"></i>
-                        <a href="index.php?act=feedback" style="--i:4;">Dịch Vụ Chuyến Bay</a>
+                        <a href="index.php?act=feedback" style="--i:4;">
+                            <i class="fa-brands fa-servicestack"></i> Dịch Vụ Chuyến Bay</a>
                     </li>
                     <li class="none">
-                        <i class="fa-solid fa-headset"></i>
-                        <a href="index.php?act=ask" style="--i:5;">Hỗ Trợ</a>
+                        <a href="index.php?act=ask" style="--i:5;">
+                            <i class="fa-solid fa-headset"></i> Hỗ Trợ</a>
                     </li>
                     <li class="none">
-                        <i class="fa-solid fa-user-shield"></i>
-                        <a href="index.php?act=ask" style="--i:6;">Tài Khoản</a>
+                        <a href="index.php?act=ask" style="--i:6;">
+                            <i class="fa-solid fa-user-shield"></i> Tài Khoản</a>
                     </li>
                 </ul>
             </div>

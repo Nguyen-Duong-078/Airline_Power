@@ -9,5 +9,15 @@
             <i class="fa-solid fa-circle-right"></i>
         </div>
     </div>
+    <form action="" method="post">
+        <div class="search">
+            <div class="conten">
+                <span>
+                    <i class="fa-solid fa-location-crosshairs"></i> Tra cứu chuyến bay
+                </span>
+            </div>
+            <input type="radio"> Khứ hồi
+        </div>
+    </form>
 </div>
 </div>

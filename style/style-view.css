@@ -257,3 +257,18 @@ header .logo-text {
     border-radius: 5px;
     font-style: italic;
 }
+
+.image-plane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.image-plane img {
+    width: 33%;
+    height: 300px;
+    border-radius: 5px;
+}

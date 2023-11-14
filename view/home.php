@@ -4,7 +4,7 @@
         <div class="pre">
             <i class="fa-solid fa-circle-left"></i>
         </div>
-        <img src="image/banner_sen_vng_group_3.png" alt="" srcset="">
+        <img src="image/banner_sen_vng_group_3.png" alt="">
         <div class="next">
             <i class="fa-solid fa-circle-right"></i>
         </div>
@@ -40,6 +40,11 @@
                 </div>
                 <input type="submit" value="Tìm chuyến bay">
             </div>
+        </div>
+        <div class="image-plane">
+            <img src="image/bay-di-my-hang-nao-re-3617-1.jpg" alt="">
+            <img src="image/du-lich-tu-do-khap-the-gioi_copy1.jpg" alt="">
+            <img src="image/du-lich-hue-bang-may-bay-h1.jpg" alt="">
         </div>
     </form>
 </div>

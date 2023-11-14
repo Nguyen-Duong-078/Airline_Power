@@ -272,3 +272,33 @@ header .logo-text {
     height: 300px;
     border-radius: 5px;
 }
+
+.enjoy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.enjoy img {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+}
+
+.category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 95%;
+}
+
+.category .contens {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+}
+
+.category img {
+    width: 400px;
+    border-radius: 5px;
+}

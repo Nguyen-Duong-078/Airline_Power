@@ -47,5 +47,22 @@
             <img src="image/du-lich-hue-bang-may-bay-h1.jpg" alt="">
         </div>
     </form>
+    <div class="enjoy">
+        <div class="ablum">
+            <img src="image/pc2-1695094522549.jpg" alt="">
+        </div>
+    </div>
+    <div class="category">
+        <div class="contens">
+            <img src="image/skycare380x260vn1689666523556-1695094643503.jpg" alt="" srcset="">
+
+        </div>
+        <div class="contens">
+            <img src="image/swift2471592284169014-1695094650429.jpg" alt="" srcset="">
+        </div>
+        <div class="contens">
+            <img src="image/bannervj3802601691554683744-1695094655469.jpg" alt="" srcset="">
+        </div>
+    </div>
 </div>
 </div>

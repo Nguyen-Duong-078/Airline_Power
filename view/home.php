@@ -38,7 +38,7 @@
                     <input type="text" placeholder=" Điểm đến"> <span>Ngày về</span>
                     <input type="date">
                 </div>
-                <input type="submit" value="Tìm chuyến baydsfds">
+                <input type="submit" value="Tìm chuyến bay">
             </div>
         </div>
     </form>

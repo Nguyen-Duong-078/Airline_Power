@@ -26,13 +26,13 @@
              <div class="row justify-content-center align-items-center mb-30-none">
                  <div class="col-xxl-5 col-xl-6 col-lg-12 mb-30">
                      <div class="banner-content" data-aos="fade-right" data-aos-duration="1800">
-                         <span class="sub-title"><span>Fly</span>next</span>
-                         <h1 class="title">Book a private jet instantly</h1>
-                         <p>Curly Airline proudly raises the bar and exceeds the standard for luxury and corporate
-                             private jet charter services. We pride ourselves on offering a professional service.</p>
+                         <span class="sub-title"><span>Airline</span>next</span>
+                         <h1 class="title">Đặt vé máy bay riêng</h1>
+                         <p>Airline tự hào nâng tầm và vượt qua tiêu chuẩn dành cho sự sang trọng và dành cho doanh nghiệp
+                              dịch vụ thuê máy bay riêng. Chúng tôi tự hào cung cấp dịch vụ chuyên nghiệp.</p>
                          <div class="banner-btn">
-                             <a href="package-details.html" class="btn--base"><i class="fas fa-chevron-right mr-2"></i> Make Your Trip</a>
-                             <a href="contact.html" class="btn--base active">Request Quote <i class="icon-Group-2361 ml-2"></i></a>
+                             <a href="package-details.html" class="btn--base"><i class="fas fa-chevron-right mr-2"></i> Trải nghiệm ngay</a>
+                             <a href="contact.html" class="btn--base active">Giá là <i class="icon-Group-2361 ml-2"></i></a>
                          </div>
                      </div>
                  </div>
@@ -54,7 +54,6 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
      <a href="#" class="scrollToTop">
          <i class="las la-dot-circle"></i>
-         <span>Top</span>
      </a>
      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         End Scroll-To-Top
@@ -65,8 +64,8 @@
         Start Call-widget
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
      <div class="call-widget-wrapper">
-         <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +1 814 929
-                 4263</span> <span class="arrow"></span></button>
+         <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +84 382 500 462
+        </span> <span class="arrow"></span></button>
          <div class="call-widget-form-area">
              <form class="book-form">
                  <div class="row justify-content-center mb-20-none">
@@ -77,8 +76,8 @@
                                  <i class="icon-from-airplane"></i>
                              </div>
                              <select class="book-select form--control">
-                                 <option value="dhaka" selected>Dhaka</option>
-                                 <option value="london">London</option>
+                                 <option value="dhaka" selected>Hà Nội</option>
+                                 <option value="london">Tp. Hồ Chí Minh</option>
                              </select>
                          </div>
                      </div>
@@ -89,8 +88,8 @@
                                  <i class="icon-to-airplane"></i>
                              </div>
                              <select class="book-select form--control">
-                                 <option value="london" selected>London</option>
-                                 <option value="dhaka">Dhaka</option>
+                                 <option value="london" selected>Tp. Hồ Chí Minh</option>
+                                 <option value="dhaka">Hà Nội</option>
                              </select>
                          </div>
                      </div>
@@ -101,8 +100,8 @@
                                  <i class="icon-schedule-icon"></i>
                              </div>
                              <select class="book-select form--control">
-                                 <option value="25/12/2021" selected>25/12/2021</option>
-                                 <option value="30/12/2021">30/12/2021</option>
+                                 <option value="25/12/2023" selected>25/12/2021</option>
+                                 <option value="30/12/2023">30/12/2021</option>
                              </select>
                          </div>
                      </div>
@@ -644,8 +643,8 @@
              <div class="row justify-content-center">
                  <div class="col-xl-12 text-center">
                      <div class="section-header white">
-                         <span class="sub-title text-white"><span>Flynext</span> Package</span>
-                         <h2 class="section-title">Flynext Tour Packages</h2>
+                         <span class="sub-title text-white"><span>Airlinenext</span> Bưu kiện</span>
+                         <h2 class="section-title">Gói Tour Airlinenext</h2>
                      </div>
                  </div>
              </div>

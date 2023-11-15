@@ -183,7 +183,7 @@
                                          <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, 
                                             dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
-                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Book Now</a>
+                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>
@@ -198,7 +198,7 @@
                                          <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, 
                                             dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
-                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Book Now</a>
+                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>
@@ -209,11 +209,11 @@
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Air Ambulance</a></h3>
-                                         <p>Trade crowded airports and wasted time for the ease, comfort, and
-                                             convenience of travel by private jet.</p>
+                                         <h3 class="title"><a href="service-details.html">Xe cứu thương hàng không</a></h3>
+                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, 
+                                            dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
-                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Book Now</a>
+                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>
@@ -240,22 +240,21 @@
              <div class="row justify-content-center mb-30-none">
                  <div class="col-xl-7 col-lg-7 mb-30">
                      <div class="about-content">
-                         <span class="sub-title"><span>About</span> Flynext</span>
-                         <h2 class="title">Private Jet Charters save your
-                             time and give more comfort</h2>
-                         <p>Flynext is the only way to fully travel on your terms. Whether it’s accessing a remote
-                             destination or taking back control of productivity and flight scheduling</p>
+                         <span class="sub-title"><span>Thông tin</span> Aieline next</span>
+                         <h2 class="title">Thuê máy bay phản lực tư nhân tiết kiệm thời gian của bạn và mang lại sự thoải mái hơn</h2>
+                         <p>Airlinenext là cách duy nhất để du lịch trọn vẹn theo điều kiện của bạn. 
+                            Cho dù đó là truy cập một điểm đến từ xa hay lấy lại quyền kiểm soát năng suất và lập lịch bay</p>
                          <div class="about-book-area">
                              <div class="about-book-element">
                                  <img src="assets/images/element/element-7.png" alt="element">
                              </div>
                              <div class="about-book-left">
-                                 <h3 class="call-title">Call for book an order</h3>
-                                 <span class="call"><a href="tel:8-800-10-500">8-800-10-500</a></span>
+                                 <h3 class="call-title">Gọi đặt hàng</h3>
+                                 <span class="call"><a href="tel:+84 382 500 462">+84 382 500 462</a></span>
                              </div>
                              <div class="about-book-right">
                                  <a href="service-details.html" class="btn--base"><i class="icon-btn-icon-v2"></i>
-                                     Book Now</a>
+                                     Đặt Ngay</a>
                              </div>
                          </div>
                      </div>
@@ -292,8 +291,8 @@
              <div class="row justify-content-center">
                  <div class="col-xl-12 text-center">
                      <div class="section-header">
-                         <span class="sub-title">Discover <span>Flynext</span> Benefits</span>
-                         <h2 class="section-title">Discover Private Jet Benefits</h2>
+                         <span class="sub-title">Phát hiện <span>Airline next</span> Lợi ích</span>
+                         <h2 class="section-title">Khám phá lợi ích của máy bay phản lực tư nhân</h2>
                      </div>
                  </div>
              </div>

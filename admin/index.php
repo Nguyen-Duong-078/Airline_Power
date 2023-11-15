@@ -13,12 +13,12 @@ if (isset($_GET['act'])) {
                 $Flight_Number = $_POST['number_flight'];
                 $Start_City = $_POST['start'];
                 $Arrival_City = $_POST['end'];
-                // $Departure_Time = $_POST['time_start'];
-                // $Arrival_Time = $_POST['time_end'];
-                // $Price = $_POST['price'];
-                // $Flight_time = $_POST['time_flight'];
-                insert_flight($Flight_Number, $Start_City, $Arrival_City);
-                $Thongbao = "Thêm Thành Công";
+                $Departure_Time = $_POST['time_start'];
+                $Arrival_Time = $_POST['time_end'];
+                $Price = $_POST['price'];
+                $Flight_time = $_POST['time_flight'];
+                insert_flight($Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Flight_time);
+                $thongbao = "Thêm Thành Công";
             }
             include "Danh_Muc/add.php";
             break;

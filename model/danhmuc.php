@@ -1,7 +1,8 @@
 <?php
-function insert_flight($Flight_Number, $Start_City, $Arrival_City)
+function insert_flight($Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Flight_time)
 {
-    $sql = "INSERT INTO flights (Flight_Number, Start_City, Arrival_City) VALUES ('$Flight_Number','$Start_City','$Arrival_City')";
+    $sql = "INSERT INTO flights (Flight_Number, Start_City, Arrival_City, Departure_Time, Arrival_Time, Price, Flight_time) 
+    VALUES ('$Flight_Number','$Start_City','$Arrival_City','$Departure_Time','$Arrival_Time','$Price','$Flight_time')";
     pdo_execute($sql);
 }
 

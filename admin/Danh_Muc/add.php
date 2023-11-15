@@ -103,11 +103,11 @@
                             </div>
                             <div class="form-group col-md-3">
                                 <label class="control-label">Giờ khởi hành</label>
-                                <input class="form-control" type="text" name="time_start">
+                                <input class="form-control" type="time" name="time_start">
                             </div>
                             <div class="form-group col-md-3">
                                 <label class="control-label">Thời gian đến</label>
-                                <input class="form-control" type="text" name="time_end">
+                                <input class="form-control" type="time" name="time_end">
                             </div>
                             <div class="form-group col-md-3">
                                 <label class="control-label">Giá chuyến bay</label>
@@ -124,8 +124,8 @@
                         <a href="index.php?act=list_flight"><input class="btn btn-save" type="button" value="Danh sách"></input></a>
                         <div class="thongbao btn">
                             <?php
-                            if (isset($Thongbao) && ($Thongbao != ""))
-                                echo $Thongbao;
+                            if (isset($thongbao) && ($thongbao != ""))
+                                echo $thongbao;
                             ?>
                         </div>
                     </div>

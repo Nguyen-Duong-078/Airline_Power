@@ -684,10 +684,11 @@ section {
     font-weight: bold;
 }
 
-.app-menu__item:focus {
+
+/* .app-menu__item:focus {
     background-color: red !important;
     color: #fff;
-}
+} */
 
 .conten_admin {
     text-align: center;

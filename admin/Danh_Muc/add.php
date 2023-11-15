@@ -46,9 +46,9 @@
                 </a>
             </li>
             <li>
-                <a class="app-menu__item active" href="index.php?act=add_dm">
-                    <i class='app-menu__icon bx bx-task'></i>
-                    <span class="app-menu__label">Danh mục</span>
+                <a class="app-menu__item active" href="index.php?act=add_flight">
+                    <i class='app-menu__icon bx bxs-rocket'></i>
+                    <span class="app-menu__label">Chuyến Bay</span>
                 </a>
             </li>
             <li>

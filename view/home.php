@@ -64,49 +64,66 @@
         Start Call-widget
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
      <div class="call-widget-wrapper">
+<<<<<<< Updated upstream
          <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +84 382 500 462
         </span> <span class="arrow"></span></button>
+=======
+         <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +84 876-55-2004</span> <span class="arrow"></span></button>
+>>>>>>> Stashed changes
          <div class="call-widget-form-area">
              <form class="book-form">
                  <div class="row justify-content-center mb-20-none">
                      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                          <div class="book-select">
-                             <label>From</label>
+                             <label>Khởi Hành</label>
                              <div class="book-form-icon">
                                  <i class="icon-from-airplane"></i>
                              </div>
                              <select class="book-select form--control">
                                  <option value="dhaka" selected>Hà Nội</option>
+<<<<<<< Updated upstream
                                  <option value="london">Tp. Hồ Chí Minh</option>
+=======
+                                 <option value="london">Thanh Hóa</option>
+>>>>>>> Stashed changes
                              </select>
                          </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                          <div class="book-select">
-                             <label>To</label>
+                             <label>Điểm đến</label>
                              <div class="book-form-icon">
                                  <i class="icon-to-airplane"></i>
                              </div>
                              <select class="book-select form--control">
+<<<<<<< Updated upstream
                                  <option value="london" selected>Tp. Hồ Chí Minh</option>
                                  <option value="dhaka">Hà Nội</option>
+=======
+                                 <option value="london" selected>Hồ Chí Minh</option>
+                                 <option value="dhaka">Buôn Ma Thuật</option>
+>>>>>>> Stashed changes
                              </select>
                          </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                          <div class="book-select">
-                             <label>Date</label>
+                             <label>Ngày khởi hành</label>
                              <div class="book-form-icon">
                                  <i class="icon-schedule-icon"></i>
                              </div>
+<<<<<<< Updated upstream
                              <select class="book-select form--control">
                                  <option value="25/12/2023" selected>25/12/2021</option>
                                  <option value="30/12/2023">30/12/2021</option>
                              </select>
+=======
+                             <input type="date" class="book-select form--control" style="color:#FFF">
+>>>>>>> Stashed changes
                          </div>
                      </div>
                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
-                         <label>Passenger</label>
+                         <label>Hành Khách</label>
                          <div class="book-quantity">
                              <div class="book-plus-minus">
                                  <div class="dec qtybutton">-</div>
@@ -116,8 +133,7 @@
                          </div>
                      </div>
                      <div class="col-xl-12 form-group">
-                         <button type="submit" class="btn--base w-100 mt-10"><i class="icon-btn-icon"></i> Book
-                             Now</button>
+                         <button type="submit" class="btn--base w-100 mt-10"><i class="icon-btn-icon"></i> Đặt vé</button>
                      </div>
                  </div>
              </form>

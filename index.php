@@ -13,6 +13,15 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
         case 'register':
             include "View/Client/register.php";
             break;
+        case '404':
+            include "View/404.php";
+            break;
+        case 'contact':
+            include "View/contact.php";
+            break;
+        case 'blog':
+            include "View/blog.php";
+            break;
         default:
             include "View/home.php";
             break;

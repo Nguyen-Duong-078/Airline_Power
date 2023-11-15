@@ -469,15 +469,14 @@
                                          <img src="assets/images/charter/charter-1.png" alt="charter">
                                      </div>
                                      <div class="charter-content">
-                                         <h3 class="title"><a href="deals-details.html">Private Jet Charter</a></h3>
+                                         <h3 class="title"><a href="deals-details.html">Thuê máy bay riêng</a></h3>
                                          <span class="sub-title">Legacy 600</span>
                                          <div class="charter-meta">
                                              <span class="seat">8 - 14 Seats</span>
                                              <span class="price">Price: $9,000/ hr</span>
                                          </div>
                                          <div class="charter-btn">
-                                             <a href="service-details.html"><i class="icon-btn-icon-v2"></i> Book
-                                                 Now</a>
+                                             <a href="service-details.html"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>
@@ -495,8 +494,7 @@
                                              <span class="price">Price: $9,000/ hr</span>
                                          </div>
                                          <div class="charter-btn">
-                                             <a href="service-details.html"><i class="icon-btn-icon-v2"></i> Book
-                                                 Now</a>
+                                             <a href="service-details.html"><i class="icon-btn-icon-v2"></i> Đặt ngay</a>
                                          </div>
                                      </div>
                                  </div>

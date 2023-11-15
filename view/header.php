@@ -60,7 +60,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Header
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <header class="header-section header-section-one">
+        <header class="header-section header-section-one header--style">
             <div class="header">
                 <div class="header-bottom-area">
                     <div class="container-fluid">
@@ -80,33 +80,22 @@
                                             </ul> -->
                                         </li>
                                         <!-- <li><a href="about.php">Về Chúng Tôi</a></li> -->
-                                        <li class="menu_has_children"><a href="#0">Pages</a>
+                                        <li class="menu_has_children"><a href="#0">Chức Năng</a>
                                             <ul class="sub-menu">
-                                                <li><a href="service.html">Service</a></li>
-                                                <li><a href="service-details.html">Service Details</a></li>
-                                                <li><a href="deals.html">Deals</a></li>
-                                                <li><a href="deals-details.html">Deals Details</a></li>
-                                                <li><a href="package.html">Package</a></li>
-                                                <li><a href="package-details.html">Package Details</a></li>
-                                                <li><a href="course.html">Our Course</a></li>
-                                                <li><a href="course-details.html">Course Details</a></li>
-                                                <li><a href="team.html">Our Team</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
                                                 <li><a href="index.php?action=register">Sign Up</a></li>
                                                 <li><a href="index.php?action=login">Sign In</a></li>
-                                                <li><a href="404.html">404 Page</a></li>
+                                                <li><a href="index.php?action=404">404 Page</a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu_has_children"><a href="#0">Blog</a>
-                                            <ul class="sub-menu">
+                                        <li class="menu_has_children"><a href="index.php?action=blog">Blog</a>
+                                            <!-- <ul class="sub-menu">
                                                 <li><a href="blog.html">Blog</a></li>
                                                 <li><a href="blog-classic.html">Blog Classic</a></li>
                                                 <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
                                         <li><a href="faq.html">Faq</a></li>
-                                        <li><a href="contact.html">Liên Hệ</a></li>
+                                        <li><a href="index.php?action=contact">Liên Hệ</a></li>
                                     </ul>
                                     <div class="header-right">
                                         <div class="search-bar d-none d-lg-block">

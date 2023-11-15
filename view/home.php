@@ -304,9 +304,9 @@
                                  <i class="icon-world-svgrepo-com"></i>
                              </div>
                              <div class="feature-content">
-                                 <h3 class="title">Luxury & Comfort Travel</h3>
-                                 <p>As well as getting to fly to many different destinations as part of their job,
-                                     airplane pilots get big discounts on money</p>
+                                 <h3 class="title">Du lịch sang trọng & tiện nghi</h3>
+                                 <p>Ngoài việc được bay đến nhiều điểm đến khác nhau như một phần công việc của mình, 
+                                    các phi công lái máy bay còn được giảm giá lớn về tiền bạc.</p>
                              </div>
                          </div>
                      </div>
@@ -316,9 +316,9 @@
                                  <i class="icon-money-svgrepo-com-1"></i>
                              </div>
                              <div class="feature-content">
-                                 <h3 class="title">Smart Costing Flight</h3>
-                                 <p>Flying should be a pleasure and we’ll make your charter experience as luxurious
-                                     and more comfortable as soon as possible.</p>
+                                 <h3 class="title">Chuyến bay tính chi phí thông minh</h3>
+                                 <p>Việc bay sẽ là một niềm vui và chúng tôi sẽ giúp trải 
+                                    nghiệm thuê chuyến của bạn trở nên sang trọng và thoải mái hơn trong thời gian sớm nhất.</p>
                              </div>
                          </div>
                      </div>
@@ -328,9 +328,9 @@
                                  <i class="icon-briefcase"></i>
                              </div>
                              <div class="feature-content">
-                                 <h3 class="title">Career progression</h3>
-                                 <p>The first small jet-powered civil aircraft was the Morane-Saulnier MS.760 Paris,
-                                     developed privately since 1940s</p>
+                                 <h3 class="title">Sự tiến triển trong sự nghiệp</h3>
+                                 <p>Máy bay dân dụng nhỏ chạy bằng động cơ phản lực đầu tiên là 
+                                    Morane-Saulnier MS.760 Paris, được phát triển riêng từ những năm 1940</p>
                              </div>
                          </div>
                      </div>
@@ -340,9 +340,9 @@
                                  <i class="icon-note"></i>
                              </div>
                              <div class="feature-content">
-                                 <h3 class="title">Flexible Schedule</h3>
-                                 <p>Our technology consistently delivers the best pricing for charters – and the
-                                     unique ability to buy individual seats all over the world.</p>
+                                 <h3 class="title">Kế hoạch linh hoạt</h3>
+                                 <p>Công nghệ của chúng tôi luôn mang đến mức giá tốt nhất cho 
+                                    việc thuê chuyến – và khả năng độc đáo để mua chỗ ngồi riêng lẻ trên toàn thế giới.</p>
                              </div>
                          </div>
                      </div>

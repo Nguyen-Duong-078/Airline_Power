@@ -143,18 +143,15 @@
                              <img src="assets/images/overview/overview-2.png" alt="overview">
                              <div class="nav-tab-area">
                                  <div class="nav-tab-header">
-                                     <span class="sub-title"><span>#1</span> Private Jet Charter</span>
-                                     <h2 class="title">Find the Best Service For You</h2>
+                                     <span class="sub-title"><span>#1</span> Thuê máy bay riêng</span>
+                                     <h2 class="title">Dịch vụ tốt nhất cho bạn</h2>
                                  </div>
                                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                     <button class="nav-link" id="private-jet-tab" data-toggle="tab" data-target="#private-jet" type="button" role="tab" aria-controls="private-jet" aria-selected="true"><span>01</span> Private Jet
-                                         Charter</button>
-                                     <button class="nav-link active" id="business-jet-tab" data-toggle="tab" data-target="#business-jet" type="button" role="tab" aria-controls="business-jet" aria-selected="false"><span>02</span> Business
-                                         Jet Charter</button>
+                                     <button class="nav-link" id="private-jet-tab" data-toggle="tab" data-target="#private-jet" type="button" role="tab" aria-controls="private-jet" aria-selected="true"><span>01</span> Thuê máy bay riêng</button>
+                                     <button class="nav-link active" id="business-jet-tab" data-toggle="tab" data-target="#business-jet" type="button" role="tab" aria-controls="business-jet" aria-selected="false"><span>02</span> Thuê máy bay phản lực hạng thương gia</button>
                                      <button class="nav-link" id="private-helicopter-tab" data-toggle="tab" data-target="#private-helicopter" type="button" role="tab" aria-controls="private-helicopter" aria-selected="false"><span>03</span>
-                                         Private Helicopter</button>
-                                     <button class="nav-link" id="air-ambulance-tab" data-toggle="tab" data-target="#air-ambulance" type="button" role="tab" aria-controls="air-ambulance" aria-selected="false"><span>04</span> Air
-                                         Ambulance</button>
+                                        Trực thăng riêng</button>
+                                     <button class="nav-link" id="air-ambulance-tab" data-toggle="tab" data-target="#air-ambulance" type="button" role="tab" aria-controls="air-ambulance" aria-selected="false"><span>04</span> Xe cứu thương hàng không</button>
                                  </div>
                              </div>
                          </div>
@@ -165,12 +162,12 @@
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Private Jet Charter</a>
+                                         <h3 class="title"><a href="service-details.html">Thuê Máy Bay Riêng</a>
                                          </h3>
-                                         <p>Trade crowded airports and wasted time for the ease, comfort, and
-                                             convenience of travel by private jet.</p>
+                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
+                                            dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
-                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Book Now</a>
+                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>
@@ -181,10 +178,10 @@
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Business Jet Charter</a>
+                                         <h3 class="title"><a href="service-details.html">Thuê máy bay phản lực hạng thương gia</a>
                                          </h3>
-                                         <p>Trade crowded airports and wasted time for the ease, comfort, and
-                                             convenience of travel by private jet.</p>
+                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, 
+                                            dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
                                              <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Book Now</a>
                                          </div>
@@ -197,9 +194,9 @@
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Private Helicopter</a></h3>
-                                         <p>Trade crowded airports and wasted time for the ease, comfort, and
-                                             convenience of travel by private jet.</p>
+                                         <h3 class="title"><a href="service-details.html">Trứcj thăg riêng</a></h3>
+                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, 
+                                            dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
                                              <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Book Now</a>
                                          </div>

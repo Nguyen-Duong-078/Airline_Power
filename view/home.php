@@ -1,7 +1,7 @@
      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-     <section class="banner-section">
+    <section class="banner-section">
          <div class="banner-element" data-aos="fade-left" data-aos-duration="1200">
              <img src="assets/images/element/element-1.png" alt="element">
          </div>
@@ -422,7 +422,7 @@
                                  <div class="odo-area">
                                      <h3 class="odo-title odometer" data-odometer-final="195">0</h3>
                                  </div>
-                                 <p>Directions</p>
+                                 <p>Hướng chuyến bay</p>
                              </div>
                          </div>
                      </div>
@@ -445,8 +445,8 @@
                  <div class="col-xl-12">
                      <div class="section-header-wrapper">
                          <div class="section-header">
-                             <span class="sub-title">Luxury Charters</span>
-                             <h2 class="section-title">Luxury Deals For You</h2>
+                             <span class="sub-title">Thuê thuyền sang trọng</span>
+                             <h2 class="section-title">Ưu đãi cao cấp dành cho bạn</h2>
                          </div>
                          <div class="slider-nav-area" data-aos="fade-left" data-aos-duration="1200">
                              <div class="slider-prev">

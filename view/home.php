@@ -352,9 +352,9 @@
                                  <i class="icon-job-announcement"></i>
                              </div>
                              <div class="feature-content">
-                                 <h3 class="title">Excellent advantages</h3>
-                                 <p>Search the world with ease and transparency.As the only tech-forward private
-                                     aviation company, XO is able to bring you</p>
+                                 <h3 class="title">Ưu điểm vượt trội</h3>
+                                 <p>Tìm kiếm trên thế giới một cách dễ dàng và minh bạch. Là công ty 
+                                    hàng không tư nhân tiên tiến về công nghệ duy nhất, XO có thể mang đến cho bạn</p>
                              </div>
                          </div>
                      </div>
@@ -364,9 +364,9 @@
                                  <i class="icon-coolest-job"></i>
                              </div>
                              <div class="feature-content">
-                                 <h3 class="title">Coolest Environment</h3>
-                                 <p>Charter an entire jet, or offer the seats you don’t need through our app a need
-                                     for full or even fractional jet ownership</p>
+                                 <h3 class="title">Môi trường tuyệt vời nhất</h3>
+                                 <p>Thuê toàn bộ máy bay phản lực hoặc cung cấp chỗ ngồi bạn không cần 
+                                    thông qua ứng dụng của chúng tôi khi cần sở hữu toàn bộ hoặc thậm chí một phần máy bay phản lực</p>
                              </div>
                          </div>
                      </div>
@@ -392,7 +392,7 @@
                                  <div class="odo-area">
                                      <h3 class="odo-title odometer" data-odometer-final="95">0</h3>
                                  </div>
-                                 <p>Professional Pilots</p>
+                                 <p>Phi công chuyên nghiệp</p>
                              </div>
                          </div>
                      </div>
@@ -402,7 +402,7 @@
                                  <div class="odo-area">
                                      <h3 class="odo-title odometer" data-odometer-final="68">0</h3>
                                  </div>
-                                 <p>Jet Airplanes</p>
+                                 <p>Máy bay phản lực</p>
                              </div>
                          </div>
                      </div>
@@ -412,7 +412,7 @@
                                  <div class="odo-area">
                                      <h3 class="odo-title odometer" data-odometer-final="290">0</h3>
                                  </div>
-                                 <p>World Airports</p>
+                                 <p>Sân bay quốc tế</p>
                              </div>
                          </div>
                      </div>

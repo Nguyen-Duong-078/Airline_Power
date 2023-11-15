@@ -1,5 +1,4 @@
 <?php
-
 function inser_danhmuc($tenloai)
 {
     $sql = "INSERT INTO tb_danhmuc(Ten_danhmuc) VALUE('$tenloai')";

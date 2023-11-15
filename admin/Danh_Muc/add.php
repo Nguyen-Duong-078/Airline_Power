@@ -87,7 +87,7 @@
                         <div class="tile-body row">
                             <div class="form-group col-md-3">
                                 <label class="control-label">Mã Loại </label>
-                                <input class="form-control" type="number" placeholder="Tự tăng" name="maloai">
+                                <input class="form-control" type="number" placeholder="Tự tăng" name="maloai" >
                             </div>
                             <div class="form-group col-md-3">
                                 <label class="control-label">Tên Loại</label>

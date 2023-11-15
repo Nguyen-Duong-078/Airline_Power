@@ -7,11 +7,17 @@ include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
-        case 'add_dm':
+        case 'add_flight':
             // kt xem người dùng có click vào nút add hay không
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                $tenloai = $_POST['tenloai'];
-                inser_danhmuc($tenloai);
+                $Flight_Number = $_POST['number_flight'];
+                $Start_City = $_POST['start'];
+                $Arrival_City = $_POST['end'];
+                // $Departure_Time = $_POST['time_start'];
+                // $Arrival_Time = $_POST['time_end'];
+                // $Price = $_POST['price'];
+                // $Flight_time = $_POST['time_flight'];
+                insert_flight($Flight_Number, $Start_City, $Arrival_City);
                 $Thongbao = "Thêm Thành Công";
             }
             include "Danh_Muc/add.php";

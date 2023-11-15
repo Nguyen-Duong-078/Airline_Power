@@ -1,7 +1,7 @@
 <?php
-function inser_danhmuc($tenloai)
+function insert_flight($Flight_Number, $Start_City, $Arrival_City)
 {
-    $sql = "INSERT INTO tb_danhmuc(Ten_danhmuc) VALUE('$tenloai')";
+    $sql = "INSERT INTO flights (Flight_Number, Start_City, Arrival_City) VALUES ('$Flight_Number','$Start_City','$Arrival_City')";
     pdo_execute($sql);
 }
 

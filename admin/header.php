@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a class="app-menu__item" href="index.php?act=add_dm">
+                <a class="app-menu__item" href="index.php?act=add_flight">
                     <i class='app-menu__icon bx bx-task'></i>
                     <span class="app-menu__label">Danh mục</span>
                 </a>

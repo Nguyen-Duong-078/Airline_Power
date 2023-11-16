@@ -81,7 +81,6 @@ if (is_array($update_flight)) {
             </li>
         </ul>
     </aside>
-
     <main class="app-content">
         <div class="row">
             <div class="col-md-12">
@@ -129,8 +128,6 @@ if (is_array($update_flight)) {
                             ?>
                         </div>
                     </div>
-
-
                 </form>
             </div>
         </div>

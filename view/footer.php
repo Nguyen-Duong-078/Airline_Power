@@ -23,7 +23,7 @@
                                                      <ul class="footer-list">
                                                              <li><a href="#0">Xuân Phương, Nam Từ Liêm</a></li>
                                                              <li><a href="#0">Thành Phố Hà Nội</a></li>
-                                                             <li><a href="#0">+84 (0) 876-55-2004</a></li>
+                                                             <li><a href="#0">+84 876-55-2004</a></li>
                                                      </ul>
                                              </div>
                                      </div>

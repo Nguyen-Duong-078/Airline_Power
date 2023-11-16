@@ -83,7 +83,7 @@
             <div class="col-md-12">
                 <form action="index.php?act=add_flight" method="post">
                     <div class="tile">
-                        <h3 class="tile-title">Thêm danh mục</h3>
+                        <h3 class="tile-title">Thêm chuyến bay</h3>
                         <div class="tile-body row">
                             <div class="form-group col-md-3">
                                 <label class="control-label">ID Chuyến Bay</label>

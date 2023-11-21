@@ -2,7 +2,6 @@
 session_start();
 include "../model/pdo.php";
 include "../model/danhmuc.php";
-include "../model/type_ticket.php";
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -104,6 +103,50 @@ if (isset($_GET['act'])) {
             session_unset();
             header('location: index.php');
             break;
+            // Voucher///////////////////////////////
+        case 'add_voucher':
+                // kt xem người dùng có click vào nút add hay không
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $Voucher_name = $_POST['voucher_name'];
+                $Voucher_value = $_POST['voucher_value'];
+                $Voucher_start = $_POST['voucher_start'];
+                $Voucher_end = $_POST['voucher_end'];
+                insert_voucher($Voucher_name,$Voucher_value,$Voucher_start,$Voucher_end);
+                $thongbao = "Thêm Thành Công";
+            }
+            include "Voucher/add.php";
+            break;
+        case 'list_voucher':
+            $listvoucher= loadall_voucher();
+            include "Voucher/list.php";
+            break;
+        case 'delete_voucher':
+            if(isset($_GET['id_voucher']) && ($_GET['id_voucher'] > 0)){
+                $Voucher_ID=$_GET['id_voucher'];
+                delete_voucher($Voucher_ID);
+            }
+            $listvoucher= loadall_voucher();
+            include "Voucher/list.php";
+            break;
+        case 'edit_voucher':
+            $listonevoucher = loadone_voucher();
+            $listvoucher= loadall_voucher();
+            include "Voucher/update.php";
+            break;
+        case 'update_voucher':
+                // kt xem người dùng có click vào nút add hay không
+        if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+            $Voucher_ID = $_POST['id_voucher'];
+            $Voucher_name = $_POST['voucher_name'];
+            $Voucher_value = $_POST['voucher_value'];
+            $Voucher_start = $_POST['voucher_start'];
+            $Voucher_end = $_POST['voucher_end'];
+            update_voucher($Voucher_ID,$Voucher_name,$Voucher_value,$Voucher_start,$Voucher_end);
+            $thongbao = "Thêm Thành Công";
+        }
+        $listvoucher= loadall_voucher();
+        include "Voucher/list.php";
+        break;
         default:
             include "home.php";
             break;

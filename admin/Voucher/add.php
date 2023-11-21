@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="../style/main.css">
     <!-- or -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -47,9 +46,9 @@
                 </a>
             </li>
             <li>
-                <a class="app-menu__item active" href="index.php?act=add_dm">
-                    <i class='app-menu__icon bx bx-task'></i>
-                    <span class="app-menu__label">Danh mục</span>
+                <a class="app-menu__item active" href="index.php?act=add_flight">
+                    <i class='app-menu__icon bx bxs-rocket'></i>
+                    <span class="app-menu__label">Chuyến Bay</span>
                 </a>
             </li>
             <li>
@@ -71,6 +70,18 @@
                 </a>
             </li>
             <li>
+                <a class="app-menu__item" href="index.php?act=add_voucher">
+                    <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
+                    <span class="app-menu__label">Voucher</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=statistical">
+                    <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
+                    <span class="app-menu__label">Thống kê</span>
+                </a>
+            </li>
+            <li>
                 <a class="app-menu__item" href="index.php?act=commnet">
                     <i class='app-menu__icon bx bx bx-chat'></i>
                     <span class="app-menu__label">Comment</span>
@@ -82,47 +93,46 @@
     <main class="app-content">
         <div class="row">
             <div class="col-md-12">
-                <div class="tile">
-                    <h3 class="tile-title">Danh sách danh mục</h3>
-                    <div class="tile-body">
-                        <table class="table table-hover table-bordered" id="sampleTable">
-                            <thead>
-                                <tr>
-                                    <th width="10"><input type="checkbox" id="all"></th>
-                                    <th>ID</th>
-                                    <th>Tên danh mục</th>
-                                    <th>Tính năng</th>
-                                </tr>
-                            </thead>
+                <form action="index.php?act=add_voucher" method="post">
+                    <div class="tile">
+                        <h3 class="tile-title">Thêm Voucher</h3>
+                        <div class="tile-body row">
+                            <div class="form-group col-md-3">
+                                <label class="control-label">ID Voucher</label>
+                                <input class="form-control" type="number" placeholder="Tự tăng" name="id_flight" disabled>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="control-label">Voucher_Name</label>
+                                <input class="form-control" type="text" name="voucher_name">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="control-label">Voucher_value</label>
+                                <input class="form-control" type="text" name="voucher_value">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="control-label">Voucher_start</label>
+                                <input class="form-control" type="text" name="voucher_start">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="control-label">Voucher_end</label>
+                                <input class="form-control" type="text" name="voucher_end">
+                            </div>
+                        </div>
+                        <input class="btn btn-save" type="submit" value="Thêm Mới" name="themmoi"></input>
+                        <input class="btn btn-cancel" type="reset" value="Nhập lại">
+                        <a href="index.php?act=list_voucher"><input class="btn btn-save" type="button" value="Danh sách"></input></a>
+                        <div class="thongbao btn">
                             <?php
-                            foreach ($list_dm as $danhmuc) {
-                                extract($danhmuc);
-                                $sua_dm = "index.php?act=sua_dm&id=" . $ID_danhmuc;
-                                $xoa_dm = "index.php?act=xoa_dm&id=" . $ID_danhmuc;
-                                echo '<tr>
-                                    <td><input type="checkbox" name="" id=""></td>
-                                    <td>' . $ID_danhmuc . '</td>
-                                    <td>' . $Ten_danhmuc . '</td>
-                                    <td>
-                                    <a href="' . $sua_dm . '"><input class="btn btn-primary btn-sm trash" type="button" value="Sửa"></a>
-                                    <a href="#" class= "delete-btn" data-id=' . $ID_danhmuc . ' ><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a>
-                                    </td>
-                                    </tr>';
-                            }
+                            if (isset($thongbao) && ($thongbao != ""))
+                                echo $thongbao;
                             ?>
-                        </table>
+                        </div>
                     </div>
-                    <input class="btn btn-save" type="submit" value="Chọn Tất Cả"></input>
-                    <input class="btn btn-cancel" type="reset" value="Bỏ Chọn Tất Cả">
-                    <input class="btn btn-save" type="button" value="Xóa Các Mục Đã Chọn">
-                    <a href="index.php?act=add_dm"><input class="btn btn-cancel" type="button" value="Nhập Thêm"></input></a>
-                </div>
+                </form>
             </div>
         </div>
     </main>
 
-    <!-- THÔNG BÁO KHI CLICK XÓA -->
-    <script src="../javascript/SweetAlert copy.js"> </script>
 </body>
 
 </html>

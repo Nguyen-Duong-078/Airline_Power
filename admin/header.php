@@ -63,10 +63,23 @@
                     <span class="app-menu__label">Khách hàng</span>
                 </a>
             </li>
+
             <li>
                 <a class="app-menu__item" href="index.php?act=statistical">
                     <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
                     <span class="app-menu__label">Thống kê</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=add_voucher">
+                    <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
+                    <span class="app-menu__label">Voucher</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=add_type_ticket">
+                    <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
+                    <span class="app-menu__label">Type_ticket</span>
                 </a>
             </li>
             <li>

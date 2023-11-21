@@ -556,7 +556,7 @@
                              <span class="sub-title text-white"><span>Airline</span> Book</span>
                              <h2 class="section-title">Đặt chuyến bay cá nhân</h2>
                          </div>
-                         <form class="book-form">
+                         <form class="book-form" action="index.php?action=search_flight" method="post">
                              <div class="row justify-content-center mb-20-none">
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                                      <div class="book-select">
@@ -564,10 +564,7 @@
                                          <div class="book-form-icon">
                                              <i class="icon-from-airplane"></i>
                                          </div>
-                                         <select class="book-select form--control">
-                                             <option value="dhaka" selected>Hà Nội</option>
-                                             <option value="london">Thanh hóa</option>
-                                         </select>
+                                         <input class="book-select form--control" type="text" name="start_flight" placeholder="Điểm khởi hành" required>
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
@@ -576,10 +573,7 @@
                                          <div class="book-form-icon">
                                              <i class="icon-to-airplane"></i>
                                          </div>
-                                         <select class="book-select form--control">
-                                             <option value="london" selected>Hồ Chí Minh</option>
-                                             <option value="dhaka">Buôn ma thuật</option>
-                                         </select>
+                                         <input class="book-select form--control" type="text" name="end_flight" placeholder="Điểm đến" required>
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
@@ -588,7 +582,7 @@
                                          <div class="book-form-icon">
                                              <i class="icon-schedule-icon"></i>
                                          </div>
-                                         <input class="book-select form--control" type="date" style="color:#FFF">
+                                         <input class="book-select form--control" name="date_flight" type="date" style="color:#FFF">
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
@@ -602,7 +596,7 @@
                                      </div>
                                  </div>
                                  <div class="col-xl-12 form-group">
-                                     <button type="submit" class="btn--base ml-auto mr-auto mt-30"><i class="icon-btn-icon"></i> Tìm Chuyến Bay</button>
+                                     <button type="submit" name="search_flight" class="btn--base ml-auto mr-auto mt-30"><i class="icon-btn-icon"></i> Tìm Chuyến Bay</button>
                                  </div>
                              </div>
                          </form>

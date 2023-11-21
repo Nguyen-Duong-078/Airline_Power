@@ -22,6 +22,9 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
         case 'blog':
             include "View/blog.php";
             break;
+        case 'search_flight':
+            include "View/flight.php";
+            break;
         default:
             include "View/home.php";
             break;

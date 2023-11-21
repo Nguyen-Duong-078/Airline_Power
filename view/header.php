@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <!-- fontawesome css link -->
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- bootstrap css link -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- favicon -->
@@ -54,10 +54,8 @@
 
         <!-- End Preloader -->
 
+        <!--Start Header-->
 
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Header
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <header class="header-section header-section-one header--style">
             <div class="header">
                 <div class="header-bottom-area">
@@ -70,27 +68,16 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav main-menu ml-auto">
-                                        <li class="menu_has_children"><a href="index.php">Trang Chủ</a>
-                                            <!-- <ul class="sub-menu">
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index-two.html">Home Two</a></li>
-                                                <li><a href="index-dark.html">Home Dark</a></li>
-                                            </ul> -->
+                                        <li class="menu_has_children"><a href="index.php?action=home">Trang Chủ</a>
                                         </li>
-                                        <!-- <li><a href="about.php">Về Chúng Tôi</a></li> -->
-                                        <li class="menu_has_children"><a href="#0">Chức Năng</a>
+                                        <!-- <li class="menu_has_children"><a href="#0">Chức Năng</a>
                                             <ul class="sub-menu">
-                                                <li><a href="index.php?action=register">Sign Up</a></li>
-                                                <li><a href="index.php?action=login">Sign In</a></li>
+                                                <li><a href="index.php?action=register">Đăng Ký</a></li>
+                                                <li><a href="index.php?action=login">Đăng Nhập</a></li>
                                                 <li><a href="index.php?action=404">404 Page</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li class="menu_has_children"><a href="index.php?action=blog">Blog</a>
-                                            <!-- <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-classic.html">Blog Classic</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul> -->
                                         </li>
                                         <li><a href="faq.html">Faq</a></li>
                                         <li><a href="index.php?action=contact">Liên Hệ</a></li>
@@ -105,12 +92,28 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        <div class="header-action-area">
-                                            <a href="service-details.html" class="action-btn two"><i class="icon-btn-icon"></i></a>
-                                            <div class="header-action">
-                                                <a href="service-details.html" class="btn--base"><i class="icon-btn-icon"></i> Book Now</a>
+                                        <?php
+                                        if (isset($_SESSION['username'])) {
+                                            extract($_SESSION['username']);
+                                        ?>
+                                            <div class="header-action-area">
+                                                <a href="index.php?action=logout" class="action-btn two"><i class="fa-solid fa-user-shield"></i></a>
+                                                <div class="header-action">
+                                                    <a href="index.php?action=logout" class="btn--base"><i class="fa-solid fa-user-shield"></i> <?= $Username ?></a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        <?php
+                                        } else {
+
+                                        ?>
+                                            <div class="header-action-area">
+                                                <a href="index.php?action=login" class="action-btn two"><i class="fa-solid fa-user-shield"></i></a>
+                                                <div class="header-action">
+                                                    <a href="index.php?action=login" class="btn--base"><i class="fa-solid fa-user-shield"></i> Tài Khoản</a>
+                                                </div>
+                                            </div>
+                                        <?php }
+                                        ?>
                                     </div>
                                 </div>
                             </nav>
@@ -119,6 +122,5 @@
                 </div>
             </div>
         </header>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Header
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        <!--End Header-->

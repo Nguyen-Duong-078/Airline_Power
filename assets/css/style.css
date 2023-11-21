@@ -3430,9 +3430,8 @@ section {
     line-height: 35px;
     display: inline-block;
     text-align: center;
-    background-color: #dcbb87;
     border-radius: 5px;
-    color: #19232d;
+    color: #ed180d;
     display: none;
     margin-left: 5px;
 }
@@ -3487,10 +3486,7 @@ section {
     font-size: 22px;
     margin-right: 8px;
     transition: all 0.5s;
-}
-
-.header-action a:hover i {
-    transform: rotate(40deg);
+    color: red;
 }
 
 .header-action a.active {
@@ -3891,7 +3887,7 @@ section {
 
 .banner-section {
     position: relative;
-    padding-top: 295px;
+    padding-top: 195px;
     padding-bottom: 235px;
     padding-left: 200px;
     padding-right: 200px;
@@ -4018,7 +4014,7 @@ section {
 .banner-section .banner-social-area {
     position: absolute;
     left: 110px;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
 }
 
@@ -10918,4 +10914,11 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
     .blog-right-content-area {
         display: none;
     }
+}
+
+.thongbao h2 {
+    text-align: center;
+    font-size: 14px;
+    color: red;
+    margin-top: 20px;
 }

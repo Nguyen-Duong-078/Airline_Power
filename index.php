@@ -1,18 +1,11 @@
 <?php
 session_start();
-include "model/pdo.php";
-include "model/Account.php";
+include_once "model/pdo.php";
+include_once "model/Account.php";
 include "View/header.php";
-
 if ((isset($_GET['action'])) && $_GET['action'] != "") {
     $act = $_GET['action'];
     switch ($act) {
-        case 'login':
-            include "View/Client/login.php";
-            break;
-        case 'forgot':
-            include "View/Client/forgot.php";
-            break;
         case 'register':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
                 $Username = $_POST['username'];
@@ -23,6 +16,27 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
                 $Thongbao = "Đăng kí thành công";
             }
             include "View/Client/register.php";
+            break;
+        case 'login':
+            if (isset($_POST['login']) && ($_POST['login'])) {
+                $User = $_POST['username'];
+                $Password = $_POST['password'];
+                $check_user = check_user($User, $Password);
+                if (is_array($check_user)) {
+                    $_SESSION['username'] = $check_user;
+                    header('location: index.php?action=home');
+                } else {
+                    $Thongbao = "Tài khoản không tồn tại";
+                }
+            }
+            include "View/Client/login.php";
+            break;
+        case 'logout':
+            session_unset();
+            header('location: index.php?action=home');
+            break;
+        case 'forgot':
+            include "View/Client/forgot.php";
             break;
         case '404':
             include "View/404.php";

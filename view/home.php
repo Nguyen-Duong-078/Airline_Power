@@ -1,6 +1,4 @@
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Banner
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--Start Banner-->
      <section class="banner-section">
          <div class="banner-element" data-aos="fade-left" data-aos-duration="1200">
              <img src="assets/images/element/element-1.png" alt="element">
@@ -47,18 +45,6 @@
      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         End Banner
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Scroll-To-Top
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-     <a href="#" class="scrollToTop">
-         <i class="las la-dot-circle"></i>
-     </a>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Scroll-To-Top
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 
      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Call-widget
@@ -370,14 +356,11 @@
              </div>
          </div>
      </section>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Feature
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+     <!--End Feature-->
 
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Statistics
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--Start Statistics-->
+
      <section class="statistics-section bg-overlay-black ptb-120 bg_img" data-background="assets/images/bg/bg-2.png">
          <div class="container">
              <div class="statistics-area">
@@ -427,126 +410,12 @@
              </div>
          </div>
      </section>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Statistics
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+     <!-- End Statistics -->
 
 
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Charter
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-     <section class="charter-section pt-120">
-         <div class="container">
-             <div class="row">
-                 <div class="col-xl-12">
-                     <div class="section-header-wrapper">
-                         <div class="section-header">
-                             <span class="sub-title">Thuê máy bay sang trọng</span>
-                             <h2 class="section-title">Ưu đãi cao cấp dành cho bạn</h2>
-                         </div>
-                         <div class="slider-nav-area" data-aos="fade-left" data-aos-duration="1200">
-                             <div class="slider-prev">
-                                 <i class="fas fa-chevron-left"></i>
-                             </div>
-                             <div class="slider-next">
-                                 <i class="fas fa-chevron-right"></i>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="row justify-content-center">
-                 <div class="col-xl-12">
-                     <div class="charter-slider">
-                         <div class="swiper-wrapper">
-                             <div class="swiper-slide">
-                                 <div class="charter-item">
-                                     <div class="charter-thumb">
-                                         <img src="assets/images/charter/charter-1.png" alt="charter">
-                                     </div>
-                                     <div class="charter-content">
-                                         <h3 class="title"><a href="deals-details.html">Thuê máy bay riêng</a></h3>
-                                         <span class="sub-title">Legacy 600</span>
-                                         <div class="charter-meta">
-                                             <span class="seat">8 - 14 Seats</span>
-                                             <span class="price">Price: $9,000/ hr</span>
-                                         </div>
-                                         <div class="charter-btn">
-                                             <a href="service-details.html"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="charter-item">
-                                     <div class="charter-thumb">
-                                         <img src="assets/images/charter/charter-2.png" alt="charter">
-                                     </div>
-                                     <div class="charter-content">
-                                         <h3 class="title"><a href="deals-details.html">Business Jet Charter</a></h3>
-                                         <span class="sub-title">Beech BE300 Super King</span>
-                                         <div class="charter-meta">
-                                             <span class="seat">8 - 14 Seats</span>
-                                             <span class="price">Price: $9,000/ hr</span>
-                                         </div>
-                                         <div class="charter-btn">
-                                             <a href="service-details.html"><i class="icon-btn-icon-v2"></i> Đặt ngay</a>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="charter-item">
-                                     <div class="charter-thumb">
-                                         <img src="assets/images/charter/charter-3.png" alt="charter">
-                                     </div>
-                                     <div class="charter-content">
-                                         <h3 class="title"><a href="deals-details.html">Private Helicopter</a></h3>
-                                         <span class="sub-title">Charter a A500</span>
-                                         <div class="charter-meta">
-                                             <span class="seat">8 - 14 Seats</span>
-                                             <span class="price">Price: $9,000/ hr</span>
-                                         </div>
-                                         <div class="charter-btn">
-                                             <a href="service-details.html"><i class="icon-btn-icon-v2"></i> Book
-                                                 Now</a>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="charter-item">
-                                     <div class="charter-thumb">
-                                         <img src="assets/images/charter/charter-4.png" alt="charter">
-                                     </div>
-                                     <div class="charter-content">
-                                         <h3 class="title"><a href="deals-details.html">Air Ambulance</a></h3>
-                                         <span class="sub-title">Beech BE300 Super King</span>
-                                         <div class="charter-meta">
-                                             <span class="seat">8 - 14 Seats</span>
-                                             <span class="price">Price: $9,000/ hr</span>
-                                         </div>
-                                         <div class="charter-btn">
-                                             <a href="service-details.html"><i class="icon-btn-icon-v2"></i> Book
-                                                 Now</a>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Charter
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!-- Start Book-form -->
 
-
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Book-form
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
      <section class="book-form-section ptb-120">
          <div class="container">
              <div class="book-form-area bg-overlay-black bg_img" data-background="assets/images/bg/bg-3.png">
@@ -605,14 +474,11 @@
              </div>
          </div>
      </section>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Book-form
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+     <!-- End Book-form -->
 
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Package
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!-- Start Package -->
+
      <section class="package-section section--bg ptb-120">
          <div class="package-element-one" data-aos="fade-right" data-aos-duration="1200">
              <img src="assets/images/element/element-24.png" alt="element">
@@ -741,14 +607,11 @@
              </div>
          </div>
      </section>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Package
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+     <!-- End Package -->
 
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Client
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!-- Start Client -->
+
      <section class="client-section ptb-120">
          <div class="client-element">
              <img src="assets/images/client/map.png" alt="map">
@@ -857,14 +720,11 @@
              </div>
          </div>
      </section>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Client
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+     <!-- End Client -->
 
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Brand
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!-- Start Brand -->
+
      <div class="brand-section ptb-120">
          <div class="container">
              <div class="row justify-content-center mt-10-none mb-10-none">
@@ -902,14 +762,11 @@
              </div>
          </div>
      </div>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Brand
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+     <!-- End Brand -->
 
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Blog
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--  Start Blog -->
+
      <section class="blog-section ptb-120">
          <div class="container">
              <div class="row justify-content-center">
@@ -984,6 +841,5 @@
              </div>
          </div>
      </section>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Blog
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+     <!-- End Blog -->

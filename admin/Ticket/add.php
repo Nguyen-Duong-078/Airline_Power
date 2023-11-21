@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-    <title>𝑨𝒅𝒎𝒊𝒏_𝑷𝒐𝒘𝒆𝒓</title>
+    <title>Admin</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link id="favicon" rel="icon" type="../image/logo-acgen.png" sizes="50x50" href="../image/logo-acgen.png">
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="../style/main.css">
     <!-- or -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-    <!-- <script>
-        swal("Xin Chào Admin", "Chúc Bạn 1 Ngày Tốt Lành Nhé", "");
-    </script> -->
     <!-- Navbar-->
     <header class="app-header">
+        <!-- Sidebar toggle button-->
+        <!-- <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a> -->
+        <!-- Navbar Right Menu-->
         <ul class="app-nav">
             <h3>Trang Quản Trị</h3>
             <form action="index.php?act=out" class="rows">
-                <a class="app-nav__item" href="index.php?act=logout_admin">
+                <a class="app-nav__item" href="../index.php">
                     Thoát <i class='bx bx-log-out bx-rotate-180'></i>
                 </a>
             </form>
@@ -33,20 +33,20 @@
     <aside class="app-sidebar">
         <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../image/Shipper_CPS3.77d4065.png" width="50px" alt="User Image">
             <div>
-                <p class="app-sidebar__user-name"><b style="color:yellow;">Airline Power</b></p>
+                <p class="app-sidebar__user-name"><b>Nguyễn Văn Dương</b></p>
                 <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
             </div>
         </div>
         <hr>
         <ul class="app-menu">
             <li>
-                <a class="app-menu__item active" href="index.php">
+                <a class="app-menu__item" href="index.php">
                     <i class='app-menu__icon bx bxs-home'></i>
                     <span class="app-menu__label">Trang Chủ</span>
                 </a>
             </li>
             <li>
-                <a class="app-menu__item" href="index.php?act=add_flight">
+                <a class="app-menu__item active" href="index.php?act=add_flight">
                     <i class='app-menu__icon bx bxs-rocket'></i>
                     <span class="app-menu__label">Chuyến Bay</span>
                 </a>
@@ -63,7 +63,6 @@
                     <span class="app-menu__label">Khách hàng</span>
                 </a>
             </li>
-
             <li>
                 <a class="app-menu__item" href="index.php?act=statistical">
                     <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
@@ -88,15 +87,48 @@
                     <span class="app-menu__label">Comment</span>
                 </a>
             </li>
-            <li>
-                <a class="app-menu__item" href="../index.php">
-                    <i class='app-menu__icon bx bx bx bxl-unity'></i>
-                    <span class="app-menu__label">Public</span>
-                </a>
-            </li>
-
         </ul>
     </aside>
+
+    <main class="app-content">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="index.php?act=add_type_ticket" method="post">
+                    <div class="tile">
+                        <h3 class="tile-title">Type_ticket</h3>
+                        <div class="tile-body row">
+                            <div class="form-group col-md-3">
+                                <label class="control-label">ID Ticket</label>
+                                <input class="form-control" type="number" placeholder="Tự tăng" disabled>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="control-label">Ticket name</label>
+                                <input class="form-control" type="text" name="ticket_name">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="control-label">Status</label>
+                                <input class="form-control" type="text" name="status">
+                            </div>
+                           
+                        </div>
+                        <input class="btn btn-save" type="submit" value="Thêm Mới" name="themmoi"></input>
+                        <input class="btn btn-cancel" type="reset" value="Nhập lại">
+
+                        <a href="index.php?act=list_type_ticket"><input class="btn btn-save" type="button" value="Danh sách"></input></a>
+                        <div class="thongbao btn">
+                            <?php
+                            if (isset($thongbao) && ($thongbao != ""))
+                                echo $thongbao;
+                            ?>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </main>
+
 </body>
 
 </html>

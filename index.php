@@ -22,6 +22,16 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
         case 'blog':
             include "View/blog.php";
             break;
+<<<<<<< Updated upstream
+=======
+        case 'search_flight':
+            $listflight =loadAll_flight();
+            include "View/flight.php";
+            break;
+        case 'datve':
+            include "View/booking.php";
+            break;
+>>>>>>> Stashed changes
         default:
             include "View/home.php";
             break;

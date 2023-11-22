@@ -49,7 +49,7 @@
                                             <div class="header-action-area">
                                                 <a href="index.php?action=logout" class="action-btn two"><i class="fa-solid fa-user-shield"></i></a>
                                                 <div class="header-action">
-                                                    <a href="#"><i class="fa-solid fa-user-shield"></i> <?= $Username ?></a>
+                                                    <a href="#"><i class="fa-solid fa-user-shield"></i> <?= $User ?></a>
                                                     <a href="index.php?action=logout"><i class="fa-solid fa-right-from-bracket"></i></a>
                                                 </div>
                                             </div>

@@ -11,18 +11,18 @@
     <link rel="stylesheet" type="text/css" href="../style/main.css">
     <!-- or -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
 </head>
 
 <body>
-    <!-- <script>
-        swal("Xin Chào Admin", "Chúc Bạn 1 Ngày Tốt Lành Nhé", "");
-    </script> -->
-    <!-- Navbar-->
     <header class="app-header">
         <ul class="app-nav">
             <h3>Trang Quản Trị</h3>
-            <form action="index.php?act=out" class="rows">
-                <a class="app-nav__item" href="index.php?act=logout_admin">
+            <form action="#" class="rows">
+                <a class="app-nav__item" href="#" id="btnLogout">
                     Thoát <i class='bx bx-log-out bx-rotate-180'></i>
                 </a>
             </form>
@@ -58,7 +58,7 @@
                 </a>
             </li>
             <li>
-                <a class="app-menu__item" href="index.php?act=list_client">
+                <a class="app-menu__item" href="index.php?act=account">
                     <i class='app-menu__icon bx bx-user-voice'></i>
                     <span class="app-menu__label">Khách hàng</span>
                 </a>

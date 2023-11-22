@@ -1,14 +1,29 @@
 <?php
 session_start();
+// Hàm kiểm tra quyền của người dùng
+function checkRole()
+{
+    // Kiểm tra xem người dùng có quyền admin không
+    if ($_SESSION['User'] != 'Admin') {
+        // Nếu không phải admin, chuyển hướng người dùng đến trang không có quyền
+        header("Location: login.php");
+        exit();
+    }
+}
+// Kiểm tra đăng nhập
+if (isset($_SESSION['User'])) {
+    // Gọi hàm kiểm tra quyền sau khi đăng nhập
+    checkRole();
+    // Người dùng có quyền admin đã đăng nhập, có thể hiển thị trang chính
+} else {
+    // Người dùng chưa đăng nhập, chuyển hướng đến trang đăng nhập
+    header("Location: login.php");
+    exit();
+}
 include "../model/pdo.php";
 include "../model/flight.php";
 include "../model/type_ticket.php";
 include "../model/voucher.php";
-<<<<<<< Updated upstream
-=======
-include "../model/Account.php";
-include "../model/Charging.php";
->>>>>>> Stashed changes
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -184,13 +199,17 @@ if (isset($_GET['act'])) {
             include "Voucher/list.php";
             break;
 
-        case 'logout_admin':
-            session_unset();
-            header('location: index.php');
+        case 'account':
+            $list_account = loadAll_User();
+            include "Account/list.php";
             break;
-<<<<<<< Updated upstream
-
-=======
+        case 'edit_account':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                $update_account = loadOne_account($ID);
+            }
+            include "Account/update.php";
+            break;
         case 'edit_account':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];
@@ -238,7 +257,6 @@ if (isset($_GET['act'])) {
             $listcharging = loadall_charging();
             include "Charging/list.php";
             break;
->>>>>>> Stashed changes
         default:
             include "home.php";
             break;

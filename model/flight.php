@@ -31,3 +31,10 @@ function Update_danhmuc($Flight_ID, $Flight_Number, $Start_City, $Arrival_City, 
     $sql = "UPDATE flights SET Flight_Number = '" . $Flight_Number . "', Start_City = '" . $Start_City . "', Arrival_City = '" . $Arrival_City . "', Departure_Time = '" . $Departure_Time . "', Arrival_Time = '" . $Arrival_Time . "', Price = '" . $Price . "', Flight_time = '" . $Flight_time . "'  WHERE Flight_ID=" . $Flight_ID;
     pdo_execute($sql);
 }
+
+// function Search_flight($Flight_Number, $Start_City, $Arrival_City)
+// {
+//     $sql = "SELECT * FROM flights WHERE Flight_Number = '" . $Flight_Number . "' AND Start_City='" . $Start_City . "' AND Arrival_City='" . $Arrival_City . "'";
+//     $Search_flight = pdo_query($sql);
+//     return $Search_flight;
+// }

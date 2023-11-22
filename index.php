@@ -7,6 +7,7 @@ include "model/type_ticket.php";
 include "model/voucher.php";
 include "global.php";
 include "View/header.php";
+
 $listvoucher = loadall_voucher();
 $list_type_ticket = loadAll_type_ticket();
 
@@ -31,16 +32,17 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
                 $check_user = check_user($User, $Password);
                 if (is_array($check_user)) {
                     $_SESSION['username'] = $check_user;
-                    header('location: index.php?action=home');
+                    header('location: index.php?act=home ');
+                    //   $Thongbao = "Đăng nhập thành công";
                 } else {
                     $Thongbao = "Tài khoản không tồn tại";
                 }
             }
-            include "View/Client/login.php";
+            include "view/Client/login.php";
             break;
         case 'logout':
             session_unset();
-            header('location: index.php?action=home');
+            header('location: index.php?act=home ');
             break;
         case 'forgot':
             include "View/Client/forgot.php";
@@ -55,7 +57,7 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             include "View/blog.php";
             break;
         case 'search_flight':
-            include "View/flight.php";
+            include "View/select-flight.php";
             break;
         default:
             include "View/home.php";

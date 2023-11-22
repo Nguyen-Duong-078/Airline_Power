@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link id="favicon" rel="icon" type="../image/logo-acgen.png" sizes="50x50" href="../image/logo-acgen.png">
+    <link id="favicon" rel="icon" type="../image/logo-acgen.png" sizes="50x50" href="../image/logo-may-bay-17.png">
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="../style/main.css">
     <!-- or -->
@@ -40,7 +40,7 @@
         <hr>
         <ul class="app-menu">
             <li>
-                <a class="app-menu__item active" href="index.php">
+                <a class="app-menu__item" href="index.php">
                     <i class='app-menu__icon bx bxs-home'></i>
                     <span class="app-menu__label">Trang Chủ</span>
                 </a>
@@ -54,7 +54,7 @@
             <li>
                 <a class="app-menu__item" href="index.php?act=add_sp">
                     <i class='app-menu__icon bx bx-purchase-tag-alt'></i>
-                    <span class="app-menu__label">Sản phẩm</span>
+                    <span class="app-menu__label">Đặt Chỗ</span>
                 </a>
             </li>
             <li>
@@ -70,20 +70,41 @@
                 </a>
             </li>
             <li>
+                <a class="app-menu__item" href="index.php?act=add_voucher">
+                    <i class='app-menu__icon bx bx-printer'></i>
+                    <span class="app-menu__label">Voucher</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=add_type_ticket">
+                    <i class='app-menu__icon bx bxs-objects-vertical-bottom'></i>
+                    <span class="app-menu__label">Ticket</span>
+                </a>
+            </li>
+            <li>
                 <a class="app-menu__item" href="index.php?act=commnet">
-                    <i class='app-menu__icon bx bx bx-chat'></i>
-                    <span class="app-menu__label">Comment</span>
+                    <i class='app-menu__icon bx bxl-paypal'></i>
+                    <span class="app-menu__label">Thanh Toán</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=commnet">
+                    <i class='app-menu__icon bx bxs-user-check'></i>
+                    <span class="app-menu__label">Hóa Đơn</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=commnet">
+                    <i class='app-menu__icon bx bx-chair'></i>
+                    <span class="app-menu__label">Chỗ Ngồi</span>
                 </a>
             </li>
             <li>
                 <a class="app-menu__item" href="../index.php">
                     <i class='app-menu__icon bx bx bx bxl-unity'></i>
-                    <span class="app-menu__label">Public</span>
+                    <span class="app-menu__label">chức Vụ</span>
                 </a>
             </li>
 
         </ul>
     </aside>
-</body>
-
-</html>

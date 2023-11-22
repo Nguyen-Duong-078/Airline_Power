@@ -751,3 +751,9 @@ section {
 .chart {
     margin-left: 300px;
 }
+
+.images img {
+    border-radius: 3px;
+    margin-top: -110px;
+    margin-left: 320px;
+}

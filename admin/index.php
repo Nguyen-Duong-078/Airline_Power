@@ -123,7 +123,15 @@ if (isset($_GET['act'])) {
                 $Voucher_value = $_POST['voucher_value'];
                 $Voucher_start = $_POST['voucher_start'];
                 $Voucher_end = $_POST['voucher_end'];
-                insert_voucher($Voucher_name, $Voucher_value, $Voucher_start, $Voucher_end);
+                $Image = $_FILES['Image']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES["Image"]["name"]);
+                if (move_uploaded_file($_FILES["Image"]["tmp_name"], $target_file)) {
+                    // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+                } else {
+                    // echo "Sorry, there was an error uploading your file.";
+                }
+                insert_voucher($Voucher_name, $Voucher_value, $Voucher_start, $Voucher_end, $Image);
                 $thongbao = "Thêm Thành Công";
             }
             include "Voucher/add.php";
@@ -156,7 +164,15 @@ if (isset($_GET['act'])) {
                 $Voucher_value = $_POST['voucher_value'];
                 $Voucher_start = $_POST['voucher_start'];
                 $Voucher_end = $_POST['voucher_end'];
-                update_voucher($Voucher_ID, $Voucher_name, $Voucher_value, $Voucher_start, $Voucher_end);
+                $Image = $_FILES['Image']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES["Image"]["name"]);
+                if (move_uploaded_file($_FILES["Image"]["tmp_name"], $target_file)) {
+                    // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+                } else {
+                    // echo "Sorry, there was an error uploading your file.";
+                }
+                update_voucher($Voucher_ID, $Voucher_name, $Voucher_value, $Voucher_start, $Voucher_end, $Image);
                 $thongbao = "Thêm Thành Công";
             }
             $listvoucher = loadall_voucher();

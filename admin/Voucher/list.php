@@ -13,6 +13,7 @@
                                  <th>VOUCHER VALUE</th>
                                  <th>VOUCHER START</th>
                                  <th>VOUCHER END</th>
+                                 <th>Image</th>
                                  <th>Chức Năng</th>
                              </tr>
                          </thead>
@@ -21,12 +22,19 @@
                                 extract($voucher);
                                 $edit_voucher = "index.php?act=edit_voucher&id_voucher=" . $Voucher_ID;
                                 $delete_voucher = "index.php?act=delete_voucher&id_voucher=" . $Voucher_ID;
+                                $hinhpath = "../upload/" . $Image;
+                                if (is_file($hinhpath)) {
+                                    $hinh = "<img src='" .  $hinhpath . "' height='50px'>";
+                                } else {
+                                    $hinh = "No image found";
+                                }
                                 echo '<tr>
                                     <td>' . $Voucher_ID . '</td>
                                     <td>' . $Voucher_name . '</td>
-                                    <td>' . $Voucher_value . '</td>
+                                    <td>' . $Voucher_value . '</td> 
                                     <td>' . $Voucher_start . '</td>
                                     <td>' . $Voucher_end . '</td>
+                                    <td>' . $hinh . '</td>
                                     <td>
                                     <a href="' . $edit_voucher . '"><input class="btn btn-primary btn-sm trash" type="button" value="Sửa"></a>
                                     <a href="' . $delete_voucher . '"><input class="btn btn-primary btn-sm" type="button" value="Xóa"></a>

@@ -68,7 +68,7 @@
         display: flex;
         justify-content: end;
     }
-    .endmain input{
+    .endmain button{
         width: 150px;
         margin-right: 50px;
         margin-left: 250px;
@@ -80,6 +80,7 @@
     <div class="boxleft mgr">
 
     </div>
+
     <div class="boxright">
         <div class="rowtt mgb">
             <label><h3>THÔNG TIN ĐẶT CHỖ</h3></label>
@@ -116,5 +117,5 @@
 </main>
 <div class="endmain">
         <h3>Tổng tiền 0 VNĐ</h3>
-        <input type="submit" value="Đi tiếp">
+        <a href="index.php?action=abate"><button>Đi tiếp</button></a>
     </div>

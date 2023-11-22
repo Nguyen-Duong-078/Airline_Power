@@ -4,6 +4,11 @@ include "../model/pdo.php";
 include "../model/flight.php";
 include "../model/type_ticket.php";
 include "../model/voucher.php";
+<<<<<<< Updated upstream
+=======
+include "../model/Account.php";
+include "../model/Charging.php";
+>>>>>>> Stashed changes
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -183,7 +188,57 @@ if (isset($_GET['act'])) {
             session_unset();
             header('location: index.php');
             break;
+<<<<<<< Updated upstream
 
+=======
+        case 'edit_account':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                $update_account = loadOne_account($ID);
+            }
+            include "Account/update.php";
+            break;
+        case 'update_account':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $Ticket_ID = $_POST['id'];
+                $role = $_POST['role'];
+                $Status = $_POST['Status'];
+                Update_account($Ticket_ID, $role, $Status);
+                $thongbao = "Thêm Thành Công";
+            }
+            $list_account = loadAll_User();
+            include "Account/list.php";
+            break;
+
+        case 'delete_account':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                delete_account($ID);
+            }
+            $list_account = loadAll_User();
+            include "Account/list.php";
+            break;
+
+            // case 'logout_admin':
+            //     session_destroy();
+            //     header('location: index.php');
+            //     break;
+        case 'add_charging':
+            if(isset($_POST['themmoi']) && $_POST['themmoi']){
+                $tax = $_POST['tax'];
+                $service = $_POST['service'];
+                $Flights_ID = $_POST['Flights_ID'];
+                insert_charging($tax,$service,$Flights_ID);
+            }
+            $list_flight = loadAll_flight();
+            include "Charging/add.php";
+            break;
+        case 'list_charging':
+            $list_flight = loadAll_flight();
+            $listcharging = loadall_charging();
+            include "Charging/list.php";
+            break;
+>>>>>>> Stashed changes
         default:
             include "home.php";
             break;

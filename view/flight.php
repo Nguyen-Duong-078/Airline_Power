@@ -32,7 +32,7 @@
                                     <td>'.$Price.'</td>
                                     <td>'.$Passenger.'</td>
                                     <td>'.$Flight_time.'</td>
-                                    <td><a href="'.$datvengay.'"><input class="btn btn-primary btn-sm trash" type="button" value="Đặt vé ngay"></a></td>  
+                                    <td><a href="'.$datvengay.'"><button class="btn btn-primary btn-sm trash">Đặt vé ngay</button></a></td>  
                                     </tr>';
                             }
                             ?>

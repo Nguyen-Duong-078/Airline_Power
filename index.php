@@ -7,6 +7,7 @@ include "model/type_ticket.php";
 include "model/voucher.php";
 include "global.php";
 include "View/header.php";
+include "model/Charging.php";
 
 $listvoucher = loadall_voucher();
 $list_type_ticket = loadAll_type_ticket();
@@ -61,12 +62,13 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             $listflight =loadAll_flight();
             include "View/flight.php";
             break;
+        case 'abate':
+            include "view/abate.php";
+            break;
         case 'datve':
             include "View/booking.php";
             break;
-        case 'search_flight':
-            include "View/select-flight.php";
-            break;
+
         default:
             include "View/home.php";
             break;

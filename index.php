@@ -57,6 +57,14 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
         case 'blog':
             include "View/blog.php";
             break;
+
+        case 'search_flight':
+            $listflight =loadAll_flight();
+            include "View/flight.php";
+            break;
+        case 'datve':
+            include "View/booking.php";
+            break;
         case 'search_flight':
 <<<<<<< Updated upstream
             include "View/select-flight.php";

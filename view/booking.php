@@ -1,93 +1,34 @@
-<?php
-if (is_array($update_flight)) {
-    extract($update_flight);
-}
-?>
-<!-- <style>
-    .mgr {
-        margin-right: 2%;
-    }
 
-    .rowtt {
-        float: left;
-        width: 100%;
-    }
-
-    .mgb {
-        margin-bottom: 20px;
-    }
-
-    main {
         width: 100%;
         display: flex;
         justify-content: center;
         font-family: roboto;
     }
 
-    .boxleft {
-        width: 69%;
-        min-height: 200px;
-    }
-
-    .boxright {
         width: 39%;
         height: 500px;
         justify-content: space-between;
     }
 
-    .money1 {
         position: absolute;
         right: 50px;
         top: 190px;
     }
 
-    .money2 {
         position: absolute;
         right: 50px;
         top: 300px;
     }
 
-    .money3 {
         position: absolute;
         right: 50px;
         top: 370px;
     }
-
-    .money4 {
-        position: absolute;
-        right: 50px;
-        top: 430px;
-
-    }
-
-    .money5 {
         position: absolute;
         right: 50px;
         top: 490px;
         font-size: 23px;
     }
-
-    .fullmoney {
-        width: 100%;
-        background-color: red;
-        border: 1px solid #EEE;
-    }
-
-    .fullmoney1 {
-        width: 100%;
-        border: 1px solid #EEE;
-    }
-
-    .fullmoney p {
-        color: white;
-    }
-
-    .endmain {
-        display: flex;
-        justify-content: end;
-    }
-
-    .endmain input {
         width: 150px;
         margin-right: 50px;
         margin-left: 250px;
@@ -97,19 +38,13 @@ if (is_array($update_flight)) {
 </style>
 <main>
     <div class="boxleft mgr">
-    </div>
-    <div class="boxright">
-        <div class="rowtt mgb">
-            <label>
-                <h3>THÔNG TIN ĐẶT CHỖ</h3>
-            </label>
         </div>
         <div class="rowtt mgb">
             <a href="">Thông Tin Khách Hàng</a>
         </div>
         <div class="rowtt mgb fullmoney1">
             <p>Chuyến đi</p>
-            <p class="money1"><?= $Price ?></p>
+
         </div>
         <div class="rowtt mgb">
             <p>Từ Hà Nội đến Tp. Hồ Chí Minh</p>
@@ -132,4 +67,4 @@ if (is_array($update_flight)) {
         </div>
         <div class="rowtt"></div>
     </div>
-</main> -->
+

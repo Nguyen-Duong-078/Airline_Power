@@ -40,7 +40,7 @@
         <hr>
         <ul class="app-menu">
             <li>
-                <a class="app-menu__item active" href="index.php">
+                <a class="app-menu__item" href="index.php">
                     <i class='app-menu__icon bx bxs-home'></i>
                     <span class="app-menu__label">Trang Chủ</span>
                 </a>
@@ -54,7 +54,7 @@
             <li>
                 <a class="app-menu__item" href="index.php?act=add_sp">
                     <i class='app-menu__icon bx bx-purchase-tag-alt'></i>
-                    <span class="app-menu__label">Sản phẩm</span>
+                    <span class="app-menu__label">Đặt Chỗ</span>
                 </a>
             </li>
             <li>
@@ -63,7 +63,6 @@
                     <span class="app-menu__label">Khách hàng</span>
                 </a>
             </li>
-
             <li>
                 <a class="app-menu__item" href="index.php?act=statistical">
                     <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
@@ -72,31 +71,40 @@
             </li>
             <li>
                 <a class="app-menu__item" href="index.php?act=add_voucher">
-                    <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
+                    <i class='app-menu__icon bx bx-printer'></i>
                     <span class="app-menu__label">Voucher</span>
                 </a>
             </li>
             <li>
                 <a class="app-menu__item" href="index.php?act=add_type_ticket">
-                    <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
-                    <span class="app-menu__label">Type_ticket</span>
+                    <i class='app-menu__icon bx bxs-objects-vertical-bottom'></i>
+                    <span class="app-menu__label">Ticket</span>
                 </a>
             </li>
             <li>
                 <a class="app-menu__item" href="index.php?act=commnet">
-                    <i class='app-menu__icon bx bx bx-chat'></i>
-                    <span class="app-menu__label">Comment</span>
+                    <i class='app-menu__icon bx bxl-paypal'></i>
+                    <span class="app-menu__label">Thanh Toán</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=commnet">
+                    <i class='app-menu__icon bx bxs-user-check'></i>
+                    <span class="app-menu__label">Hóa Đơn</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=commnet">
+                    <i class='app-menu__icon bx bx-chair'></i>
+                    <span class="app-menu__label">Chỗ Ngồi</span>
                 </a>
             </li>
             <li>
                 <a class="app-menu__item" href="../index.php">
                     <i class='app-menu__icon bx bx bx bxl-unity'></i>
-                    <span class="app-menu__label">Public</span>
+                    <span class="app-menu__label">chức Vụ</span>
                 </a>
             </li>
 
         </ul>
     </aside>
-</body>
-
-</html>

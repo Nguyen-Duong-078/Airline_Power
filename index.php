@@ -2,14 +2,15 @@
 session_start();
 include_once "model/pdo.php";
 include_once "model/Account.php";
+include "model/flight.php";
+include "model/type_ticket.php";
+include "model/voucher.php";
+include "global.php";
 include "View/header.php";
-<<<<<<< Updated upstream
-=======
 
 $listvoucher = loadall_voucher();
 $list_type_ticket = loadAll_type_ticket();
 
->>>>>>> Stashed changes
 if ((isset($_GET['action'])) && $_GET['action'] != "") {
     $act = $_GET['action'];
     switch ($act) {

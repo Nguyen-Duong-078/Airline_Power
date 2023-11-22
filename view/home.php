@@ -24,13 +24,12 @@
              <div class="row justify-content-center align-items-center mb-30-none">
                  <div class="col-xxl-5 col-xl-6 col-lg-12 mb-30">
                      <div class="banner-content" data-aos="fade-right" data-aos-duration="1800">
-                         <span class="sub-title"><span>Airline</span>next</span>
+                         <span class="sub-title"><span>Airline </span> Power</span>
                          <h1 class="title">Đặt vé máy bay riêng</h1>
                          <p>Airline tự hào nâng tầm và vượt qua tiêu chuẩn dành cho sự sang trọng và dành cho doanh nghiệp
                              dịch vụ thuê máy bay riêng. Chúng tôi tự hào cung cấp dịch vụ chuyên nghiệp.</p>
                          <div class="banner-btn">
                              <a href="package-details.html" class="btn--base"><i class="fas fa-chevron-right mr-2"></i> Trải nghiệm ngay</a>
-                             <a href="contact.html" class="btn--base active">Giá là <i class="icon-Group-2361 ml-2"></i></a>
                          </div>
                      </div>
                  </div>
@@ -42,13 +41,9 @@
              </div>
          </div>
      </section>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Banner
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--End Banner-->
 
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Call-widget
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--Start Call-widget-->
      <div class="call-widget-wrapper">
          <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +84 382 500 462
              </span> <span class="arrow"></span></button>
@@ -105,14 +100,9 @@
              </form>
          </div>
      </div>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Call-widget
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--End Call-widget-->
 
-
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Overview
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--Start Overview-->
      <div class="overview-section ptb-120">
          <div class="container-fluid">
              <div class="overview-area">
@@ -125,26 +115,29 @@
                              <img src="assets/images/overview/overview-2.png" alt="overview">
                              <div class="nav-tab-area">
                                  <div class="nav-tab-header">
-                                     <span class="sub-title"><span>#1</span> Thuê máy bay riêng</span>
-                                     <h2 class="title">Dịch vụ tốt nhất cho bạn</h2>
+                                     <span class="sub-title"> Ticket</span>
+                                     <h2 class="title">Các loại vé Airline Power</h2>
                                  </div>
-                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                     <button class="nav-link" id="private-jet-tab" data-toggle="tab" data-target="#private-jet" type="button" role="tab" aria-controls="private-jet" aria-selected="true"><span>01</span> Thuê máy bay riêng</button>
-                                     <button class="nav-link active" id="business-jet-tab" data-toggle="tab" data-target="#business-jet" type="button" role="tab" aria-controls="business-jet" aria-selected="false"><span>02</span> Thuê máy bay phản lực hạng thương gia</button>
-                                     <button class="nav-link" id="private-helicopter-tab" data-toggle="tab" data-target="#private-helicopter" type="button" role="tab" aria-controls="private-helicopter" aria-selected="false"><span>03</span>
-                                         Trực thăng riêng</button>
-                                     <button class="nav-link" id="air-ambulance-tab" data-toggle="tab" data-target="#air-ambulance" type="button" role="tab" aria-controls="air-ambulance" aria-selected="false"><span>04</span> Xe cứu thương hàng không</button>
-                                 </div>
+                                 <?php
+                                    foreach ($list_type_ticket as $tikcet) {
+                                        extract($tikcet);
+                                        // $images =  $image_path . $Image;
+                                        echo '
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link" id="' . $Ticket_ID . '" data-toggle="tab" data-target="#' . $Status . '" type="button" role="tab" aria-controls="private-jet" aria-selected="true"><span>➥</span>' . $Ticket_name . '</button>
+                                        </div>';
+                                    }
+                                    ?>
                              </div>
                          </div>
                      </nav>
                      <div class="tab-content" id="nav-tabContent" data-aos="fade-right" data-aos-duration="1200">
-                         <div class="tab-pane fade" id="private-jet" role="tabpanel" aria-labelledby="private-jet-tab">
+                         <div class="tab-pane fade" id="Start" role="tabpanel" aria-labelledby="15">
                              <div class="overview-item">
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Thuê Máy Bay Riêng</a>
+                                         <h3 class="title"><a href="service-details.html">Hạng vé bình dân</a>
                                          </h3>
                                          <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
                                              dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
@@ -155,43 +148,13 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="tab-pane fade show active" id="business-jet" role="tabpanel" aria-labelledby="business-jet-tab">
+                         <div class="tab-pane fade show active" id="Start" role="tabpanel" aria-labelledby="16">
                              <div class="overview-item">
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Thuê máy bay phản lực hạng thương gia</a>
+                                         <h3 class="title"><a href="service-details.html">Hạng vé thương gia</a>
                                          </h3>
-                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
-                                             dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
-                                         <div class="overview-btn">
-                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="tab-pane fade" id="private-helicopter" role="tabpanel" aria-labelledby="private-helicopter-tab">
-                             <div class="overview-item">
-                                 <div class="overview-thumb">
-                                     <img src="assets/images/overview/overview-1.png" alt="overview">
-                                     <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Trứcj thăg riêng</a></h3>
-                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
-                                             dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
-                                         <div class="overview-btn">
-                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="tab-pane fade" id="air-ambulance" role="tabpanel" aria-labelledby="air-ambulance-tab">
-                             <div class="overview-item">
-                                 <div class="overview-thumb">
-                                     <img src="assets/images/overview/overview-1.png" alt="overview">
-                                     <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Xe cứu thương hàng không</a></h3>
                                          <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
                                              dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
@@ -206,14 +169,10 @@
              </div>
          </div>
      </div>
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Overview
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!-- End Overview-->
 
 
-     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start About
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--Start About-->
      <section class="about-section bg-overlay-base ptb-120 bg_img" data-background="assets/images/bg/bg-1.png">
          <div class="about-element">
              <img src="assets/images/element/element-8.png" alt="element">
@@ -222,9 +181,9 @@
              <div class="row justify-content-center mb-30-none">
                  <div class="col-xl-7 col-lg-7 mb-30">
                      <div class="about-content">
-                         <span class="sub-title"><span>Thông tin</span> Aieline next</span>
-                         <h2 class="title">Thuê máy bay phản lực tư nhân tiết kiệm thời gian của bạn và mang lại sự thoải mái hơn</h2>
-                         <p>Airlinenext là cách duy nhất để du lịch trọn vẹn theo điều kiện của bạn.
+                         <span class="sub-title"><span>Thông tin</span> Aieline Power</span>
+                         <h2 class="title">Thuê máy bay tư nhân tiết kiệm thời gian của bạn và mang lại sự thoải mái hơn</h2>
+                         <p>Airline Power là cách duy nhất để du lịch trọn vẹn theo điều kiện của bạn.
                              Cho dù đó là truy cập một điểm đến từ xa hay lấy lại quyền kiểm soát năng suất và lập lịch bay</p>
                          <div class="about-book-area">
                              <div class="about-book-element">
@@ -273,8 +232,8 @@
              <div class="row justify-content-center">
                  <div class="col-xl-12 text-center">
                      <div class="section-header">
-                         <span class="sub-title">Phát hiện <span>Airline next</span> Lợi ích</span>
-                         <h2 class="section-title">Khám phá lợi ích của máy bay phản lực tư nhân</h2>
+                         <span class="sub-title">Phát hiện <span>Airline Power</span> Lợi ích</span>
+                         <h2 class="section-title">Khám phá lợi ích của máy bay tư nhân</h2>
                      </div>
                  </div>
              </div>
@@ -435,111 +394,50 @@
              <div class="row justify-content-center">
                  <div class="col-xl-12 text-center">
                      <div class="section-header white">
-                         <span class="sub-title text-white"><span>Airline power</span> Bưu kiện</span>
-                         <h2 class="section-title">Gói Tour Airline Power</h2>
+                         <span class="sub-title text-white"><span>Airline power</span> Khuyến Mãi</span>
+                         <h2 class="section-title">Gói Voucher</h2>
                      </div>
                  </div>
              </div>
+
              <div class="row justify-content-center">
                  <div class="col-xl-12">
                      <div class="package-slider">
                          <div class="swiper-wrapper">
-                             <div class="swiper-slide">
-                                 <div class="package-item">
-                                     <div class="package-thumb">
-                                         <img src="assets/images/package/package-9.png" alt="package">
-                                         <div class="package-prize">
-                                             <span>$115.00</span>
-                                         </div>
-                                     </div>
-                                     <div class="package-content">
-                                         <div class="package-content-header">
-                                             <h3 class="title"><a href="package-details.html">Đảo hàng hóa</a>
-                                             </h3>
-                                         </div>
-                                         <div class="package-content-body">
-                                             <ul class="package-list">
-                                                 <li>Ngày : Thứ Sáu, ngày 24 tháng 11 năm 2023</li>
-                                                 <li>Người: 2 Người lớn</li>
-                                             </ul>
-                                             <div class="package-content-footer">
-                                                 <div class="package-btn">
-                                                     <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2 mr-2"></i> Đặt ngay</a>
-                                                 </div>
-                                                 <div class="package-video">
-                                                     <a data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/Hw4ctvV25H0">
-                                                         <img src="assets/images/icon/icon-17.png" alt="icon">
-                                                     </a>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="package-item">
-                                     <div class="package-thumb">
-                                         <img src="assets/images/package/package-10.png" alt="package">
-                                         <div class="package-prize">
-                                             <span>$110.00</span>
-                                         </div>
-                                     </div>
-                                     <div class="package-content">
-                                         <div class="package-content-header">
-                                             <h3 class="title"><a href="package-details.html">Thành phố hàng hóa</a>
-                                             </h3>
-                                         </div>
-                                         <div class="package-content-body">
-                                             <ul class="package-list">
-                                                 <li>Ngày: Thứ Tư, ngày 27 tháng 12 năm 2023</li>
-                                                 <li>Người: 3 Người lớn</li>
-                                             </ul>
-                                             <div class="package-content-footer">
-                                                 <div class="package-btn">
-                                                     <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2 mr-2"></i> Đặt ngay</a>
-                                                 </div>
-                                                 <div class="package-video">
-                                                     <a data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/Hw4ctvV25H0">
-                                                         <img src="assets/images/icon/icon-17.png" alt="icon">
-                                                     </a>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="package-item">
-                                     <div class="package-thumb">
-                                         <img src="assets/images/package/package-11.png" alt="package">
-                                         <div class="package-prize">
-                                             <span>$120.00</span>
-                                         </div>
-                                     </div>
-                                     <div class="package-content">
-                                         <div class="package-content-header">
-                                             <h3 class="title"><a href="package-details.html">Sa mạc hàng hóa</a>
-                                             </h3>
-                                         </div>
-                                         <div class="package-content-body">
-                                             <ul class="package-list">
-                                                 <li>Ngày : Thứ Sáu, ngày 29 tháng 11 năm 2023</li>
-                                                 <li>Người: 4 Người lớn</li>
-                                             </ul>
-                                             <div class="package-content-footer">
-                                                 <div class="package-btn">
-                                                     <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2 mr-2"></i> Đặt ngay</a>
-                                                 </div>
-                                                 <div class="package-video">
-                                                     <a data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/Hw4ctvV25H0">
-                                                         <img src="assets/images/icon/icon-17.png" alt="icon">
-                                                     </a>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
+                             <?php
+                                foreach ($listvoucher as $voucher) {
+                                    extract($voucher);
+                                    $images =  $image_path . $Image;
+                                    echo '<div class="swiper-slide">
+                                    <div class="package-item">
+                                        <div class="package-thumb">
+                                            <img src="' . $images . '" alt="package">
+                                            <div class="package-prize">
+                                                <span>Mới</span>
+                                            </div>
+                                        </div>
+                                        <div class="package-content">
+                                            <div class="package-content-header">
+                                                <h3 class="title"><a href="package-details.html">' . $Voucher_name . '</a>
+                                                </h3>
+                                            </div>
+                                            <div class="package-content-body">
+                                                <ul class="package-list">
+                                                    <li>Ngày bắt đầu ' . $Voucher_start . '</li>
+                                                    <li>Ngày kết thúc ' . $Voucher_end . '</li>
+                                                    <li>Voucher: ' . $Voucher_value . '</li>
+                                                </ul>
+                                                <div class="package-content-footer">
+                                                    <div class="package-btn">
+                                                        <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2 mr-2"></i> Đặt ngay</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>';
+                                }
+                                ?>
                          </div>
                          <div class="slider-prev">
                              <i class="fas fa-chevron-left"></i>
@@ -668,47 +566,6 @@
 
      <!-- End Client -->
 
-     <!-- Start Brand -->
-
-     <div class="brand-section ptb-120">
-         <div class="container">
-             <div class="row justify-content-center mt-10-none mb-10-none">
-                 <div class="col-xl-12 text-center">
-                     <div class="brand-slider">
-                         <div class="swiper-wrapper">
-                             <div class="swiper-slide">
-                                 <div class="brand-item">
-                                     <img src="assets/images/brand/brand-1.png" alt="brand">
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="brand-item">
-                                     <img src="assets/images/brand/brand-2.png" alt="brand">
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="brand-item">
-                                     <img src="assets/images/brand/brand-3.png" alt="brand">
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="brand-item">
-                                     <img src="assets/images/brand/brand-4.png" alt="brand">
-                                 </div>
-                             </div>
-                             <div class="swiper-slide">
-                                 <div class="brand-item">
-                                     <img src="assets/images/brand/brand-5.png" alt="brand">
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-
-     <!-- End Brand -->
 
      <!--  Start Blog -->
 
@@ -733,12 +590,12 @@
                                  <span class="date">20 March 2022</span>
                                  <span class="comment">3 Comment</span>
                              </div>
-                             <h3 class="title"><a href="blog-details.html">Charter flight of the Death Penalty in
-                                     America</a></h3>
-                             <p>With a vast array of popular private planes to choose from, travelling by private jet
-                                 charter is the most efficient</p>
+                             <h3 class="title"><a href="blog-details.html">Chuyến bay thuê ở
+                                     Mỹ</a></h3>
+                             <p>Với vô số máy bay tư nhân phổ biến để lựa chọn, di chuyển bằng máy bay riêng
+                                 điều lệ là hiệu quả nhất</p>
                              <div class="blog-btn">
-                                 <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
+                                 <a href="blog-details.html">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
                              </div>
                          </div>
                      </div>
@@ -753,12 +610,11 @@
                                  <span class="date">23 February 2022</span>
                                  <span class="comment">4 Comment</span>
                              </div>
-                             <h3 class="title"><a href="blog-details.html">Our technology consistently deliver</a>
+                             <h3 class="title"><a href="blog-details.html">Công nghệ của chúng tôi</a>
                              </h3>
-                             <p>Private jet hire for leisure purposes allows yourself, your family and friends to
-                                 travel in luxury, comfort and privacy. </p>
+                             <p>Việc thuê máy bay riêng cho mục đích giải trí cho phép bạn, gia đình và bạn bè của bạn </p>
                              <div class="blog-btn">
-                                 <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
+                                 <a href="blog-details.html">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
                              </div>
                          </div>
                      </div>
@@ -773,12 +629,11 @@
                                  <span class="date">18 June 2022</span>
                                  <span class="comment">6 Comment</span>
                              </div>
-                             <h3 class="title"><a href="blog-details.html">Search the world with ease and
-                                     transparency</a></h3>
-                             <p>It’s fast gaining in popularity as leisure time becomes increasingly precious and we
-                                 value the experience of the journey</p>
+                             <h3 class="title"><a href="blog-details.html">Tìm kiếm thế giới dễ dàng</a></h3>
+                             <p>Nó nhanh chóng trở nên phổ biến khi thời gian giải trí ngày càng trở nên quý giá và chúng ta
+                                 đánh giá cao trải nghiệm</p>
                              <div class="blog-btn">
-                                 <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
+                                 <a href="blog-details.html">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
                              </div>
                          </div>
                      </div>

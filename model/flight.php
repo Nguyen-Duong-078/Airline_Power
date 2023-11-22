@@ -1,12 +1,12 @@
 <?php
-function insert_flight($Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Flight_time)
+function insert_flight($Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time)
 {
-    $sql = "INSERT INTO flights (Flight_Number, Start_City, Arrival_City, Departure_Time, Arrival_Time, Price, Flight_time) 
-    VALUES ('$Flight_Number','$Start_City','$Arrival_City','$Departure_Time','$Arrival_Time','$Price','$Flight_time')";
+    $sql = "INSERT INTO flights (Flight_Number, Start_City, Arrival_City, Departure_Time, Arrival_Time, Price, Passenger, Voucher_ID, Flight_time) 
+    VALUES ('$Flight_Number','$Start_City','$Arrival_City','$Departure_Time','$Arrival_Time','$Price', '$Passenger', '$Voucher','$Flight_time')";
     pdo_execute($sql);
 }
 
-function deleta_danhmuc($ID)
+function deleta_flight($ID)
 {
     $sql = "DELETE FROM flights WHERE Flight_ID =" . $ID;
     pdo_execute($sql);

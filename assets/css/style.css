@@ -3152,6 +3152,10 @@ section {
     margin-right: 100px;
 }
 
+.site-logo img {
+    height: 70px;
+}
+
 @media only screen and (max-width: 991px) {
     .site-logo {
         max-width: 100px;
@@ -3450,6 +3454,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     margin: -5px;
+    margin-left: 20px;
 }
 
 @media only screen and (max-width: 1299px) {
@@ -3474,19 +3479,22 @@ section {
 }
 
 .header-action a {
-    padding: 12px 30px;
+    padding: 12px 3px;
     font-weight: 800;
     font-size: 16px;
     margin: 5px;
     display: flex;
     justify-content: center;
+    color: #edd608;
+    margin-left: 10px;
 }
 
 .header-action a i {
-    font-size: 22px;
+    font-size: 17px;
     margin-right: 8px;
     transition: all 0.5s;
     color: red;
+    margin-top: 4px;
 }
 
 .header-action a.active {

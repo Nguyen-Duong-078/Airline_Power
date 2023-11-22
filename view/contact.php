@@ -20,7 +20,7 @@
                         <li>
                             <a href="#0">
                                 <div class="contact-item-icon">
-                                    <i class="icon-location-icon"></i>
+                                    <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="contact-item-content">
                                     <h4 class="title">Địa điểm của chúng tôi</h4>

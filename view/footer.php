@@ -1,7 +1,7 @@
 <!-- Start Scroll-To-Top -->
 
 <a href="#" class="scrollToTop">
-        <i class="las la-dot-circle"></i>
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
         <span>Top</span>
 </a>
 

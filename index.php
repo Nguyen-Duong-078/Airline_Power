@@ -5,6 +5,7 @@ include_once "model/Account.php";
 include "model/flight.php";
 include "model/type_ticket.php";
 include "model/voucher.php";
+include "model/search.php";
 include "global.php";
 include "View/header.php";
 
@@ -65,7 +66,27 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             include "View/booking.php";
             break;
         case 'search_flight':
+<<<<<<< Updated upstream
             include "View/select-flight.php";
+=======
+            if (isset($_POST['Start_City']) && ($_POST['Start_City'] != "") && isset($_POST['Arrival_City']) && ($_POST['Arrival_City'] != "")) {
+                $Start_City = $_POST['Start_City'];
+                $Arrival_City = $_POST['Arrival_City'];
+            } else {
+                $Start_City = "";
+                $Arrival_City = "";
+            }
+            $search_flight = search_flight($Start_City, $Arrival_City);
+            include "View/flight.php";
+            break;
+        case 'book':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                $list_flight = loadAll_flight();
+                $update_type_ticket = loadOne_type_ticket($ID);
+            }
+            include "View/info_flight.php";
+>>>>>>> Stashed changes
             break;
         default:
             include "View/home.php";

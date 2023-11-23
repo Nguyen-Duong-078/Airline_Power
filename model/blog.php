@@ -10,6 +10,12 @@ function loadAll_blog()
     $list_blog = pdo_query($sql);
     return $list_blog;
 }
+function loadOne_blog($ID)
+{
+    $sql = "SELECT * FROM blog WHERE Blog_ID=" . $ID;
+    $loadOne_blog = pdo_query_one($sql);
+    return $loadOne_blog;
+}
 function deleta_blog($ID)
 {
     $sql = "DELETE FROM blog WHERE Blog_ID =" . $ID;

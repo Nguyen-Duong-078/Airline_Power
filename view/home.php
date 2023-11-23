@@ -592,12 +592,11 @@
                                 <h3 class="title"><a href="#">' . $Blog_name . '</a></h3>
                                 <p>' . $Blog_content . '</p>
                                 <div class="blog-btn">
-                                    <a href="index.php?action=info_blog">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
+                                    <a href="index.php?action=info_Blog&id=' . $Blog_ID . '">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-   
                         ';
                     }
                     ?>

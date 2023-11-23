@@ -26,6 +26,7 @@ include "../model/type_ticket.php";
 include "../model/voucher.php";
 include "../model/Account.php";
 include "../model/blog.php";
+include "../model/Evaluate.php";
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -281,6 +282,18 @@ if (isset($_GET['act'])) {
             }
             $list_blog = loadAll_blog();
             include "Blog/list.php";
+            break;
+        case 'Evaluate':
+            $list_evaluate =  loadAll_comments(0);
+            include "../Admin/Evaluate/list.php";
+            break;
+        case 'delete_evaluate':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                deleta_comment($ID);
+            }
+            $list_evaluate =  loadAll_comments(0);
+            include "../Admin/Evaluate/list.php";
             break;
         default:
             include "home.php";

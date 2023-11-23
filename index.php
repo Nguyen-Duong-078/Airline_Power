@@ -9,6 +9,7 @@ include "model/search.php";
 include "global.php";
 include "model/Charging.php";
 include "model/blog.php";
+include "model/Evaluate.php";
 include "View/header.php";
 
 $listvoucher = loadall_voucher();
@@ -71,7 +72,6 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             $search_flight = search_flight($Start_City, $Arrival_City);
             include "View/flight.php";
             break;
-
         case 'book':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];
@@ -82,6 +82,16 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             break;
         case 'abate':
             include "view/abate.php";
+            break;
+        case 'evaluate':
+            include "View/Evaluate.php";
+            break;
+        case 'info_Blog':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                $loadOne_blog = loadOne_blog($ID);
+            }
+            include "View/Evaluate.php";
             break;
         default:
             include "View/home.php";

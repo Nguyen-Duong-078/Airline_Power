@@ -117,5 +117,11 @@
                     <span class="app-menu__label">Blog</span>
                 </a>
             </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=Evaluate">
+                    <i class='app-menu__icon bx bx-chat'></i>
+                    <span class="app-menu__label">Đánh giá</span>
+                </a>
+            </li>
         </ul>
     </aside>

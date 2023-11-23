@@ -58,20 +58,18 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
         case 'blog':
             include "View/blog.php";
             break;
-
         case 'search_flight':
-            $listflight =loadAll_flight();
+            if (isset($_POST['Start_City']) && ($_POST['Start_City'] != "") && isset($_POST['Arrival_City']) && ($_POST['Arrival_City'] != "")) {
+                $Start_City = $_POST['Start_City'];
+                $Arrival_City = $_POST['Arrival_City'];
+            } else {
+                $Start_City = "";
+                $Arrival_City = "";
+            }
+            $search_flight = search_flight($Start_City, $Arrival_City);
             include "View/flight.php";
             break;
-<<<<<<< Updated upstream
-        case 'abate':
-            include "view/abate.php";
-            break;
-        case 'datve':
-            include "View/booking.php";
-            break;
 
-=======
         case 'book':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];
@@ -80,22 +78,9 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             }
             include "View/info_flight.php";
             break;
-        case 'evaluate':
-
-            include "View/Evaluate.php";
-            break;
         case 'abate':
-            include "View/abate.php";
+            include "view/abate.php";
             break;
-        // case 'evaluate':
-        //     if(isset($_GET['id_voucher']) && ($_GET['id_voucher']>0)){
-        //         $id = $_GET['id_voucher'];
-        //         $onevoucher = loadone_voucher();
-        //         extract($onevoucher);
-        //         include "View/Evaluate.php";
-        //         }
-        //         break;
->>>>>>> Stashed changes
         default:
             include "View/home.php";
             break;

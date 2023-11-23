@@ -29,7 +29,7 @@
                          <p>Airline tự hào nâng tầm và vượt qua tiêu chuẩn dành cho sự sang trọng và dành cho doanh nghiệp
                              dịch vụ thuê máy bay riêng. Chúng tôi tự hào cung cấp dịch vụ chuyên nghiệp.</p>
                          <div class="banner-btn">
-                             <a href="package-details.html" class="btn--base"><i class="fas fa-chevron-right mr-2"></i> Trải nghiệm ngay</a>
+                             <a href="index.php" class="btn--base"><i class="fas fa-chevron-right mr-2"></i> Trải nghiệm ngay</a>
                          </div>
                      </div>
                  </div>
@@ -48,42 +48,36 @@
          <button type="button" class="call-widget-btn"><span class="num"><i class="icon-call-icon"></i> +84 382 500 462
              </span> <span class="arrow"></span></button>
          <div class="call-widget-form-area">
-             <form class="book-form">
+             <form class="book-form" action="index.php?action=search_flight" method="post">
                  <div class="row justify-content-center mb-20-none">
                      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                          <div class="book-select">
                              <label>Điểm khởi hành</label>
                              <div class="book-form-icon">
-                                 <i class="icon-from-airplane"></i>
+                                 <i class="fa-solid fa-plane-departure"></i>
                              </div>
-                             <select class="book-select form--control">
-                                 <option value="dhaka" selected>Hà Nội</option>
-                                 <option value="london">Tp. Hồ Chí Minh</option>
-                             </select>
+                             <input class="book-select form--control" type="text" name="Start_City" placeholder=" Điểm khởi hành" required>
                          </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                          <div class="book-select">
                              <label>Điểm đến</label>
                              <div class="book-form-icon">
-                                 <i class="icon-to-airplane"></i>
+                                 <i class="fa-solid fa-plane-arrival"></i>
                              </div>
-                             <select class="book-select form--control">
-                                 <option value="london" selected>Tp. Hồ Chí Minh</option>
-                                 <option value="dhaka">Hà Nội</option>
-                             </select>
+                             <input class="book-select form--control" type="text" name="Arrival_City" placeholder=" Điểm đến" required>
                          </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                          <div class="book-select">
                              <label>Ngày đi</label>
                              <div class="book-form-icon">
-                                 <i class="icon-schedule-icon"></i>
+                                 <i class="fa-solid fa-calendar-days"></i>
                              </div>
-                             <input class="book-select form--control" type="date" name="" id="" style="color:#FFF">
+                             <input class="book-select form--control" name="date_flight" type="date" style="color:#FFF" required>
                          </div>
                      </div>
-                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                          <label>Hành Khách</label>
                          <div class="book-quantity">
                              <div class="book-plus-minus">
@@ -94,7 +88,7 @@
                          </div>
                      </div>
                      <div class="col-xl-12 form-group">
-                         <button type="submit" class="btn--base w-100 mt-10"><i class="icon-btn-icon"></i> Tìm Chuyến Bay</button>
+                         <button type="submit" name="search_flight" class="btn--base ml-auto mr-auto mt-30"><i class="icon-btn-icon"></i> Tìm Chuyến Bay</button>
                      </div>
                  </div>
              </form>
@@ -137,12 +131,12 @@
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Hạng vé bình dân</a>
+                                         <h3 class="title"><a href="#">Hạng vé bình dân</a>
                                          </h3>
                                          <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
                                              dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
-                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
+                                             <a href="#" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>
@@ -153,12 +147,12 @@
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="service-details.html">Hạng vé thương gia</a>
+                                         <h3 class="title"><a href="#">Hạng vé thương gia</a>
                                          </h3>
                                          <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
                                              dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
-                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
+                                             <a href="#" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>
@@ -194,7 +188,7 @@
                                  <span class="call"><a href="tel:+84 382 500 462">+84 382 500 462</a></span>
                              </div>
                              <div class="about-book-right">
-                                 <a href="service-details.html" class="btn--base"><i class="icon-btn-icon-v2"></i>
+                                 <a href="https://zalo.me/nguyenduong_078" class="btn--base"><i class="icon-btn-icon-v2"></i>
                                      Đặt Ngay</a>
                              </div>
                          </div>
@@ -335,27 +329,27 @@
                                      <div class="book-select">
                                          <label>Điểm khởi hành</label>
                                          <div class="book-form-icon">
-                                             <i class="icon-from-airplane"></i>
+                                             <i class="fa-solid fa-plane-departure"></i>
                                          </div>
-                                         <input class="book-select form--control" type="text" name="Start_City" placeholder="Điểm khởi hành" required>
+                                         <input class="book-select form--control" type="text" name="Start_City" placeholder=" Điểm khởi hành" required>
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                                      <div class="book-select">
                                          <label>Điểm đến</label>
                                          <div class="book-form-icon">
-                                             <i class="icon-to-airplane"></i>
+                                             <i class="fa-solid fa-plane-arrival"></i>
                                          </div>
-                                         <input class="book-select form--control" type="text" name="Arrival_City" placeholder="Điểm đến" required>
+                                         <input class="book-select form--control" type="text" name="Arrival_City" placeholder=" Điểm đến" required>
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                                      <div class="book-select">
                                          <label>Ngày đi</label>
                                          <div class="book-form-icon">
-                                             <i class="icon-schedule-icon"></i>
+                                             <i class="fa-solid fa-calendar-days"></i>
                                          </div>
-                                         <input class="book-select form--control" name="date_flight" type="date" style="color:#FFF">
+                                         <input class="book-select form--control" name="date_flight" type="date" style="color:#FFF" required>
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">

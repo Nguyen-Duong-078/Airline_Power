@@ -99,16 +99,22 @@
                     <span class="app-menu__label">Chỗ Ngồi</span>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a class="app-menu__item" href="../index.php">
                     <i class='app-menu__icon bx bx bx bxl-unity'></i>
                     <span class="app-menu__label">chức Vụ</span>
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a class="app-menu__item" href="index.php?act=add_charging">
                     <i class='app-menu__icon bx bx bx bxl-unity'></i>
                     <span class="app-menu__label">Tiền phát sinh</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=blog">
+                    <i class='app-menu__icon bx bx-chat'></i>
+                    <span class="app-menu__label">Blog</span>
                 </a>
             </li>
         </ul>

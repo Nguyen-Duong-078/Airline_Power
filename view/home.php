@@ -337,7 +337,7 @@
                                          <div class="book-form-icon">
                                              <i class="icon-from-airplane"></i>
                                          </div>
-                                         <input class="book-select form--control" type="text" name="start_flight" placeholder="Điểm khởi hành" required>
+                                         <input class="book-select form--control" type="text" name="Start_City" placeholder="Điểm khởi hành" required>
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
@@ -346,7 +346,7 @@
                                          <div class="book-form-icon">
                                              <i class="icon-to-airplane"></i>
                                          </div>
-                                         <input class="book-select form--control" type="text" name="end_flight" placeholder="Điểm đến" required>
+                                         <input class="book-select form--control" type="text" name="Arrival_City" placeholder="Điểm đến" required>
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">

@@ -5,6 +5,7 @@ include_once "model/Account.php";
 include "model/flight.php";
 include "model/type_ticket.php";
 include "model/voucher.php";
+include "model/search.php";
 include "global.php";
 include "View/header.php";
 include "model/Charging.php";

@@ -71,6 +71,7 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             $search_flight = search_flight($Start_City, $Arrival_City);
             include "View/flight.php";
             break;
+
         case 'book':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];

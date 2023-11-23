@@ -429,7 +429,7 @@
                                                 </ul>
                                                 <div class="package-content-footer">
                                                     <div class="package-btn">
-                                                        <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2 mr-2"></i> Đặt ngay</a>
+                                                        <a href="index.php?action=evaluate" class="custom-btn"><i class="icon-btn-icon-v2 mr-2"></i> Đặt ngay</a>
                                                     </div>
                                                 </div>
                                             </div>

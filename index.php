@@ -63,6 +63,7 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             $listflight =loadAll_flight();
             include "View/flight.php";
             break;
+<<<<<<< Updated upstream
         case 'abate':
             include "view/abate.php";
             break;
@@ -70,6 +71,31 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             include "View/booking.php";
             break;
 
+=======
+        case 'book':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                $list_flight = loadAll_flight();
+                $update_type_ticket = loadOne_type_ticket($ID);
+            }
+            include "View/info_flight.php";
+            break;
+        case 'evaluate':
+
+            include "View/Evaluate.php";
+            break;
+        case 'abate':
+            include "View/abate.php";
+            break;
+        // case 'evaluate':
+        //     if(isset($_GET['id_voucher']) && ($_GET['id_voucher']>0)){
+        //         $id = $_GET['id_voucher'];
+        //         $onevoucher = loadone_voucher();
+        //         extract($onevoucher);
+        //         include "View/Evaluate.php";
+        //         }
+        //         break;
+>>>>>>> Stashed changes
         default:
             include "View/home.php";
             break;

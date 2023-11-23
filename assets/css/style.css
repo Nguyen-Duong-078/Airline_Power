@@ -9994,7 +9994,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 
 .blog-thumb img {
     width: 100%;
-    height: 100%;
+    height: 216px;
     object-fit: cover;
 }
 

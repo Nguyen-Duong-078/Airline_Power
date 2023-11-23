@@ -25,6 +25,7 @@ include "../model/flight.php";
 include "../model/type_ticket.php";
 include "../model/voucher.php";
 include "../model/Account.php";
+include "../model/blog.php";
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -252,7 +253,34 @@ if (isset($_GET['act'])) {
             include "Charging/list.php";
             break;
         case 'blog':
-            include "Charging/list.php";
+            if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+                $Blog_name = $_POST['Blog_name'];
+                $Blog_content = $_POST['Blog_content'];
+                $Date = $_POST['Date'];
+                $Image = $_FILES['Image']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES["Image"]["name"]);
+                if (move_uploaded_file($_FILES["Image"]["tmp_name"], $target_file)) {
+                    // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+                } else {
+                    // echo "Sorry, there was an error uploading your file.";
+                }
+                insert_blog($Blog_name, $Blog_content, $Date, $Image);
+                $thongbao = "Thêm Thành Công";
+            }
+            include "Blog/add.php";
+            break;
+        case 'list_blog':
+            $list_blog = loadAll_blog();
+            include "Blog/list.php";
+            break;
+        case 'delete_blog':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                deleta_blog($ID);
+            }
+            $list_blog = loadAll_blog();
+            include "Blog/list.php";
             break;
         default:
             include "home.php";

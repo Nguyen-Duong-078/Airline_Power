@@ -7,11 +7,13 @@ include "model/type_ticket.php";
 include "model/voucher.php";
 include "model/search.php";
 include "global.php";
-include "View/header.php";
 include "model/Charging.php";
+include "model/blog.php";
+include "View/header.php";
 
 $listvoucher = loadall_voucher();
 $list_type_ticket = loadAll_type_ticket();
+$list_blog = loadAll_blog();
 
 if ((isset($_GET['action'])) && $_GET['action'] != "") {
     $act = $_GET['action'];

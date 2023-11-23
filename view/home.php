@@ -574,64 +574,33 @@
                  </div>
              </div>
              <div class="row justify-content-center mb-30-none">
-                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                     <div class="blog-item">
-                         <div class="blog-thumb">
-                             <img src="assets/images/blog/blog-1.png" alt="blog">
-                         </div>
-                         <div class="blog-content">
-                             <div class="blog-post-meta">
-                                 <span class="date">20 March 2022</span>
-                                 <span class="comment">3 Comment</span>
-                             </div>
-                             <h3 class="title"><a href="blog-details.html">Chuyến bay thuê ở
-                                     Mỹ</a></h3>
-                             <p>Với vô số máy bay tư nhân phổ biến để lựa chọn, di chuyển bằng máy bay riêng
-                                 điều lệ là hiệu quả nhất</p>
-                             <div class="blog-btn">
-                                 <a href="blog-details.html">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                     <div class="blog-item">
-                         <div class="blog-thumb">
-                             <img src="assets/images/blog/blog-2.png" alt="blog">
-                         </div>
-                         <div class="blog-content">
-                             <div class="blog-post-meta">
-                                 <span class="date">23 February 2022</span>
-                                 <span class="comment">4 Comment</span>
-                             </div>
-                             <h3 class="title"><a href="blog-details.html">Công nghệ của chúng tôi</a>
-                             </h3>
-                             <p>Việc thuê máy bay riêng cho mục đích giải trí cho phép bạn, gia đình và bạn bè của bạn </p>
-                             <div class="blog-btn">
-                                 <a href="blog-details.html">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                     <div class="blog-item">
-                         <div class="blog-thumb">
-                             <img src="assets/images/blog/blog-3.png" alt="blog">
-                         </div>
-                         <div class="blog-content">
-                             <div class="blog-post-meta">
-                                 <span class="date">18 June 2022</span>
-                                 <span class="comment">6 Comment</span>
-                             </div>
-                             <h3 class="title"><a href="blog-details.html">Tìm kiếm thế giới dễ dàng</a></h3>
-                             <p>Nó nhanh chóng trở nên phổ biến khi thời gian giải trí ngày càng trở nên quý giá và chúng ta
-                                 đánh giá cao trải nghiệm</p>
-                             <div class="blog-btn">
-                                 <a href="blog-details.html">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
+                 <?php
+                    foreach ($list_blog as $blog) {
+                        extract($blog);
+                        $images =  $image_path . $Image;
+                        echo '
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                        <div class="blog-item">
+                            <div class="blog-thumb">
+                                <img src="' . $images . '" alt="blog">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-post-meta">
+                                    <span class="date">' . $Date . '</span>
+                                    <span class="comment">3 Comment</span>
+                                </div>
+                                <h3 class="title"><a href="#">' . $Blog_name . '</a></h3>
+                                <p>' . $Blog_content . '</p>
+                                <div class="blog-btn">
+                                    <a href="index.php?action=info_blog">Đọc thêm <i class="icon-Group-2361 ml-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+   
+                        ';
+                    }
+                    ?>
              </div>
          </div>
      </section>

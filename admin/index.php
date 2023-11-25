@@ -38,13 +38,14 @@ if (isset($_GET['act'])) {
                 $Flight_Number = $_POST['number_flight'];
                 $Start_City = $_POST['start'];
                 $Arrival_City = $_POST['end'];
+                $Flight_date = $_POST['Flight_date'];
                 $Departure_Time = $_POST['time_start'];
                 $Arrival_Time = $_POST['time_end'];
                 $Price = $_POST['price'];
                 $Passenger = $_POST['Passenger'];
                 $Voucher = $_POST['Voucher'];
                 $Flight_time = $_POST['time_flight'];
-                insert_flight($Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time);
+                insert_flight($Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time);
                 $thongbao = "Thêm Thành Công";
             }
             $listvoucher = loadall_voucher();

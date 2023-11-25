@@ -10,6 +10,7 @@ include "global.php";
 include "model/Charging.php";
 include "model/blog.php";
 include "model/Evaluate.php";
+// include "model/process.php";
 include "View/header.php";
 
 $listvoucher = loadall_voucher();
@@ -62,23 +63,26 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             include "View/blog.php";
             break;
         case 'search_flight':
-            if (isset($_POST['Start_City']) && ($_POST['Start_City'] != "") && isset($_POST['Arrival_City']) && ($_POST['Arrival_City'] != "")) {
+            if (isset($_POST['Start_City']) && ($_POST['Start_City'] != "") && isset($_POST['Arrival_City']) && ($_POST['Arrival_City'] != "") && isset($_POST['Flight_date']) && ($_POST['Flight_date'] != "")) {
                 $Start_City = $_POST['Start_City'];
                 $Arrival_City = $_POST['Arrival_City'];
+                $Flight_date = $_POST['Flight_date'];
+                $formattedDate = date("d/m/Y", strtotime($Flight_date));
             } else {
-                $Start_City = "";
-                $Arrival_City = "";
+                $Start_City = "Default";
+                $Arrival_City = "Default";
+                $Flight_date = "";
             }
-            $search_flight = search_flight($Start_City, $Arrival_City);
+            $search_flight = search_flight($Start_City, $Arrival_City, $Flight_date);
             include "View/flight.php";
             break;
-        case 'book':
+        case 'book_flight':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];
-                $list_flight = loadAll_flight();
+                $list_flOne = loadOne_flight();
                 $update_type_ticket = loadOne_type_ticket($ID);
             }
-            include "View/info_flight.php";
+            include "view/info_flight.php";
             break;
         case 'abate':
             include "view/abate.php";

@@ -475,6 +475,22 @@
         cursor: pointer;
     }
 
+    ul.dtc-box-sort li .hang {
+        margin-left: -50px;
+    }
+
+    ul.dtc-box-sort li .tm {
+        margin-left: -30px;
+    }
+
+    ul.dtc-box-sort li .fullh {
+        margin-left: -25px;
+    }
+
+    ul.dtc-box-sort li .gh {
+        margin-left: -15px;
+    }
+
     ul.dtc-box-sort li:last-child {
         background: url(https://plugin.datacom.vn/Resources/images/Icon/chart.png) no-repeat right center;
         background-size: 20px;
@@ -484,7 +500,7 @@
 
     ul.dtc-box-sort span {
         color: #080808;
-        font-size: 12px !important;
+        font-size: 13px !important;
         font-weight: 400 !important;
     }
 
@@ -905,20 +921,29 @@
                     <div class="dtc-circle">3</div> <span>Hoàn tất</span>
                 </li>
             </ul>
-            <h4><?= $Start_City ?> <strong>➥</strong> <?= $Arrival_City ?> </h4>
+            <!-- <i class="fa-solid fa-plane-departure fa-beat" style="color:red"></i> -->
+            <h4 style="color:red"><?= $Start_City ?> <strong style="color:#000">➥</strong> <?= $Arrival_City ?> </h4>
+            <?php
+            if ($Flight_date != "") {
+                echo "<strong>$formattedDate</strong>";
+            }
+            ?>
+            <h4></h4>
         </div>
         <div class="col-8">
             <ul class="dtc-box-sort">
-                <li sort-value="airline"><span class="">Hãng</span></li>
-                <li sort-value="timeup"><span class="">Giờ bay</span></li>
-                <li sort-value="totaltime"><span class="">Tổng giờ</span></li>
-                <li sort-value="timedown"><span class="">Giờ hạ</span></li>
-                <li sort-value="price"><span class=" ">Giá</span></li>
+                <li sort-value="airline"><span class="hang">Hãng</span></li>
+                <li sort-value="timeup"><span class="tm">Giờ bay</span></li>
+                <li sort-value="totaltime"><span class="fullh">Tổng giờ</span></li>
+                <li sort-value="timedown"><span class="gh">Giờ hạ</span></li>
+                <li sort-value="price"><span class="pr">Giá</span></li>
                 <li></li>
             </ul>
             <?php
             foreach ($search_flight as $flight) {
                 extract($flight);
+                $Departure_Times = date("H:i", strtotime($Departure_Time));
+                $Arrival_Times = date("H:i", strtotime($Arrival_Time));
                 echo '
                 <div class="dtc-flight-main">
                 <div class="dtc-flight-item">
@@ -928,7 +953,7 @@
                         </li>
                         <li>
                             <div class="dtc-flight-city">' . $Start_City . '</div>
-                            <div class="dtc-flight-time">' . $Departure_Time . '</div>
+                            <div class="dtc-flight-time">' . $Departure_Times . '</div>
                         </li>
                         <li>
                             <div class="dtc-flight-numb dtc-color-text"> <i class="fa fa-plane"></i>' . $Flight_Number . '</div>
@@ -938,10 +963,13 @@
                         </li>
                         <li>
                             <div class="dtc-flight-city">' . $Arrival_City . '</div>
-                            <div class="dtc-flight-time">' . $Arrival_Time . '</div>
+                            <div class="dtc-flight-time">' . $Arrival_Times . '</div>
                         </li>
                         <li>
-                            <div class="dtc-flight-price">' . $Price . '<span>VND</span><br></div> <button type="button" class="dtc-color-button">Chọn</button>
+                            <div class="dtc-flight-price">' . $Price . '.000<span>VND</span><br></div>
+                            <a href="index.php?action=book_flight&id=' . $Flight_ID . '">
+                            <button type="button" class="dtc-color-button">Chọn</button>
+                            </a>
                         </li>
                     </ul>
                     <ul class="dtc-flight-info-mobile">
@@ -1000,7 +1028,7 @@
         <div class="col-4">
             <div class="container">
                 <h3 class="mb-4">Tìm Chuyến Bay</h3>
-                <form>
+                <form action="index.php?action=search_flight" method="post">
                     <div class="form-row">
                         <div class="form-group form-check col-md-3">
                             <input type="radio" class="form-check-input" id="one-way" name="rager" checked>
@@ -1014,17 +1042,17 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="departure"><i class="fa-solid fa-plane-departure fa-beat"></i> Điểm Xuất Phát</label>
-                            <input type="text" class="form-control" id="departure" placeholder="Điểm xuất phát">
+                            <input type="text" class="form-control" id="departure" name="Start_City" placeholder="Điểm xuất phát" value="<?= $Start_City ?>">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="destination"><i class="fa-solid fa-plane-arrival fa-beat"></i> Điểm Đến</label>
-                            <input type="text" class="form-control" id="destination" placeholder="Điểm đến">
+                            <input type="text" class="form-control" id="destination" name="Arrival_City" placeholder="Điểm đến" value="<?= $Arrival_City ?>">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="departure-date"><i class="fa-solid fa-person-walking-luggage fa-beat"></i> Ngày Xuất Phát</label>
-                            <input type="date" class="form-control" id="departure-date">
+                            <input type="date" class="form-control" id="departure-date" name="Flight_date" value="<?= $Flight_date ?>">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="return-date"><i class="fa-solid fa-person-walking-luggage fa-beat"></i> Ngày Trở Về</label>
@@ -1043,7 +1071,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Tìm Chuyến Bay</button>
+                            <button type="submit" class="btn btn-primary" name="search_flight">Tìm Chuyến Bay</button>
                         </div>
                     </div>
                 </form>

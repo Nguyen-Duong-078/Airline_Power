@@ -38,13 +38,8 @@ section {
     top: 0;
     width: 100%;
     background: rgb(0, 28, 64);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 15px;
-    padding-left: 15px;
-    height: 60px;
+    height: 53px;
+    z-index: 10;
 }
 
 .app-sidebar__toggle {
@@ -61,49 +56,175 @@ section {
     border-radius: .357rem;
 }
 
-.app-sidebar__toggle:before {
+.app-nav .app-sidebar__toggle:before {
     content: "\f009";
     font-size: 15px;
 }
 
 .app-nav {
     display: flex;
-    justify-content: center;
-    text-align: right;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    gap: 10px;
 }
 
-.app-nav h3 {
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    margin-left: 210px;
-}
-
-.app-nav__item {
-    display: block;
+.dash {
     position: absolute;
-    right: 0;
-    line-height: 0px;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 10px;
-    background-color: yellow;
-    padding: 10px;
-    border-radius: 15px;
+    left: 18%;
 }
 
-.app-nav__item:hover {
-    background-color: #00ff44;
+.dash h3 {
+    color: rgb(255, 255, 255);
 }
 
-.rows a {
-    text-decoration: none;
+.app-img img {
+    border-radius: 50px;
+    margin-top: 4.5px;
 }
 
-.rows {
+.noti {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.noti i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+    margin-top: 1px;
+}
+
+.noti span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50px;
+    font-size: 13px;
+    font-family: serif;
+    top: -8px;
+    right: -5px;
+}
+
+.setting {
+    margin-right: 14px;
+    margin-top: 3px;
+}
+
+.setting i {
+    font-size: 25px;
+}
+
+.rotating {
+    /* Thiết lập xoay mỗi 2 giây */
+    animation: rotate 2s linear infinite, changeColor 7s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Style cho nút mở dropdown */
+
+.dropdown-button {
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: #f9f9f9;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: times, "Times New Roman";
+    height: 53px;
+}
+
+
+/* Style cho các tùy chọn trong dropdown */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-left: -30px;
+}
+
+.dropdown-content i {
+    padding: 1px;
+    margin-right: 4px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    color: red;
+}
+
+
+/* Hiển thị dropdown khi hover */
+
+.dropdown:hover .dropdown-content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+    16.666% {
+        color: orange;
+    }
+    33.333% {
+        color: yellow;
+    }
+    50% {
+        color: darkturquoise;
+    }
+    66.666% {
+        color: chartreuse;
+    }
+    83.333% {
+        color: palegreen;
+    }
+    100% {
+        color: red;
+    }
 }
 
 .app-sidebar {
@@ -126,11 +247,18 @@ section {
     color: white;
     text-align: center;
     padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgb(0, 28, 64);
+    width: 234px;
+    z-index: 9999;
 }
 
 .app-menu {
     margin-bottom: 0;
     padding-bottom: 40px;
+    margin-top: 143px;
 }
 
 .app-menu__item {

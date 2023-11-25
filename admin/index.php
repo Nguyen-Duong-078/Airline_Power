@@ -4,7 +4,7 @@ session_start();
 function checkRole()
 {
     // Kiểm tra xem người dùng có quyền admin không
-    if ($_SESSION['User'] != 'Admin') {
+    if ($_SESSION['role'] != "1") {
         // Nếu không phải admin, chuyển hướng người dùng đến trang không có quyền
         header("Location: login.php");
         exit();

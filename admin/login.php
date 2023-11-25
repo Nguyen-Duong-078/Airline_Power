@@ -39,28 +39,10 @@
              text-align: center;
              margin-bottom: 10px;
          }
-
-         .loading {
-             position: absolute;
-             z-index: 99999;
-             width: 100%;
-             height: 100%;
-             display: none;
-             align-items: center;
-             justify-content: center;
-             background: rgba(0, 0, 0, 0.479);
-         }
-
-         .loading img {
-             width: 7rem;
-         }
      </style>
  </head>
 
  <body>
-     <div class="loading" id="loading">
-         <img src="../image/Spinner-1s-200px.gif" alt="loading">
-     </div>
      <div class="limiter">
          <div class="container-login100">
              <div class="wrap-login100">
@@ -106,7 +88,7 @@
                          <!--=====LINK TÌM MẬT KHẨU======-->
 
                          <div class="text-right p-t-12">
-                             <a class="txt2" href="forgot.php">
+                             <a class="txt2" href="#">
                                  Bạn quên mật khẩu?
                              </a>
                          </div>
@@ -159,6 +141,39 @@
      </script>
      <script src="../javascript/login.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+     <!-- <script>
+             window.onload = function() {
+                 var notification = document.getElementById("auto-notification");
+                 notification.style.display = "block"; // Hiển thị thông báo
+
+                 setTimeout(function() {
+                     notification.style.right = "10px"; // Hiển thị thông báo bằng cách đặt right về 10px
+                 }, 100); // Sau 100 milliseconds
+                 setTimeout(function() {
+                     notification.style.display = "none"; // Ẩn thông báo sau một khoảng thời gian (ví dụ: 5 giây)
+                 }, 4000); // 5 giây (5000 milliseconds)
+             }
+         </script> -->
+     <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             // Hiển thị thông báo SweetAlert2 khi trang web được tải
+             const Toast = Swal.mixin({
+                 toast: true,
+                 position: "top-end",
+                 showConfirmButton: false,
+                 timer: 3000,
+                 timerProgressBar: true,
+                 didOpen: (toast) => {
+                     toast.onmouseenter = Swal.stopTimer;
+                     toast.onmouseleave = Swal.resumeTimer;
+                 }
+             });
+             Toast.fire({
+                 icon: "success",
+                 title: "𝑳𝒐𝒈 𝒊𝒏 𝒕𝒐 𝒕𝒉𝒆 𝒔𝒚𝒔𝒕𝒆𝒎 𝑨𝒅𝒎𝒊𝒏"
+             });
+         });
+     </script>
  </body>
 
  </html>

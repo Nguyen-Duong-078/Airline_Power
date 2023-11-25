@@ -28,20 +28,21 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         // Kiểm tra mật khẩu
         if ($password === $row['Password']) {
             $_SESSION['User'] = $row['User'];
+            $_SESSION['role'] = $row['role'];
             $response = [
                 'success' => true,
                 'message' => 'Đăng nhập thành công'
             ];
-            if ($row['role'] != $role) {
-                $response = [
-                    'success' => false,
-                    'message' => 'Tài khoản không có quyền truy cập'
-                ];
-            }
         } else {
             $response = [
                 'success' => false,
                 'message' => 'Sai mật khẩu'
+            ];
+        }
+        if ($row['role'] != $role) {
+            $response = [
+                'success' => false,
+                'message' => 'Tài khoản không có quyền truy cập'
             ];
         }
     } else {

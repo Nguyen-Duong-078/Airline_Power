@@ -1,9 +1,31 @@
 <?php
 session_start();
+<<<<<<< Updated upstream
 include "model/pdo.php";
 include "model/Account.php";
 include "View/header.php";
 
+=======
+include_once "model/pdo.php";
+include_once "model/Account.php";
+include "model/flight.php";
+include "model/type_ticket.php";
+include "model/voucher.php";
+include "model/search.php";
+include "global.php";
+include "model/Charging.php";
+include "model/blog.php";
+include "model/Evaluate.php";
+include "model/billtest.php";
+// include "model/process.php";
+include "View/header.php";
+
+$listvoucher = loadall_voucher();
+$list_type_ticket = loadAll_type_ticket();
+$list_blog = loadAll_blog();
+$loadone_Bill = loadone_bill();
+
+>>>>>>> Stashed changes
 if ((isset($_GET['action'])) && $_GET['action'] != "") {
     $act = $_GET['action'];
     switch ($act) {

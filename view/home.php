@@ -74,7 +74,7 @@
                              <div class="book-form-icon">
                                  <i class="fa-solid fa-calendar-days"></i>
                              </div>
-                             <input class="book-select form--control" name="Flight_date" type="date" style="color:#FFF" required>
+                             <input id="datepicker" class="book-select form--control" name="Flight_date" type="date" style="color:#FFF" required onchange="validateDate()">
                          </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">

@@ -81,6 +81,12 @@
             </li>
             <li>
                 <a class="app-menu__item" href="index.php?act=seat">
+                    <i class='app-menu__icon bx bx bxl-xing'></i>
+                    <span class="app-menu__label">Ghế Ngồi</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=book_flight">
                     <i class='app-menu__icon bx bx-cloud-upload'></i>
                     <span class="app-menu__label">Đặt Chỗ</span>
                 </a>

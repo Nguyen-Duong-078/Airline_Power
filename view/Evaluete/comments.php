@@ -120,7 +120,7 @@ $list_comment = loadAll_comment($idpro);
         <div class="footer_comments">
             <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
                 <input type="hidden" name="idpro" value="<?= $idpro ?>">
-                <!-- <input type="hidden" name="idpro" value="<?= $ID_User ?>"> -->
+                <input type="hidden" name="User_ID" value="<?= $ID_user ?>">
                 <div class="titles">
                     <input name="msg" type="text" placeholder="Viết bình luận">
                     <input name="guibl" type="submit" value="Gửi">
@@ -131,7 +131,8 @@ $list_comment = loadAll_comment($idpro);
         if (isset($_POST['guibl']) && ($_POST['guibl'])) {
             $noidung = $_POST['msg'];
             $idpro = $_POST['idpro'];
-            $Evaluate_Date = date('h:i:sa d/m/Y');
+            $ID_User = $_POST['User_ID'];
+            $Evaluate_Date = date('H:i d/m/Y');
             inser_comment($noidung, $ID_User, $idpro, $Evaluate_Date);
             header("location: " . $_SERVER['HTTP_REFERER']);
         }

@@ -27,6 +27,8 @@ include "../model/voucher.php";
 include "../model/Account.php";
 include "../model/blog.php";
 include "../model/Evaluate.php";
+include "../model/seats.php";
+include "../model/book_flight.php";
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -45,10 +47,12 @@ if (isset($_GET['act'])) {
                 $Passenger = $_POST['Passenger'];
                 $Voucher = $_POST['Voucher'];
                 $Flight_time = $_POST['time_flight'];
-                insert_flight($Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time);
+                $Ticket = $_POST['Ticket'];
+                insert_flight($Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time, $Ticket);
                 $thongbao = "Thêm Thành Công";
             }
             $listvoucher = loadall_voucher();
+            $list_type_ticket = loadAll_type_ticket();
             include "Flight/add.php";
             break;
         case 'list_flight':
@@ -286,7 +290,7 @@ if (isset($_GET['act'])) {
             break;
         case 'Evaluate':
             $list_evaluate =  loadAll_comments(0);
-            include "../Admin/Evaluate/list.php";
+            include "Evaluate/list.php";
             break;
         case 'delete_evaluate':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
@@ -294,7 +298,24 @@ if (isset($_GET['act'])) {
                 deleta_comment($ID);
             }
             $list_evaluate =  loadAll_comments(0);
-            include "../Admin/Evaluate/list.php";
+            include "Evaluate/list.php";
+            break;
+        case "seat":
+            if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+                $Seat_Number = $_POST['Seat_Number'];
+                $Status = $_POST['status'];
+                insert_seats($Seat_Number, $Status);
+                $thongbao = "Thêm Thành Công";
+            }
+            include "Seats/add.php";
+            break;
+        case "list_seats":
+            $list_seats = loadAll_seats();
+            include "Seats/list.php";
+            break;
+        case "book_flight":
+            $listbook = loadAll_book();
+            include "Book/list.php";
             break;
         default:
             include "home.php";

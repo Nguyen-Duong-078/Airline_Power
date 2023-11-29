@@ -6,126 +6,30 @@
         <div class="row justify-content-center mb-30-none">
             <div class="col-xl-8 col-lg-8 mb-30">
                 <div class="row justify-content-center mb-30-none">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
+                    <?php
+                    foreach ($list_blog as $blog) {
+                        extract($blog);
+                        $images =  $image_path . $Image;
+                        echo '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
                         <div class="blog-item">
                             <div class="blog-thumb">
-                                <img src="assets/images/blog/blog-1.png" alt="blog">
+                                <img src="' . $images . '" alt="blog">
                             </div>
                             <div class="blog-content">
                                 <div class="blog-post-meta">
-                                    <span class="date">20 March 2022</span>
+                                    <span class="date">' . $Date . '</span>
                                     <span class="comment">3 Comment</span>
                                 </div>
-                                <h3 class="title"><a href="blog-details.html">Charter flight of the Death
-                                        Penalty in America</a></h3>
-                                <p>With a vast array of popular private planes to choose from, travelling by
-                                    private jet charter is the most efficient</p>
+                                <h3 class="title"><a href="blog-details.html">' . $Blog_name . '</a></h3>
+                                <p>' . $Blog_content . ' </p>
                                 <div class="blog-btn">
-                                    <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
+                                    <a href="index.php?action=info_Blog&id=' . $Blog_ID . '">Đọc Thêm <i class="icon-Group-2361 ml-2"></i></a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <div class="blog-item">
-                            <div class="blog-thumb">
-                                <img src="assets/images/blog/blog-2.png" alt="blog">
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-post-meta">
-                                    <span class="date">23 February 2022</span>
-                                    <span class="comment">4 Comment</span>
-                                </div>
-                                <h3 class="title"><a href="blog-details.html">Our technology consistently
-                                        delivers</a></h3>
-                                <p>Private jet hire for leisure purposes allows yourself, your family and
-                                    friends to travel in luxury, comfort and privacy. </p>
-                                <div class="blog-btn">
-                                    <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <div class="blog-item">
-                            <div class="blog-thumb">
-                                <img src="assets/images/blog/blog-3.png" alt="blog">
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-post-meta">
-                                    <span class="date">18 June 2022</span>
-                                    <span class="comment">6 Comment</span>
-                                </div>
-                                <h3 class="title"><a href="blog-details.html">Search the world with ease and
-                                        transparency</a></h3>
-                                <p>It’s fast gaining in popularity as leisure time becomes increasingly precious
-                                    and we value the experience of the journey</p>
-                                <div class="blog-btn">
-                                    <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <div class="blog-item">
-                            <div class="blog-thumb">
-                                <img src="assets/images/blog/blog-1.png" alt="blog">
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-post-meta">
-                                    <span class="date">20 March 2022</span>
-                                    <span class="comment">1 Comment</span>
-                                </div>
-                                <h3 class="title"><a href="blog-details.html">Charter an entire jet, or offer
-                                        the seats</a></h3>
-                                <p>Whether it’s a short trip for a weekend skiing or a two-week holiday in the
-                                    Caribbean, we’ll help you choose</p>
-                                <div class="blog-btn">
-                                    <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <div class="blog-item">
-                            <div class="blog-thumb">
-                                <img src="assets/images/blog/blog-1.png" alt="blog">
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-post-meta">
-                                    <span class="date">10 March 2022</span>
-                                    <span class="comment">4 Comment</span>
-                                </div>
-                                <h3 class="title"><a href="blog-details.html">XO is not simply a private jet
-                                        service.</a></h3>
-                                <p>Your loved ones to your destination in comfort and with minimal fuss. Access
-                                    to private terminals also helps you</p>
-                                <div class="blog-btn">
-                                    <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <div class="blog-item">
-                            <div class="blog-thumb">
-                                <img src="assets/images/blog/blog-2.png" alt="blog">
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-post-meta">
-                                    <span class="date">16 March 2022</span>
-                                    <span class="comment">2 Comment</span>
-                                </div>
-                                <h3 class="title"><a href="blog-details.html">As well as getting to fly to many
-                                        different</a></h3>
-                                <p>Bstle of busy airports and queues through security, well-rested and ready to
-                                    make the most of your next adventure.</p>
-                                <div class="blog-btn">
-                                    <a href="blog-details.html">Read More <i class="icon-Group-2361 ml-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>';
+                    }
+                    ?>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 mb-30">
@@ -140,48 +44,25 @@
                         </div>
                     </div>
                     <div class="widget-box mb-30">
-                        <h4 class="widget-title">Recent Posts</h4>
+                        <h4 class="widget-title">Bài viết gần đây</h4>
                         <div class="popular-widget-box">
-                            <div class="single-popular-item d-flex flex-wrap align-items-center">
+                            <?php
+                            foreach ($list_blog as $blog) {
+                                extract($blog);
+                                $images =  $image_path . $Image;
+                                echo '<div class="single-popular-item d-flex flex-wrap align-items-center">
                                 <div class="popular-item-thumb">
-                                    <img src="assets/images/blog/small-blog-1.png" alt="blog">
+                                    <img src="' . $images . '" alt="blog">
                                 </div>
                                 <div class="popular-item-content">
-                                    <span class="blog-date">Aug 23,2021</span>
-                                    <h5 class="title"><a href="blog-details.html">Charter flight of the Death
-                                            Penalty in America</a></h5>
+                                    <span class="blog-date">' . $Date . '</span>
+                                    <h5 class="title"><a href="index.php?action=info_Blog&id=' . $Blog_ID . '" </a>' . $Blog_name . '
+                                    </h5>
                                 </div>
-                            </div>
-                            <div class="single-popular-item d-flex flex-wrap align-items-center">
-                                <div class="popular-item-thumb">
-                                    <img src="assets/images/blog/small-blog-2.png" alt="blog">
-                                </div>
-                                <div class="popular-item-content">
-                                    <span class="blog-date">Aug 23,2021</span>
-                                    <h5 class="title"><a href="blog-details.html">Our technology consistently
-                                            delivers</a></h5>
-                                </div>
-                            </div>
-                            <div class="single-popular-item d-flex flex-wrap align-items-center">
-                                <div class="popular-item-thumb">
-                                    <img src="assets/images/blog/small-blog-3.png" alt="blog">
-                                </div>
-                                <div class="popular-item-content">
-                                    <span class="blog-date">Aug 23,2021</span>
-                                    <h5 class="title"><a href="blog-details.html">Search the world with ease and
-                                            transparency</a></h5>
-                                </div>
-                            </div>
-                            <div class="single-popular-item d-flex flex-wrap align-items-center">
-                                <div class="popular-item-thumb">
-                                    <img src="assets/images/blog/small-blog-4.png" alt="blog">
-                                </div>
-                                <div class="popular-item-content">
-                                    <span class="blog-date">Aug 23,2021</span>
-                                    <h5 class="title"><a href="blog-details.html">Charter an entire jet, or
-                                            offer the seats</a></h5>
-                                </div>
-                            </div>
+                            </div>';
+                            }
+                            ?>
+
                         </div>
                     </div>
                     <div class="widget-box mb-30">

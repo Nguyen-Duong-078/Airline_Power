@@ -1811,15 +1811,13 @@ option {
 
 .nice-select .list {
     background-color: white;
-    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
     box-sizing: border-box;
     opacity: 0;
     overflow: hidden;
     padding: 0;
     pointer-events: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    left: 270px;
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
     -webkit-transform: scale(0.75) translateY(-21px);
@@ -1827,8 +1825,6 @@ option {
     -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
     transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
     z-index: 9;
-    min-height: 50px;
-    max-height: 200px;
 }
 
 .nice-select::after {
@@ -1848,10 +1844,6 @@ option {
     -webkit-transform: scale(1) translateY(0);
     transform: scale(1) translateY(0);
     width: unset;
-    min-height: 50px;
-    max-height: 200px;
-    overflow-y: scroll;
-    width: 100%;
 }
 
 .nice-select .option:hover,
@@ -1899,7 +1891,9 @@ option {
 
 .nice-select .current {
     display: block;
-    color: white;
+    color: rgb(1, 1, 1);
+    cursor: pointer;
+    margin-left: -10px;
 }
 
 .input-group {
@@ -10273,8 +10267,9 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 }
 
 .single-popular-item .popular-item-thumb img {
-    width: 100%;
-    height: 100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
     object-fit: cover;
 }
 

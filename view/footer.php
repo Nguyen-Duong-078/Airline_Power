@@ -149,6 +149,21 @@
 <script src="assets/js/jquery.nice-select.js"></script>
 <!-- main -->
 <script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+        function validateDate() {
+                var selectedDate = new Date(document.getElementById("datepicker").value);
+                var currentDate = new Date();
+
+                // So sánh ngày được chọn với ngày hiện tại
+                if (selectedDate < currentDate) {
+                        alert("Vui lòng chọn ngày trong tương lai.");
+                        // Đặt giá trị của ô nhập ngày thành ngày hiện tại
+                        var formattedDate = currentDate.toISOString().split('T')[0];
+                        document.getElementById("datepicker").value = formattedDate;
+                }
+        }
+</script>
 
 </body>
 

@@ -10,9 +10,10 @@ include "global.php";
 include "model/Charging.php";
 include "model/blog.php";
 include "model/Evaluate.php";
-// include "model/process.php";
+include "model/seats.php";
+include "model/book_flight.php";
 include "View/header.php";
-
+include "view/Seats/seats.php";
 $listvoucher = loadall_voucher();
 $list_type_ticket = loadAll_type_ticket();
 $list_blog = loadAll_blog();
@@ -69,26 +70,17 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
                 $Flight_date = $_POST['Flight_date'];
                 $formattedDate = date("d/m/Y", strtotime($Flight_date));
             } else {
-                $Start_City = "Default";
-                $Arrival_City = "Default";
+                $Start_City = "";
+                $Arrival_City = "";
                 $Flight_date = "";
             }
             $search_flight = search_flight($Start_City, $Arrival_City, $Flight_date);
             include "View/flight.php";
             break;
         case 'book_flight':
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                $ID = $_GET['id'];
-                $list_flOne = loadOne_flight();
-                $update_type_ticket = loadOne_type_ticket($ID);
-            }
+            $list_flOne = loadOne_flight_book();
+            $list_type_ticket = loadAll_type_ticket();
             include "view/info_flight.php";
-            break;
-        case 'abate':
-            include "view/abate.php";
-            break;
-        case 'evaluate':
-            include "View/Evaluate.php";
             break;
         case 'info_Blog':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
@@ -96,6 +88,87 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
                 $loadOne_blog = loadOne_blog($ID);
             }
             include "View/Evaluate.php";
+            break;
+        case "payment":
+            if (isset($_GET['Flight']) && ($_GET['Flight'] > 0)) {
+                $Flight = $_GET['Flight'];
+                $list_flOne = loadOne_flight_book();
+            }
+
+            include "View/payment_method.php";
+            break;
+        case 'pay_code':
+            if (isset($_POST['redirect']) && ($_POST['redirect'])) {
+                $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+                $vnp_Returnurl = "http://localhost/Project_One/view/Vnpay.php";
+                $vnp_TmnCode = "GFPO8CQK"; //Mã website tại VNPAY 
+                $vnp_HashSecret = "EYTHUCYNMACUDIZAFUTVOHYUFMOQWIPD"; //Chuỗi bí mật
+                $Price = $_POST['price'];
+                $vnp_TxnRef = rand(00, 9999); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
+                $vnp_OrderInfo = 'Thanh Toán Vé Máy Bay';
+                $vnp_OrderType = 'billpayment';
+                $vnp_Amount = $Price * 100;
+                $vnp_Locale = 'vn';
+                $vnp_BankCode = 'NCB';
+                $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
+                $inputData = array(
+                    "vnp_Version" => "2.1.0",
+                    "vnp_TmnCode" => $vnp_TmnCode,
+                    "vnp_Amount" => $vnp_Amount,
+                    "vnp_Command" => "pay",
+                    "vnp_CreateDate" => date('YmdHis'),
+                    "vnp_CurrCode" => "VND",
+                    "vnp_IpAddr" => $vnp_IpAddr,
+                    "vnp_Locale" => $vnp_Locale,
+                    "vnp_OrderInfo" => $vnp_OrderInfo,
+                    "vnp_OrderType" => $vnp_OrderType,
+                    "vnp_ReturnUrl" => $vnp_Returnurl,
+                    "vnp_TxnRef" => $vnp_TxnRef
+                );
+
+                if (isset($vnp_BankCode) && $vnp_BankCode != "") {
+                    $inputData['vnp_BankCode'] = $vnp_BankCode;
+                }
+                ksort($inputData);
+                $query = "";
+                $i = 0;
+                $hashdata = "";
+                foreach ($inputData as $key => $value) {
+                    if ($i == 1) {
+                        $hashdata .= '&' . urlencode($key) . "=" . urlencode($value);
+                    } else {
+                        $hashdata .= urlencode($key) . "=" . urlencode($value);
+                        $i = 1;
+                    }
+                    $query .= urlencode($key) . "=" . urlencode($value) . '&';
+                }
+
+                $vnp_Url = $vnp_Url . "?" . $query;
+                if (isset($vnp_HashSecret)) {
+                    $vnpSecureHash =   hash_hmac('sha512', $hashdata, $vnp_HashSecret); //  
+                    $vnp_Url .= 'vnp_SecureHash=' . $vnpSecureHash;
+                }
+                $returnData = array(
+                    'code' => '00', 'message' => 'success', 'data' => $vnp_Url
+                );
+                if (isset($_POST['redirect'])) {
+                    header('Location: ' . $vnp_Url);
+                    die();
+                } else {
+                    echo json_encode($returnData);
+                }
+            }
+            // include "View/Vnpay.php";
+            break;
+        case 'booking_history':
+            include "view/account/user.php";
+            break;
+        case "user_book":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $User_ID = $_GET['id'];
+                $loadAll_book_user = loadAll_book_user($User_ID);
+            }
+            include "view/account/booking_history.php";
             break;
         default:
             include "View/home.php";

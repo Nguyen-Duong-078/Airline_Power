@@ -15,6 +15,6 @@ function loadAll_book()
 function loadAll_book_user($User_ID)
 {
     $sql = "SELECT * FROM bookings WHERE User_ID = '$User_ID'";
-    $loadAll_book_user = pdo_query_one($sql);
+    $loadAll_book_user = pdo_query($sql);
     return $loadAll_book_user;
 }

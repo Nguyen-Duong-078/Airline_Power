@@ -106,7 +106,7 @@
                 <?php } else ?>
                 <div class="child">
                     <i class="fa-solid fa-cart-arrow-down"></i>
-                    <li><a href="index.php?action=user_book&id=<?= $User_ID ?>">Lịch sử mua hàng</a></li>
+                    <li><a href="index.php?action=user_book&id=<?= $User_ID ?>">Lịch sử đặt vé</a></li>
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-user-shield"></i>
@@ -115,10 +115,6 @@
                 <div class="child">
                     <i class="fa-solid fa-recycle"></i>
                     <li> <a href="index.php?act=update_user">Cập Nhật Thông Tin</a></li>
-                </div>
-                <div class="child">
-                    <i class="fa-solid fa-recycle"></i>
-                    <li> <a href="index.php?act=forgot">Quên mật khẩu</a></li>
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-right-from-bracket"></i>

@@ -7,9 +7,7 @@
 
 <!-- End Scroll-To-Top-->
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Footer
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--Start Footer-->
 <footer class="footer-section section--bg pt-120">
         <div class="footer-element" data-aos="fade-left" data-aos-duration="1200">
                 <img src="assets/images/element/element-1.png" alt="element">
@@ -121,13 +119,10 @@
                 </div>
         </div>
 </footer>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Footer
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--End Footer-->
+
 </div>
-
-
-
 
 <!-- jquery -->
 <script src="assets/js/jquery.js"></script>
@@ -151,23 +146,44 @@
 <script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
-        function validateDate() {
-                var selectedDate = new Date(document.getElementById("datepicker").value);
+        document.getElementById('datePicker').addEventListener('change', function() {
+                var selectedDate = new Date(this.value);
+                var currentDate = new Date();
+                // So sánh ngày đã chọn với ngày hiện tại
+                if (selectedDate < currentDate) {
+                        // Hiển thị thông báo SweetAlert2
+                        Swal.fire({
+                                icon: 'error',
+                                title: 'Vui Lòng Chọn Lại',
+                                text: 'Không thể chọn ngày trong quá khứ.',
+                                confirmButtonColor: '#3085d6',
+                                confirmButtonText: 'OK'
+                        });
+                        // Reset giá trị của input date
+                        this.value = '';
+                }
+        });
+</script>
+<script>
+        document.getElementById('datePicker1').addEventListener('change', function() {
+                var selectedDate = new Date(this.value);
                 var currentDate = new Date();
 
-                // So sánh ngày được chọn với ngày hiện tại
+                // So sánh ngày đã chọn với ngày hiện tại
                 if (selectedDate < currentDate) {
-                        alert("Vui lòng chọn ngày trong tương lai.");
-                        // Đặt giá trị của ô nhập ngày thành ngày hiện tại
-                        var formattedDate = currentDate.toISOString().split('T')[0];
-                        document.getElementById("datepicker").value = formattedDate;
+                        // Hiển thị thông báo SweetAlert2
+                        Swal.fire({
+                                icon: 'error',
+                                title: 'Vui Lòng Chọn Lại',
+                                text: 'Không thể chọn ngày trong quá khứ.',
+                                confirmButtonColor: '#3085d6',
+                                confirmButtonText: 'OK'
+                        });
+                        // Reset giá trị của input date
+                        this.value = '';
                 }
-        }
+        });
 </script>
-
 </body>
-
-
-<!-- Mirrored from themeim.com/demo/flynext/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Nov 2023 10:04:21 GMT -->
 
 </html>

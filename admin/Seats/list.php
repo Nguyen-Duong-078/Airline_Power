@@ -21,8 +21,8 @@
                             echo '<tr>
                                     <td>' . $Seat_ID  . '</td>
                                     <td>' . $Seat_Number . '</td>
-                                    <td>' . $Status . '</td>
-                                    <td>' . $Users_ID . '</td>
+                                    <td>' . $status . '</td>
+                                    <td>' . $user_id . '</td>
                                     <td>
                                      <a href="' . $delete_flight . '"><input class="btn btn-primary btn-sm" type="button" value="Xóa"></a>                           
                                     </td>
@@ -34,7 +34,7 @@
                 <input class="btn btn-save" type="submit" value="Chọn Tất Cả"></input>
                 <input class="btn btn-cancel" type="reset" value="Bỏ Chọn Tất Cả">
                 <input class="btn btn-save" type="button" value="Xóa Các Mục Đã Chọn">
-                <a href="index.php?act=add_flight"><input class="btn btn-cancel" type="button" value="Nhập Thêm"></input></a>
+                <a href="index.php?act=seat"><input class="btn btn-cancel" type="button" value="Nhập Thêm"></input></a>
             </div>
         </div>
     </div>

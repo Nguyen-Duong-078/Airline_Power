@@ -117,7 +117,7 @@ if (is_array($loadAll_book_user)) {
 </style>
 <section style="padding:30px;">
     <div class="row">
-        <div class="col-4">
+        <div class="col-3">
             <div class="product_rights">
                 <div class="child">
                     <i class="fa-solid fa-house-chimney"></i>
@@ -133,7 +133,7 @@ if (is_array($loadAll_book_user)) {
                 <?php } else ?>
                 <div class="child">
                     <i class="fa-solid fa-cart-arrow-down"></i>
-                    <li><a href="index.php?action=user_book&id= <?= $User_ID ?>">Lịch sử mua hàng</a></li>
+                    <li><a href="index.php?action=user_book&id= <?= $User_ID ?>">Lịch sử đặt vé</a></li>
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-user-shield"></i>
@@ -144,47 +144,45 @@ if (is_array($loadAll_book_user)) {
                     <li> <a href="index.php?act=update_user">Cập Nhật Thông Tin</a></li>
                 </div>
                 <div class="child">
-                    <i class="fa-solid fa-recycle"></i>
-                    <li> <a href="index.php?act=forgot">Quên mật khẩu</a></li>
-                </div>
-                <div class="child">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <li><a href="index.php?act=logout">Thoát tài khoản</a></li>
                 </div>
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-9">
             <div class="product_rightst">
                 <main>
                     <table>
                         <thead>
                             <tr>
-                                <?php
-                                foreach ($loadAll_book_user as $user) {
-                                    extract($user);
-                                    echo "<th>Ngày đặt</th>
-                                         <th>Mã vé</th>
-                                         <th>Hành trình</th>
-                                        <th>Giá vé</th>";
-                                }
-                                ?>
-
+                                <th>User_ID</th>
+                                <th>CCCD</th>
+                                <th>birth</th>
+                                <th>Flight</th>
+                                <th>Loại Vé</th>
+                                <th>Ghế</th>
+                                <th>Date_Book</th>
+                                <th>Giá vé</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- Dữ liệu lịch sử đặt vé máy bay sẽ được hiển thị ở đây -->
-                            <tr>
-                                <td>01/01/2023</td>
-                                <td>ABC123</td>
-                                <td>Hà Nội - Hồ Chí Minh</td>
-                                <td>1,000,000 VND</td>
-                            </tr>
-                            <tr>
-                                <td>02/01/2023</td>
-                                <td>DEF456</td>
-                                <td>Đà Nẵng - Hải Phòng</td>
-                                <td>800,000 VND</td>
-                            </tr>
+
+                            <?php
+                            foreach ($loadAll_book_user as $user) {
+                                extract($user);
+                                echo " <tr>
+                                          <td>$User_ID</td>
+                                          <td>$CCCD</td>
+                                          <td>$birth</td>
+                                          <td>$Flight_ID</td>
+                                          <td>$Ticket</td>
+                                         <td>$Seat_Number</td>
+                                         <td>$Booking_Date</td>
+                                         <td>$Total_Price</td>
+                                   </tr> ";
+                            }
+                            ?>
                             <!-- Thêm các dòng khác tương tự nếu có nhiều lịch sử đặt vé -->
                         </tbody>
                     </table>

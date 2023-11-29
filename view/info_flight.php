@@ -220,7 +220,7 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                     <input class="dtc-btn-booking dtc-color-button" type="submit" name="book" value="Đặt Chỗ">
                                     <input type="hidden" name="User_ID" value="<?= $ID_user ?>">
                                     <input type="hidden" name="Flight_IDs" value="<?= $Flight_Number ?>">
-                                    <input type="hidden" name="Price" value="<?= $Price ?>">
+                                    <input type="hidden" name="Price" value="<?= $thue ?>">
                                     <input type="hidden" name="seats" value="<?= $seat ?>">
                                 </div>
                             </div>
@@ -285,6 +285,8 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                     <div class="dtc-base-content">
                         <div class="text-center" style="padding: 10px;">
                             <?php
+                            // Lấy danh sách các ghế đã chọn của người dùng hiện tại
+                            $bookedSeats = getBookedSeats($_SESSION['User_ID'], $conn);
                             if (!empty($bookedSeats)) {
                                 foreach ($bookedSeats as $seat) {
                                     echo "<strong>Ghế bạn đã chọn: $seat</strong>";

@@ -115,12 +115,12 @@
                     <span class="app-menu__label">chức Vụ</span>
                 </a>
             </li> -->
-            <li>
+            <!-- <li>
                 <a class="app-menu__item" href="index.php?act=add_charging">
                     <i class='app-menu__icon bx bx-dollar-circle'></i>
                     <span class="app-menu__label">Tiền phát sinh</span>
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a class="app-menu__item" href="index.php?act=blog">
                     <i class='app-menu__icon bx bxs-bookmark-alt-plus'></i>

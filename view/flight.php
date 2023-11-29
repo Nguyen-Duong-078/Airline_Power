@@ -1,4 +1,15 @@
 <link rel="stylesheet" href="style/search_flight.css">
+<?php
+if (!isset($_SESSION['username'])) {
+?>
+    <div id="checkLoginButton1"></div>
+<?php
+} else {
+?>
+    <div id="checkLoginButton"></div>
+<?php
+}
+?>
 <section class="account-section bg--gray" style="padding:30px;">
     <div class="row">
         <div class="col-8 text-center">
@@ -114,21 +125,6 @@
             }
             ?>
         </div>
-        <!-- <div class="col-4">
-            <div class="containers">
-                <h3 class="mb-4">Chọn Vé</h3>
-                <form action="#" method="post">
-                    <select class="form-select" aria-label="Default select example" name="Ticker">
-                        <?php
-                        foreach ($list_type_ticket as $ticket) {
-                            extract($ticket);
-                            echo '<option value="' . $Ticket_ID . '">' . $Ticket_name . '</option>';
-                        }
-                        ?>
-                    </select>
-                </form>
-            </div>
-        </div> -->
     </div>
     <script>
         // Bật/tắt trường nhập liệu Ngày Trở Về dựa vào trạng thái của hộp kiểm "Chuyến đi khứ hồi"
@@ -139,6 +135,26 @@
         // Bật/tắt trường nhập liệu Ngày Trở Về dựa vào trạng thái của hộp kiểm "Chuyến đi một chiều"
         document.getElementById('one-way').addEventListener('change', function() {
             document.getElementById('return-date').disabled = this.checked;
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var isUserLoggedIn = true;
+            var userId = "checkLoginButton";
+            var alertContainerId = "checkLoginButton";
+            var isLoggedIn = isUserLoggedIn ? userId : null;
+            var alertContainer = document.getElementById(alertContainerId);
+            if (!isLoggedIn || !alertContainer) {
+                // Hiển thị SweetAlert2 thông báo
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Bạn chưa đăng nhập',
+                    text: 'Vui lòng đăng nhập để tiếp tục!',
+                    confirmButtonText: 'OK',
+                }).then(function() {
+                    window.location.href = 'index.php?action=login';
+                });
+            }
         });
     </script>
 </section>

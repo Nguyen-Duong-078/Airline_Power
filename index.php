@@ -13,7 +13,6 @@ include "model/Evaluate.php";
 include "model/seats.php";
 include "model/book_flight.php";
 include "View/header.php";
-include "view/Seats/seats.php";
 $listvoucher = loadall_voucher();
 $list_type_ticket = loadAll_type_ticket();
 $list_blog = loadAll_blog();
@@ -94,7 +93,6 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
                 $Flight = $_GET['Flight'];
                 $list_flOne = loadOne_flight_book();
             }
-
             include "View/payment_method.php";
             break;
         case 'pay_code':

@@ -74,7 +74,7 @@
                              <div class="book-form-icon">
                                  <i class="fa-solid fa-calendar-days"></i>
                              </div>
-                             <input id="datepicker" class="book-select form--control" name="Flight_date" type="date" style="color:#FFF" required onchange="validateDate()">
+                             <input id="datePicker" class="book-select form--control" name="Flight_date" type="date" style="color:#FFF" required>
                          </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
@@ -349,16 +349,16 @@
                                          <div class="book-form-icon">
                                              <i class="fa-solid fa-calendar-days"></i>
                                          </div>
-                                         <input class="book-select form--control" name="Flight_date" type="date" style="color:#FFF" required>
+                                         <input id="datePicker1" class="book-select form--control" name="Flight_date" type="date" style="color:#FFF" required>
                                      </div>
                                  </div>
                                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
                                      <label>Hành Khách</label>
                                      <div class="book-quantity">
                                          <div class="book-plus-minus">
-                                             <div class="dec qtybutton">-</div>
+                                             <!-- <div class="dec qtybutton">-</div> -->
                                              <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
-                                             <div class="inc qtybutton">+</div>
+                                             <!-- <div class="inc qtybutton">+</div> -->
                                          </div>
                                      </div>
                                  </div>

@@ -8,7 +8,7 @@ function insert_user($Username, $Password, $Email, $FullName)
 
 function check_user($User, $Password)
 {
-    $sql = "SELECT * FROM users WHERE User='" . $User . "' AND Password='" . $Password . "' AND role = 1";
+    $sql = "SELECT * FROM users WHERE User='" . $User . "' AND Password='" . $Password . "' AND Status = 1";
     $User = pdo_query_one($sql);
     return $User;
 }

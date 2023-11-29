@@ -10,9 +10,6 @@
 </head>
 
 <body>
-
-    <!-- Nội dung trang web của bạn ở đây -->
-
     <!-- Include SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

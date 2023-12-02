@@ -25,14 +25,11 @@ include "../model/flight.php";
 include "../model/type_ticket.php";
 include "../model/voucher.php";
 include "../model/Account.php";
-<<<<<<< Updated upstream
-=======
 include "../model/blog.php";
 include "../model/Evaluate.php";
 include "../model/seats.php";
 include "../model/book_flight.php";
 include "../model/statistical.php";
->>>>>>> Stashed changes
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -269,6 +266,14 @@ if (isset($_GET['act'])) {
         case 'bieudo':
             $listthongke = thongke();
             include 'statistical/bieudo.php';
+            break;
+        case "statistical":
+            $listthongke = thongke();
+            include "statistical/thongke.php";
+            break;
+        case "bieudo":
+            $listthongke = thongke();
+            include "statistical/bieudo.php";
             break;
         default:
             include "home.php";

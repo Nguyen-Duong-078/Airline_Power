@@ -6,5 +6,4 @@
         $listthongke = pdo_query($sql);
         return $listthongke;
     }
-    
 ?>

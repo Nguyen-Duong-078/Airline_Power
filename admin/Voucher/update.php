@@ -14,7 +14,7 @@ if (is_file($hinhpath)) {
         <div class="col-md-12">
             <form action="index.php?act=update_voucher" method="post" enctype="multipart/form-data">
                 <div class="tile">
-                    <h3 class="tile-title">Cập nhật chuyến bay</h3>
+                    <h3 class="tile-title">Cập nhật Voucher</h3>
                     <div class="tile-body row">
                         <div class="form-group col-md-3">
                             <label class="control-label">Voucher_name</label>

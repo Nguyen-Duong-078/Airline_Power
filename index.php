@@ -77,8 +77,11 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             include "View/flight.php";
             break;
         case 'book_flight':
-            $list_flOne = loadOne_flight_book();
-            $list_type_ticket = loadAll_type_ticket();
+            if (isset($_GET['Flight'])) {
+                $Flight = $_GET['Flight'];
+                $list_flOne = loadOne_flight_book($Flight);
+                $list_type_ticket = loadAll_type_ticket();
+            }
             include "view/info_flight.php";
             break;
         case 'info_Blog':
@@ -91,7 +94,7 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
         case "payment":
             if (isset($_GET['Flight']) && ($_GET['Flight'] > 0)) {
                 $Flight = $_GET['Flight'];
-                $list_flOne = loadOne_flight_book();
+                $list_flOne = loadOne_flight_book($Flight);
             }
             include "View/payment_method.php";
             break;

@@ -59,7 +59,7 @@
     <div class="thank-you-container">
         <h2 class="thank-you-heading">Cảm ơn bạn đã tin tương Airline Power</h2>
         <p class="thank-you-message">Bạn Vui lòng ấn vào Lịch Sử Đặt Vé để xem vé của Bạn.</p>
-        <button class="back-to-home" onclick="window.location.href='booking_history.php'">Lịch Sử Đặt Vé</button>
+        <button class="back-to-home" onclick="window.location.href='../index.php?action=booking_history'">Lịch Sử Đặt Vé</button>
     </div>
 </body>
 

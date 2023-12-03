@@ -74,7 +74,7 @@ if (!isset($_SESSION['username'])) {
                         </li>
                         <li>
                             <div class="dtc-flight-price">' . $thue . '<span>VND</span><br></div>
-                            <a href="index.php?action=book_flight&Filght=' . $Flight_Number . '">
+                            <a href="index.php?action=book_flight&Flight=' . $Flight_ID . '">
                             <button type="button" class="dtc-color-button">Chọn</button>
                             </a>
                         </li>

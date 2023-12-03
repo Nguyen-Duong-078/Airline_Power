@@ -2,7 +2,7 @@
      <div class="row">
          <div class="col-md-12">
              <div class="tile">
-                 <h3 class="tile-title">Danh Voucher</h3>
+                 <h3 class="tile-title">Danh sách Voucher</h3>
                  <div class="tile-body">
                      <table class="table table-hover table-bordered" id="sampleTable">
                          <thead>

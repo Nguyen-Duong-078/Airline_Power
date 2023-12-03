@@ -1,8 +1,8 @@
 <?php
-function insert_flight($Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time, $Ticket)
+function insert_flight($Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time)
 {
-    $sql = "INSERT INTO flights (Flight_Number, Start_City, Arrival_City, Flight_date, Departure_Time, Arrival_Time, Price, Passenger, Voucher_ID, Flight_time, Ticket) 
-    VALUES ('$Flight_Number','$Start_City','$Arrival_City','$Flight_date','$Departure_Time','$Arrival_Time','$Price', '$Passenger', '$Voucher','$Flight_time', '$Ticket')";
+    $sql = "INSERT INTO flights (Flight_Number, Start_City, Arrival_City, Flight_date, Departure_Time, Arrival_Time, Price, Passenger, Voucher_ID, Flight_time) 
+    VALUES ('$Flight_Number','$Start_City','$Arrival_City','$Flight_date','$Departure_Time','$Arrival_Time','$Price', '$Passenger', '$Voucher','$Flight_time')";
     pdo_execute($sql);
 }
 
@@ -26,9 +26,9 @@ function loadOne_flight()
     return $update_flight;
 }
 
-function loadOne_flight_book()
+function loadOne_flight_book($Flight)
 {
-    $sql = "SELECT * FROM flights WHERE 1";
+    $sql = "SELECT * FROM flights WHERE Flight_ID=" . $Flight;
     $update_flight = pdo_query_one($sql);
     return $update_flight;
 }

@@ -11,21 +11,6 @@ if (is_array($update_type_ticket)) {
                     <h3 class="tile-title">Ticket</h3>
                     <div class="tile-body row">
                         <div class="form-group col-md-3">
-                            <label class="control-label">Flights_Tick</label>
-                            <select name="Flights_Tick" class="form-control_1">
-                                <?php
-                                foreach ($list_flight as $flight) {
-                                    extract($flight);
-                                    if ($Flights_Tick == $Flight_ID) {
-                                        echo  '<option value="' . $Flight_ID . '"selected>' . $Flight_Number . '</option>';
-                                    } else {
-                                        echo  '<option value="' . $Flight_ID . '">' . $Flight_Number . '</option>';
-                                    }
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3">
                             <label class="control-label">Ticket_name</label>
                             <input class="form-control" type="text" name="ticket_name" value="<?= $Ticket_name ?>">
                         </div>

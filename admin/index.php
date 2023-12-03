@@ -29,6 +29,7 @@ include "../model/blog.php";
 include "../model/Evaluate.php";
 include "../model/seats.php";
 include "../model/book_flight.php";
+include "../model/statistical.php";
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -47,8 +48,7 @@ if (isset($_GET['act'])) {
                 $Passenger = $_POST['Passenger'];
                 $Voucher = $_POST['Voucher'];
                 $Flight_time = $_POST['time_flight'];
-                $Ticket = $_POST['Ticket'];
-                insert_flight($Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time, $Ticket);
+                insert_flight($Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time);
                 $thongbao = "Thêm Thành Công";
             }
             $listvoucher = loadall_voucher();
@@ -316,6 +316,14 @@ if (isset($_GET['act'])) {
         case "book_flight":
             $listbook = loadAll_book();
             include "Book/list.php";
+            break;
+        case "statistical":
+            $listthongke = thongke();
+            include "statistical/thongke.php";
+            break;
+        case "chart":
+            $listthongke = thongke();
+            include "statistical/chart.php";
             break;
         default:
             include "home.php";

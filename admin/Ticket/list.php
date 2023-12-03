@@ -11,6 +11,7 @@
                                    <th>Ticket_name</th>
                                    <th>Status</th>
                                    <th>Ticket_number</th>
+                                   <th>Flights_Tick</th>
                                    <th>Chức Năng</th>
                                </tr>
                            </thead>
@@ -24,6 +25,7 @@
                                     <td>' . $Ticket_name . '</td>
                                     <td>' . $Status . '</td>
                                     <td>' . $Ticket_number . '</td>
+                                    <td>' . $Flights_Tick . '</td>
                                     <td>
                                     <a href="' . $sua_type_ticket . '"><input class="btn btn-primary btn-sm trash" type="button" value="Sửa"></a>
                                     <a href="' . $delete_type_ticket . '"><input class="btn btn-primary btn-sm" type="button" value="Xóa"></a>

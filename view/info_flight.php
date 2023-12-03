@@ -12,21 +12,23 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
 if (isset($_POST['book']) && ($_POST['book'])) {
     $Flight_Number = $_POST['Flight_IDs'];
     $ID_User = $_POST['User_ID'];
+    $Name = $_POST['Name'];
+    $Sex = $_POST['Sex'];
     $CCCD = $_POST['cccd'];
     $birth = $_POST['birth'];
     $Booking_Date = date('H:i d/m/Y');
     $Total_Price = $_POST['Price'];
     $Seat_Number = $_POST['seats'];
     $Ticket = $_POST['Ticker'];
-    insert_book($Flight_Number, $User_ID, $CCCD, $birth, $Booking_Date, $Total_Price, $Seat_Number, $Ticket);
-    header("location: index.php?action=payment&Flight=" . $Flight_Number);
+    insert_book($Flight_Number, $User_ID, $Name, $Sex, $CCCD, $birth, $Booking_Date, $Total_Price, $Seat_Number, $Ticket);
+    header("location: index.php?action=payment&Flight=" . $Flight_ID);
 }
 ?>
 <link rel="stylesheet" href="style/filght.css">
 <section style="padding:30px;">
     <div class="row">
         <div class="dtc-content">
-            <form action="index.php?action=book_flight&Flight=<?= $Flight_Number ?>" method="post">
+            <form action="index.php?action=book_flight&Flight=<?= $Flight_ID ?>" method="post">
                 <div class="dtc-flight">
                     <ul class="dtc-step">
                         <li class="dtc-active dtc-color-theme">
@@ -172,20 +174,26 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                             <div class="dtc-pax-customer dtc-pax-cus adt">Người lớn</div>
                                             <div class="dtc-pax-customer dtc-pax-sex">
                                                 <div class="dtc-input-group">
-                                                    <select class="dtc-input dtc-input-gender">
-                                                        <option class="option">Nam</option>
-                                                        <option class="option">Nữ</option>
+                                                    <select class="dtc-input dtc-input-gender" name="Sex">
+                                                        <option class="option" value="Nam">Nam</option>
+                                                        <option class="option" value="Nữ">Nữ</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="dtc-pax-customer dtc-pax-firstname">
-                                                <div class="dtc-input-group"> <input class="dtc-input dtc-req dtc-input-firstname" name="name" type="text" maxlength="160" placeholder="Nhập Họ Tên" required> </div>
+                                                <div class="dtc-input-group">
+                                                    <input class="dtc-input dtc-req dtc-input-firstname" name="Name" type="text" maxlength="160" placeholder="Nhập Họ Tên" required>
+                                                </div>
                                             </div>
                                             <div class="dtc-pax-customer dtc-pax-lastname">
-                                                <div class="dtc-input-group"> <input class="dtc-input dtc-req dtc-input-lastname" name="cccd" type="text" maxlength="160" placeholder="Số CCCD" required> </div>
+                                                <div class="dtc-input-group">
+                                                    <input class="dtc-input dtc-req dtc-input-lastname" name="cccd" type="text" maxlength="160" placeholder="Số CCCD" required>
+                                                </div>
                                             </div>
                                             <div class="dtc-pax-customer dtc-pax-bir">
-                                                <div class="dtc-input-group"> <input name="birth" class="dtc-input dtc-picker-adt" placeholder="dd-MM-yyyy" type="date" autocomplete="off" required> </div>
+                                                <div class="dtc-input-group">
+                                                    <input name="birth" class="dtc-input dtc-picker-adt" placeholder="dd-MM-yyyy" type="date" autocomplete="off" required>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>

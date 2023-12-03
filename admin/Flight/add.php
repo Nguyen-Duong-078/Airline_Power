@@ -52,17 +52,6 @@
                                     ?>
                               </select>
                           </div>
-                          <div class="form-group col-md-3">
-                              <label class="control-label">Tick</label>
-                              <select name="Ticket" class="form-control_1">
-                                  <?php
-                                    foreach ($list_type_ticket as $ticket) {
-                                        extract($ticket);
-                                        echo '<option value="' . $Ticket_ID . '">' . $Ticket_name . '</option>';
-                                    }
-                                    ?>
-                              </select>
-                          </div>
                       </div>
                       <input class="btn btn-save" type="submit" value="Thêm Mới" name="themmoi"></input>
                       <input class="btn btn-cancel" type="reset" value="Nhập lại">

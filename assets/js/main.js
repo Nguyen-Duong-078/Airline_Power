@@ -80,6 +80,7 @@
         }
     });
 
+
     //Odometer
     if ($(".statistics-item").length) {
         $(".statistics-item").each(function() {

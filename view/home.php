@@ -15,7 +15,7 @@
          <div class="banner-social-area">
              <ul class="banner-social">
                  <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                 <li><a href="#0" class="active"><i class="fab fa-twitter"></i></a></li>
+                 <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
                  <li><a href="#0"><i class="fab fa-youtube"></i></a></li>
                  <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
              </ul>
@@ -109,50 +109,77 @@
                              <img src="assets/images/overview/overview-2.png" alt="overview">
                              <div class="nav-tab-area">
                                  <div class="nav-tab-header">
-                                     <span class="sub-title"> Ticket</span>
-                                     <h2 class="title">Các loại vé Airline Power</h2>
+                                     <span class="sub-title">Ticket</span>
+                                     <h2 class="title">Danh Sách Vé Airline</h2>
                                  </div>
-                                 <?php
-                                    foreach ($list_type_ticket as $tikcet) {
-                                        extract($tikcet);
-                                        // $images =  $image_path . $Image;
-                                        echo '
-                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <button class="nav-link" id="' . $Ticket_ID . '" data-toggle="tab" data-target="#' . $Status . '" type="button" role="tab" aria-controls="private-jet" aria-selected="true"><span>➥</span>' . $Ticket_name . '</button>
-                                        </div>';
-                                    }
-                                    ?>
+                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                     <?php
+                                        foreach ($list_type_ticket as $ticket) {
+                                            extract($ticket);
+                                            echo '<button class="nav-link" id="private-jet-tab" data-toggle="tab" data-target="#' . $Status . '" type="button" role="tab" aria-controls="private-jet" aria-selected="true">
+                                            <span>➥</span>' . $Ticket_name . '
+                                        </button>';
+                                        }
+                                        ?>
+                                 </div>
                              </div>
                          </div>
                      </nav>
                      <div class="tab-content" id="nav-tabContent" data-aos="fade-right" data-aos-duration="1200">
-                         <div class="tab-pane fade" id="Start" role="tabpanel" aria-labelledby="15">
+                         <div class="tab-pane fade" id="Start_1" role="tabpanel" aria-labelledby="private-jet-tab">
                              <div class="overview-item">
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="#">Hạng vé bình dân</a>
+                                         <h3 class="title">
+                                             <a href="service-details.html">Hạng vé bình dân</a>
                                          </h3>
-                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
-                                             dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
+                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
-                                             <a href="#" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
+                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i>Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>
                              </div>
                          </div>
-                         <div class="tab-pane fade show active" id="Start" role="tabpanel" aria-labelledby="16">
+                         <div class="tab-pane fade show active" id="Start_2" role="tabpanel" aria-labelledby="business-jet-tab">
                              <div class="overview-item">
                                  <div class="overview-thumb">
                                      <img src="assets/images/overview/overview-1.png" alt="overview">
                                      <div class="overview-thumb-content">
-                                         <h3 class="title"><a href="#">Hạng vé thương gia</a>
+                                         <h3 class="title"><a href="service-details.html">Hạng vé thương gia</a>
                                          </h3>
-                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái,
-                                             dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
+                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
                                          <div class="overview-btn">
-                                             <a href="#" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
+                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="tab-pane fade" id="Start_3" role="tabpanel" aria-labelledby="private-helicopter-tab">
+                             <div class="overview-item">
+                                 <div class="overview-thumb">
+                                     <img src="assets/images/overview/overview-1.png" alt="overview">
+                                     <div class="overview-thumb-content">
+                                         <h3 class="title"><a href="service-details.html">Hạng vé đặc biệt</a></h3>
+                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
+                                         <div class="overview-btn">
+                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="tab-pane fade" id="Start_4" role="tabpanel" aria-labelledby="air-ambulance-tab">
+                             <div class="overview-item">
+                                 <div class="overview-thumb">
+                                     <img src="assets/images/overview/overview-1.png" alt="overview">
+                                     <div class="overview-thumb-content">
+                                         <h3 class="title"><a href="service-details.html">Hạng vé thương gia đặc biệt</a></h3>
+                                         <p>Đánh đổi các sân bay đông đúc và lãng phí thời gian để có được sự thoải mái, dễ chịu và tiện lợi khi di chuyển bằng máy bay riêng.</p>
+                                         <div class="overview-btn">
+                                             <a href="service-details.html" class="custom-btn"><i class="icon-btn-icon-v2"></i> Đặt Ngay</a>
                                          </div>
                                      </div>
                                  </div>

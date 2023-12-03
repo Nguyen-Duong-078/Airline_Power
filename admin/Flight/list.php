@@ -7,8 +7,6 @@
                        <table class="table table-hover table-bordered" id="sampleTable">
                            <thead>
                                <tr>
-                                   <!-- <th width="10"><input type="checkbox" id="all"></th> -->
-                                   <th>Flight_ID</th>
                                    <th>Số chuyến bay</th>
                                    <th>Khởi Hành</th>
                                    <th>Điểm Đến</th>
@@ -18,7 +16,6 @@
                                    <th>Passenger</th>
                                    <th>Voucher</th>
                                    <th>Flight</th>
-                                   <th>Ticket</th>
                                    <th>Tính năng</th>
                                </tr>
                            </thead>
@@ -28,7 +25,6 @@
                                 $sua_flight = "index.php?act=sua_flight&id=" . $Flight_ID;
                                 $delete_flight = "index.php?act=delete_flight&id=" . $Flight_ID;
                                 echo '<tr>
-                                    <td>' . $Flight_ID . '</td>
                                     <td>' . $Flight_Number . '</td>
                                     <td>' . $Start_City . '</td>
                                     <td>' . $Arrival_City . '</td>
@@ -38,7 +34,6 @@
                                     <td>' . $Passenger . '</td>
                                     <td>' . $Voucher_ID . '</td>
                                     <td>' . $Flight_time . '</td>
-                                    <td>' . $Ticket . '</td>
                                     <td>
                                     <a href="' . $sua_flight . '"><input class="btn btn-primary btn-sm trash" type="button" value="Sửa"></a>
                                     <a href="' . $delete_flight . '"><input class="btn btn-primary btn-sm" type="button" value="Xóa"></a>                           

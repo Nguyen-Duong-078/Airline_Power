@@ -6,18 +6,6 @@
                     <h3 class="tile-title">Ticket</h3>
                     <div class="tile-body row">
                         <div class="form-group col-md-3">
-                            <label class="control-label">ID Ticket</label>
-                            <input class="form-control" type="number" placeholder="Tự tăng" disabled>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label class="control-label">Ticket name</label>
-                            <input class="form-control" type="text" name="ticket_name">
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label class="control-label">Status</label>
-                            <input class="form-control" type="text" name="status">
-                        </div>
-                        <div class="form-group col-md-3">
                             <label class="control-label">Flight_ID</label>
                             <select name="Flights_Tick" class="form-control_1">
                                 <?php
@@ -27,6 +15,14 @@
                                 }
                                 ?>
                             </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="control-label">Ticket name</label>
+                            <input class="form-control" type="text" name="ticket_name">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="control-label">Status</label>
+                            <input class="form-control" type="text" name="status">
                         </div>
                         <div class="form-group col-md-3">
                             <label class="control-label">Ticket_number</label>

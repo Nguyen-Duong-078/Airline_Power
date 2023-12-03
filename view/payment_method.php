@@ -221,7 +221,7 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
         }).then((result) => {
             if (result.isConfirmed) {
                 // Nếu người dùng đồng ý, chuyển hướng đến trang thanh toán
-                // window.location.href = 'view/noti_pay.php';
+                window.location.href = 'view/noti_pay.php';
             }
         });
     }

@@ -155,6 +155,18 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
                                             <input type="hidden" name="price" value="<?= $thue ?>">
                                         </div>
                                     </form>
+<<<<<<< Updated upstream
+=======
+                                    <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="view/momo_pay.php">
+                                    <input class="btn btn-info" type="submit" name="payUrl" value="Thanh Toán QR Momo">
+                                    <input type="hidden" name="price" value="<?= $thue ?>">
+                                    <!--  -->
+                                    </form>
+                                    <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="view/momo_pay_atm.php">
+                                    <input class="btn btn-info" type="submit" name="payUrl" value="Thanh Toán ATM Momo">
+                                    <input type="hidden" name="price" value="<?= $thue ?>">
+                                    </form>
+>>>>>>> Stashed changes
                                 </li>
                             </ul>
                         </div>

@@ -16,15 +16,22 @@
                                    <th>Passenger</th>
                                    <th>Voucher</th>
                                    <th>Flight</th>
-                                   <th>Tính năng</th>
+                                   <?php
+                                    if ($_SESSION['role'] == 1) {
+                                    ?>
+                                       <th>Tính năng</th>
+                                   <?php } ?>
                                </tr>
                            </thead>
                            <?php
                             foreach ($list_flight as $flight) {
                                 extract($flight);
-                                $sua_flight = "index.php?act=sua_flight&id=" . $Flight_ID;
-                                $delete_flight = "index.php?act=delete_flight&id=" . $Flight_ID;
-                                echo '<tr>
+                                if ($_SESSION['role'] == 1) {
+                                    $sua_flight = "index.php?act=sua_flight&id=" . $Flight_ID;
+                                    $delete_flight = "index.php?act=delete_flight&id=" . $Flight_ID;
+                                }
+                                if ($_SESSION['role'] == 1) {
+                                    echo '<tr>
                                     <td>' . $Flight_Number . '</td>
                                     <td>' . $Start_City . '</td>
                                     <td>' . $Arrival_City . '</td>
@@ -32,13 +39,26 @@
                                     <td>' . $Arrival_Time . '</td>
                                     <td>' . $Price . '</td>
                                     <td>' . $Passenger . '</td>
-                                    <td>' . $Voucher_ID . '</td>
+                                    <td>' . $Voucher_IDS . '</td>
                                     <td>' . $Flight_time . '</td>
                                     <td>
                                     <a href="' . $sua_flight . '"><input class="btn btn-primary btn-sm trash" type="button" value="Sửa"></a>
                                     <a href="' . $delete_flight . '"><input class="btn btn-primary btn-sm" type="button" value="Xóa"></a>                           
                                     </td>
                                     </tr>';
+                                } else {
+                                    echo '<tr>
+                                    <td>' . $Flight_Number . '</td>
+                                    <td>' . $Start_City . '</td>
+                                    <td>' . $Arrival_City . '</td>
+                                    <td>' . $Departure_Time . '</td>
+                                    <td>' . $Arrival_Time . '</td>
+                                    <td>' . $Price . '</td>
+                                    <td>' . $Passenger . '</td>
+                                    <td>' . $Voucher_IDS . '</td>
+                                    <td>' . $Flight_time . '</td>
+                                    </tr>';
+                                }
                             }
                             ?>
                        </table>

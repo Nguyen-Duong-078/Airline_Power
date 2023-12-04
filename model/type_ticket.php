@@ -21,7 +21,7 @@ function loadOne_type_ticket($ID)
 }
 function Update_type_ticket($Ticket_ID, $Ticket_name, $Status, $Flights_Tick, $Ticket_number)
 {
-    $sql = "UPDATE type_ticket SET Ticket_ID = '" . $Ticket_ID  . "', Ticket_name = '" . $Ticket_name . "', Status = '" . $Status . "', Flights_Tick = '" . $Flights_Tick . "', Ticket_number = '" . $Ticket_number . "'  WHERE Ticket_ID=" . $Ticket_ID;
+    $sql = "UPDATE type_ticket SET Ticket_name = '" . $Ticket_name . "', Status = '" . $Status . "', Flights_Tick = '" . $Flights_Tick . "', Ticket_number = '" . $Ticket_number . "'  WHERE Ticket_ID=" . $Ticket_ID;
     pdo_execute($sql);
 }
 

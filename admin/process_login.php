@@ -23,6 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $stmt->execute();
     $result = $stmt->get_result();
     $role = 1;
+    $role_nv = 2;
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         // Kiểm tra mật khẩu
@@ -39,7 +40,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 'message' => 'Sai mật khẩu'
             ];
         }
-        if ($row['role'] != $role) {
+        if ($row['role'] != $role && $row['role'] != $role_nv) {
             $response = [
                 'success' => false,
                 'message' => 'Tài khoản không có quyền truy cập'

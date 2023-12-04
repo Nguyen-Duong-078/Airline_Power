@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "../model/pdo.php";
+include "../model/momo.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,11 +61,44 @@
 </head>
 
 <body>
+    <?php
+    if (isset($_SESSION['username'])) {
+        extract($_SESSION['username']);
+    }
+    ?>
+
     <div class="thank-you-container">
         <h2 class="thank-you-heading">Cảm ơn bạn đã tin tương Airline Power</h2>
         <p class="thank-you-message">Bạn Vui lòng ấn vào Lịch Sử Đặt Vé để xem vé của Bạn.</p>
         <button class="back-to-home" onclick="window.location.href='../index.php?action=booking_history'">Lịch Sử Đặt Vé</button>
     </div>
+    <?php
+    if (isset($_GET['partnerCode'])) {
+        $User_ID = $User_ID;
+        $partnerCode = $_GET['partnerCode'];
+        $orderId = $_GET['orderId'];
+        $orderInfo = $_GET['orderInfo'];
+        $price = $_GET['amount'];
+        $Method = $_GET['paymentOption'];
+        $Status = $_GET['message'];
+        insert_momo($User_ID, $partnerCode, $orderId, $orderInfo, $price, $Method, $Status);
+    }
+    ?>
+
+    <?php
+    if (isset($_GET['vnp_BankTranNo'])) {
+        $User_ID = $User_ID;
+        $partnerCode = $_GET['vnp_BankTranNo'];
+        $orderId = $_GET['vnp_TransactionNo'];
+        $orderInfo = $_GET['vnp_OrderInfo'];
+        $price = $_GET['vnp_Amount'];
+        $Time_set = $_GET['vnp_PayDate'];
+        $Method = $_GET['vnp_CardType'];
+        $Status = $_GET['vnp_TransactionStatus'];
+        insert_vnpay($User_ID, $partnerCode, $orderId, $orderInfo, $price, $Time_set, $Method, $Status);
+    }
+    ?>
+
 </body>
 
 </html>

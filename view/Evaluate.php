@@ -25,20 +25,8 @@ $images =  $image_path . $Image;
                         </div>
                     </div>
                 </div>
-                <!-- <style>
-                    .title_dg {
-                        width: 100%;
-                        background: red;
-                        margin-left: -20px;
-                        padding: 10px;
-                        border-radius: 10px;
-                    }
-                </style> -->
                 <div class="blog-btn">
                     <div class="row">
-                        <!-- <div class="title_dg">
-                            Đánh giá
-                        </div> -->
                         <?php
                         if (isset($_SESSION['username'])) {
                             extract($_SESSION['username']);
@@ -46,7 +34,7 @@ $images =  $image_path . $Image;
                             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
                             <script>
                                 $(document).ready(function() {
-                                    $("#binhluan").load("view/Evaluete/comments.php", {
+                                    $("#binhluan").load("view/Chat/comments.php", {
                                         idpro: <?= $ID ?>
                                     });
                                 });

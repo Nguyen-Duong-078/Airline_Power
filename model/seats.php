@@ -49,11 +49,23 @@ function processSeat($seat, $action, $conn)
     if ($action == "book") {
         // Đặt ghế mới
         if (checkSeatAvailability($seat, $conn)) {
-            $query = "UPDATE seats SET status = 'booked', User_ID = :user_id WHERE seat_number = :seat";
-            $stmt = $conn->prepare($query);
-            $stmt->bindParam(':seat', $seat);
-            $stmt->bindParam(':user_id', $_SESSION['User_ID']);
-            $stmt->execute();
+            // Kiểm tra xem người dùng đã đặt ghế chưa
+            $userSeatQuery = "SELECT seat_number FROM seats WHERE User_ID = :user_id";
+            $userSeatStmt = $conn->prepare($userSeatQuery);
+            $userSeatStmt->bindParam(':user_id', $_SESSION['User_ID']);
+            $userSeatStmt->execute();
+            $userSeatResult = $userSeatStmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!$userSeatResult) {
+                $updateQuery = "UPDATE seats SET status = 'booked', User_ID = :user_id WHERE seat_number = :seat";
+                $updateStmt = $conn->prepare($updateQuery);
+                $updateStmt->bindParam(':seat', $seat);
+                $updateStmt->bindParam(':user_id', $_SESSION['User_ID']);
+                $updateStmt->execute();
+            } else {
+                // $response['status'] = 'error';
+                // $response['message'] = 'Bạn đã đặt một ghế rồi!';
+            }
         }
     } elseif ($action == "cancel") {
         // Hủy ghế đã đặt
@@ -62,6 +74,9 @@ function processSeat($seat, $action, $conn)
             $stmt = $conn->prepare($query);
             $stmt->bindParam(':seat', $seat);
             $stmt->execute();
+
+            $response['status'] = 'success';
+            $response['message'] = 'Hủy ghế thành công!';
         }
     }
 }

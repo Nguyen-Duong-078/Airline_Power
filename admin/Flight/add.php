@@ -6,6 +6,17 @@
                       <h3 class="tile-title">Thêm chuyến bay</h3>
                       <div class="tile-body row">
                           <div class="form-group col-md-3">
+                              <label class="control-label">Voucher</label>
+                              <select name="Voucher" class="form-control_1">
+                                  <?php
+                                    foreach ($listvoucher as $voucher) {
+                                        extract($voucher);
+                                        echo '<option value="' . $Voucher_ID . '">' . $Voucher_name . '</option>';
+                                    }
+                                    ?>
+                              </select>
+                          </div>
+                          <div class="form-group col-md-3">
                               <label class="control-label">Số Chuyến Bay</label>
                               <input class="form-control" type="text" name="number_flight">
                           </div>
@@ -40,17 +51,6 @@
                           <div class="form-group col-md-3">
                               <label class="control-label">Thời gian bay</label>
                               <input class="form-control" type="text" name="time_flight">
-                          </div>
-                          <div class="form-group col-md-3">
-                              <label class="control-label">Voucher</label>
-                              <select name="Voucher" class="form-control_1">
-                                  <?php
-                                    foreach ($listvoucher as $voucher) {
-                                        extract($voucher);
-                                        echo '<option value="' . $Voucher_ID . '">' . $Voucher_name . '</option>';
-                                    }
-                                    ?>
-                              </select>
                           </div>
                       </div>
                       <input class="btn btn-save" type="submit" value="Thêm Mới" name="themmoi"></input>

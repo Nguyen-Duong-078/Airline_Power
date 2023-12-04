@@ -90,7 +90,7 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
                                                 <span>
                                                     <i>Sân bay Tân Sơn Nhất </i>
                                                 </span>
-                                                <span>Hạ cánh: <b><?= $Arrival_Times ?></b>
+                                                <span>Hạ cánh: <b><?= $Departure_Times ?></b>
                                                 </span>
                                                 <span>Ngày: <b><?= $formattedDate ?></b>
                                                 </span>
@@ -141,20 +141,47 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
                                         .btn {
                                             display: flex;
                                             gap: 10px;
-                                            width: 400px;
                                         }
 
                                         .btn input {
                                             border-radius: 3px;
                                         }
+
+                                        .btn_1 {
+                                            display: flex;
+                                        }
                                     </style>
-                                    <form action="index.php?action=pay_code" method="post">
+                                    <div class="btn_1">
+                                        <form action="index.php?action=pay_code" method="post">
+                                            <div class="btn">
+                                                <button onclick="confirmPayment()" type="button" class="btn btn-primary" name="monny">Thanh Toán Tiền Mặt</button>
+                                                <input onclick="confirmPayment_vnpay()" class="btn btn-info" type="submit" name="redirect" value="Thanh Toán VNPAY">
+                                                <input type="hidden" name="price" value="<?= $thue ?>">
+                                            </div>
+                                        </form>
                                         <div class="btn">
-                                            <button onclick="confirmPayment()" type="button" class="btn btn-primary" name="monny">Thanh Toán Tiền Mặt</button>
-                                            <input onclick="confirmPayment_vnpay()" class="btn btn-info" type="submit" name="redirect" value="Thanh Toán VNPAY">
-                                            <input type="hidden" name="price" value="<?= $thue ?>">
+                                            <form method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="view/Cart/momo_pay.php">
+                                                <input class="btn btn-info" type="submit" name="payUrl" value="Thanh Toán QR Momo">
+                                                <input type="hidden" name="price" value="<?= $thue ?>">
+                                                <input type="hidden" name="Flight_Number" value="<?= $Flight_Number ?>">
+                                                <input type="hidden" name="Start_City" value="<?= $Start_City ?>">
+                                                <input type="hidden" name="Arrival_City" value="<?= $Arrival_City ?>">
+                                                <input type="hidden" name="Departure_Times" value="<?= $Departure_Times ?>">
+                                                <input type="hidden" name="Arrival_Times" value="<?= $Arrival_Times ?>">
+                                                <input type="hidden" name="formattedDate" value="<?= $formattedDate ?>">
+                                            </form>
+                                            <form method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="view/Cart/momo_pay_atm.php">
+                                                <input class="btn btn-primary" type="submit" name="payUrl" value="Thanh Toán ATM Momo">
+                                                <input type="hidden" name="price" value="<?= $thue ?>">
+                                                <input type="hidden" name="Flight_Number" value="<?= $Flight_Number ?>">
+                                                <input type="hidden" name="Start_City" value="<?= $Start_City ?>">
+                                                <input type="hidden" name="Arrival_City" value="<?= $Arrival_City ?>">
+                                                <input type="hidden" name="Departure_Times" value="<?= $Departure_Times ?>">
+                                                <input type="hidden" name="Arrival_Times" value="<?= $Arrival_Times ?>">
+                                                <input type="hidden" name="formattedDate" value="<?= $formattedDate ?>">
+                                            </form>
                                         </div>
-                                    </form>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

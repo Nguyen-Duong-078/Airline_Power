@@ -6,6 +6,16 @@ include "../../model/Evaluate.php";
 $idpro = $_REQUEST['idpro'];
 $list_comment = loadAll_comment($idpro);
 ?>
+<?php
+if (isset($_POST['guibl']) && ($_POST['guibl'])) {
+    $noidung = $_POST['msg'];
+    $idpro = $_POST['idpro'];
+    $ID_User = $_POST['User_ID'];
+    $Evaluate_Date = date('H:i d/m/Y');
+    inser_comment($noidung, $ID_User, $idpro, $Evaluate_Date);
+    header("location: " . $_SERVER['HTTP_REFERER']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,17 +137,6 @@ $list_comment = loadAll_comment($idpro);
                 </div>
             </form>
         </div>
-        <?php
-        if (isset($_POST['guibl']) && ($_POST['guibl'])) {
-            $noidung = $_POST['msg'];
-            $idpro = $_POST['idpro'];
-            $ID_User = $_POST['User_ID'];
-            $Evaluate_Date = date('H:i d/m/Y');
-            inser_comment($noidung, $ID_User, $idpro, $Evaluate_Date);
-            header("location: " . $_SERVER['HTTP_REFERER']);
-        }
-        ?>
-
     </div>
 </body>
 

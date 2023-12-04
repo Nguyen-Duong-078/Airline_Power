@@ -11,6 +11,21 @@ if (is_array($update_flight)) {
                     <h3 class="tile-title">Cập nhật chuyến bay</h3>
                     <div class="tile-body row">
                         <div class="form-group col-md-3">
+                            <label class="control-label">Voucher</label>
+                            <select name="Voucher" class="form-control_1">
+                                <?php
+                                foreach ($listvoucher as $voucher) {
+                                    extract($voucher);
+                                    if ($Voucher_IDS == $Voucher_ID) {
+                                        echo  '<option value="' . $Voucher_ID . '"selected>' . $Voucher_name . '</option>';
+                                    } else {
+                                        echo  '<option value="' . $Voucher_ID . '">' . $Voucher_name . '</option>';
+                                    }
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
                             <label class="control-label">Số Chuyến Bay</label>
                             <input class="form-control" type="text" name="number_flight" value="<?= $Flight_Number ?>">
                         </div>
@@ -33,6 +48,10 @@ if (is_array($update_flight)) {
                         <div class="form-group col-md-3">
                             <label class="control-label">Giá chuyến bay</label>
                             <input class="form-control" type="text" name="price" value="<?= $Price ?>">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="control-label">Passenger</label>
+                            <input class="form-control" type="text" name="Passenger" value="<?= $Passenger ?>">
                         </div>
                         <div class="form-group col-md-3">
                             <label class="control-label">Thời gian bay</label>

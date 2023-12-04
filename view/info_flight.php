@@ -94,10 +94,7 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                                 </li>
                                                 <li>
                                                     <span>
-                                                        <b>Hà Nội - HAN</b>
-                                                    </span>
-                                                    <span>
-                                                        <i>Sân bay Nội Bài</i>
+                                                        <b><?= $Start_City ?></b>
                                                     </span>
                                                     <span>Cất cánh: <b><?= $Departure_Times ?></b>
                                                     </span>
@@ -106,10 +103,7 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                                 </li>
                                                 <li>
                                                     <span>
-                                                        <b>Hồ Chí Minh - SGN</b>
-                                                    </span>
-                                                    <span>
-                                                        <i>Sân bay Tân Sơn Nhất </i>
+                                                        <b><?= $Arrival_City ?></b>
                                                     </span>
                                                     <span>Hạ cánh: <b><?= $Arrival_Times ?></b>
                                                     </span>
@@ -123,12 +117,6 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                                     </span>
 
                                                     <span>FareBasic:<b> <?= $Price ?></b>
-                                                    </span>
-                                                    <!-- <span>Máy bay: <b></b>
-                                                </span> -->
-                                                    <span>Hành lý xách tay:<b> 7kg</b>
-                                                    </span>
-                                                    <span>Hành lý ký gửi:<b> 0 Kg</b>
                                                     </span>
                                                 </li>
                                             </ul>
@@ -274,7 +262,7 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                     echo "<form method='post'>";
                                     echo "<input type='hidden' name='seat' value='$Seat_number'>";
                                     echo "<input type='hidden' name='action' value='book'>";
-                                    echo "<button type='submit'></button>";
+                                    echo "<button onclick='confirmSeat()' type='submit'></button>";
                                     echo "</form>";
                                 } elseif ($seat['status'] == 'booked' && checkSeatAvailability($seat['Seat_number'], $conn, false)) {
                                     echo "<form method='post'>";
@@ -310,3 +298,20 @@ if (isset($_POST['book']) && ($_POST['book'])) {
         </div>
     </div>
 </section>
+<!-- <script>
+    function confirmSeat() {
+        // Hiển thị thông báo xác nhận
+        Swal.fire({
+            title: 'Xác nhận chọn ghế',
+            text: 'Bạn chắc chắn muốn thanh toán chứ?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Đồng ý',
+            cancelButtonText: 'Hủy bỏ'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // window.location.href = 'view/Vnpay.php';
+            }
+        });
+    }
+</script> -->

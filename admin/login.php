@@ -141,19 +141,6 @@
      </script>
      <script src="../javascript/login.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-     <!-- <script>
-             window.onload = function() {
-                 var notification = document.getElementById("auto-notification");
-                 notification.style.display = "block"; // Hiển thị thông báo
-
-                 setTimeout(function() {
-                     notification.style.right = "10px"; // Hiển thị thông báo bằng cách đặt right về 10px
-                 }, 100); // Sau 100 milliseconds
-                 setTimeout(function() {
-                     notification.style.display = "none"; // Ẩn thông báo sau một khoảng thời gian (ví dụ: 5 giây)
-                 }, 4000); // 5 giây (5000 milliseconds)
-             }
-         </script> -->
      <script>
          document.addEventListener('DOMContentLoaded', function() {
              // Hiển thị thông báo SweetAlert2 khi trang web được tải

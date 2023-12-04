@@ -1,6 +1,4 @@
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Blog
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--Start Blog-->
 <section class="blog-section ptb-120">
     <div class="container">
         <div class="row justify-content-center mb-30-none">
@@ -117,6 +115,4 @@
         </nav>
     </div>
 </section>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Blog
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End Blog-->

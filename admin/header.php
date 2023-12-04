@@ -133,12 +133,18 @@
                     <span class="app-menu__label">Đánh giá</span>
                 </a>
             </li>
-            <li>
-                <a class="app-menu__item" href="index.php?act=account">
-                    <i class='app-menu__icon bx bx-user-voice'></i>
-                    <span class="app-menu__label">Khách hàng</span>
-                </a>
-            </li>
+            <?php
+            if ($_SESSION['role'] == 1) {
+            ?>
+                <li>
+                    <a class="app-menu__item" href="index.php?act=account">
+                        <i class='app-menu__icon bx bx-user-voice'></i>
+                        <span class="app-menu__label">Khách hàng</span>
+                    </a>
+                </li>
+            <?php
+            } ?>
+
             <li>
                 <a class="app-menu__item" href="index.php?act=statistical">
                     <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>

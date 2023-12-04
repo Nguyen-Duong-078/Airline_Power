@@ -7,7 +7,6 @@ include "model/type_ticket.php";
 include "model/voucher.php";
 include "model/search.php";
 include "global.php";
-include "model/Charging.php";
 include "model/blog.php";
 include "model/Evaluate.php";
 include "model/seats.php";
@@ -162,14 +161,14 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             // include "View/Vnpay.php";
             break;
         case 'booking_history':
-            include "view/account/user.php";
+            include "view/Unity/user.php";
             break;
         case "user_book":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $User_ID = $_GET['id'];
                 $loadAll_book_user = loadAll_book_user($User_ID);
             }
-            include "view/account/booking_history.php";
+            include "view/Unity/booking_history.php";
             break;
         default:
             include "View/home.php";

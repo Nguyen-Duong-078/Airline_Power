@@ -4,7 +4,7 @@ session_start();
 function checkRole()
 {
     // Kiểm tra xem người dùng có quyền admin không
-    if ($_SESSION['role'] != "1") {
+    if ($_SESSION['role'] != "1" && $_SESSION['role'] != "2") {
         // Nếu không phải admin, chuyển hướng người dùng đến trang không có quyền
         header("Location: login.php");
         exit();
@@ -27,9 +27,11 @@ include "../model/voucher.php";
 include "../model/Account.php";
 include "../model/blog.php";
 include "../model/Evaluate.php";
+include "../model/payments.php";
 include "../model/seats.php";
 include "../model/book_flight.php";
 include "../model/statistical.php";
+include "../model/momo.php";
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -52,7 +54,6 @@ if (isset($_GET['act'])) {
                 $thongbao = "Thêm Thành Công";
             }
             $listvoucher = loadall_voucher();
-            $list_type_ticket = loadAll_type_ticket();
             include "Flight/add.php";
             break;
         case 'list_flight':
@@ -61,7 +62,7 @@ if (isset($_GET['act'])) {
             break;
         case 'sua_flight':
             $update_flight = loadOne_flight();
-            $list_flight = loadAll_flight();
+            $listvoucher = loadall_voucher();
             include "Flight/update.php";
             break;
         case 'update_flight':
@@ -73,10 +74,13 @@ if (isset($_GET['act'])) {
                 $Departure_Time = $_POST['time_start'];
                 $Arrival_Time = $_POST['time_end'];
                 $Price = $_POST['price'];
+                $Passenger = $_POST['Passenger'];
+                $Voucher = $_POST['Voucher'];
                 $Flight_time = $_POST['time_flight'];
-                Update_danhmuc($Flight_ID, $Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Flight_time);
+                Update_danhmuc($Flight_ID, $Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time);
                 $thongbao = "Cập nhật thành công";
             }
+            $listvoucher = loadall_voucher();
             $list_flight = loadAll_flight();
             include "Flight/list.php";
             break;
@@ -141,8 +145,6 @@ if (isset($_GET['act'])) {
             $list_type_ticket =  loadAll_type_ticket();
             include "Ticket/list.php";
             break;
-
-            // Voucher
 
         case 'add_voucher':
             // kt xem người dùng có click vào nút add hay không
@@ -239,25 +241,6 @@ if (isset($_GET['act'])) {
             include "Account/list.php";
             break;
 
-            // case 'logout_admin':
-            //     session_destroy();
-            //     header('location: index.php');
-            //     break;
-        case 'add_charging':
-            if (isset($_POST['themmoi']) && $_POST['themmoi']) {
-                $tax = $_POST['tax'];
-                $service = $_POST['service'];
-                $Flights_ID = $_POST['Flights_ID'];
-                insert_charging($tax, $service, $Flights_ID);
-            }
-            $list_flight = loadAll_flight();
-            include "Charging/add.php";
-            break;
-        case 'list_charging':
-            $list_flight = loadAll_flight();
-            $listcharging = loadall_charging();
-            include "Charging/list.php";
-            break;
         case 'blog':
             if (isset($_POST['themmoi']) && $_POST['themmoi']) {
                 $Blog_name = $_POST['Blog_name'];
@@ -316,6 +299,22 @@ if (isset($_GET['act'])) {
         case "book_flight":
             $listbook = loadAll_book();
             include "Book/list.php";
+            break;
+        case "bill":
+            $list_bill = loadAll_bill();
+            include "Bill/list.php";
+            break;
+        case "delete_bill":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                deleta_bill($ID);
+            }
+            $list_bill = loadAll_bill();
+            include "Bill/list.php";
+            break;
+        case "pay":
+            $list_payments = loadAll_payments();
+            include "Payments/list.php";
             break;
         case "statistical":
             $listthongke = thongke();

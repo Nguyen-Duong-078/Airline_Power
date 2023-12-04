@@ -1,6 +1,4 @@
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Contact
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--Start Contact-->
 <section class="contact-section ptb-120">
     <div class="container">
         <div class="row justify-content-center mb-30-none">
@@ -59,14 +57,10 @@
         </div>
     </div>
 </section>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Contact
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End Contact-->
 
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Contact
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--Start Contact-->
 <section class="contact-section bg--gray ptb-120">
     <div class="contact-element">
         <img src="assets/images/element/element-18.png" alt="element">
@@ -127,6 +121,4 @@
         </div>
     </div>
 </section>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        End Contact
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End Contact-->

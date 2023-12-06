@@ -13,10 +13,14 @@
     width: 40px;
     border-radius: 7px;
     cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .grid-container .huy {
     background: red;
+    color: #000;
+    font-weight: bold;
 }
 
 .dtc-search {

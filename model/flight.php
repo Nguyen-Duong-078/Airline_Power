@@ -14,7 +14,7 @@ function deleta_flight($ID)
 
 function loadAll_flight()
 {
-    $sql = "SELECT * FROM flights order by Flight_ID desc";
+    $sql = "SELECT * FROM flights  order by Flight_ID desc";
     $list_flight = pdo_query($sql);
     return $list_flight;
 }
@@ -33,8 +33,8 @@ function loadOne_flight_book($Flight)
     return $update_flight;
 }
 
-function Update_danhmuc($Flight_ID, $Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time)
+function Update_danhmuc($Flight_ID, $Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time)
 {
-    $sql = "UPDATE flights SET Flight_Number = '" . $Flight_Number . "', Start_City = '" . $Start_City . "', Arrival_City = '" . $Arrival_City . "', Departure_Time = '" . $Departure_Time . "', Arrival_Time = '" . $Arrival_Time . "', Price = '" . $Price . "',Passenger = '" . $Passenger . "',Voucher_IDS = '" . $Voucher . "', Flight_time = '" . $Flight_time . "'  WHERE Flight_ID=" . $Flight_ID;
+    $sql = "UPDATE flights SET Flight_Number = '" . $Flight_Number . "', Start_City = '" . $Start_City . "', Arrival_City = '" . $Arrival_City . "', Flight_date = '" . $Flight_date . "', Departure_Time = '" . $Departure_Time . "', Arrival_Time = '" . $Arrival_Time . "', Price = '" . $Price . "',Passenger = '" . $Passenger . "',Voucher_IDS = '" . $Voucher . "', Flight_time = '" . $Flight_time . "'  WHERE Flight_ID=" . $Flight_ID;
     pdo_execute($sql);
 }

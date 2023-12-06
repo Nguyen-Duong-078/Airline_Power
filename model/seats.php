@@ -1,15 +1,21 @@
 <?php
-function insert_seats($Seat_Number, $Status)
+function insert_seats($Seat_Number, $Status, $Flights_seats)
 {
-    $sql = "INSERT INTO seats(Seat_Number,Status) VALUES ('$Seat_Number','$Status')";
+    $sql = "INSERT INTO seats(Seat_Number,Status, Flights_seats) VALUES ('$Seat_Number','$Status','$Flights_seats')";
     pdo_execute($sql);
 }
 
 function loadAll_seats()
 {
-    $sql = "SELECT * FROM seats order by Seat_ID desc";
+    $sql = "SELECT * FROM seats order by user_id desc";
     $list_seats = pdo_query($sql);
     return $list_seats;
+}
+
+function deleta_seats($ID)
+{
+    $sql = "DELETE FROM seats WHERE Seat_ID =" . $ID;
+    pdo_execute($sql);
 }
 
 $servername = "localhost";
@@ -98,11 +104,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Hiển thị tất cả các ghế
-$query = "SELECT Seat_number, status FROM seats";
-$stmt = $conn->prepare($query);
-$stmt->execute();
-$seats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// // Hiển thị tất cả các ghế
+// $query = "SELECT Seat_number, status FROM seats WHERE Flights_seats";
+// $stmt = $conn->prepare($query);
+// $stmt->execute();
+// $seats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 function getBookedSeats($user_id, $conn)
 {

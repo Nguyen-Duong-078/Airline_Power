@@ -38,6 +38,10 @@ if (is_array($update_flight)) {
                             <input class="form-control" type="text" name="end" value="<?= $Arrival_City ?>">
                         </div>
                         <div class="form-group col-md-3">
+                            <label class="control-label">Ngày bay</label>
+                            <input class="form-control" type="date" name="Flight_date" value="<?= $Flight_date ?>">
+                        </div>
+                        <div class="form-group col-md-3">
                             <label class="control-label">Giờ khởi hành</label>
                             <input class="form-control" type="time" name="time_start" value="<?= $Departure_Time ?>">
                         </div>

@@ -71,13 +71,14 @@ if (isset($_GET['act'])) {
                 $Flight_Number = $_POST['number_flight'];
                 $Start_City = $_POST['start'];
                 $Arrival_City = $_POST['end'];
+                $Flight_date = $_POST['Flight_date'];
                 $Departure_Time = $_POST['time_start'];
                 $Arrival_Time = $_POST['time_end'];
                 $Price = $_POST['price'];
                 $Passenger = $_POST['Passenger'];
                 $Voucher = $_POST['Voucher'];
                 $Flight_time = $_POST['time_flight'];
-                Update_danhmuc($Flight_ID, $Flight_Number, $Start_City, $Arrival_City, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time);
+                Update_danhmuc($Flight_ID, $Flight_Number, $Start_City, $Arrival_City, $Flight_date, $Departure_Time, $Arrival_Time, $Price, $Passenger, $Voucher, $Flight_time);
                 $thongbao = "Cập nhật thành công";
             }
             $listvoucher = loadall_voucher();
@@ -287,12 +288,22 @@ if (isset($_GET['act'])) {
             if (isset($_POST['themmoi']) && $_POST['themmoi']) {
                 $Seat_Number = $_POST['Seat_Number'];
                 $Status = $_POST['status'];
-                insert_seats($Seat_Number, $Status);
+                $Flights_seats = $_POST['Flights_seats'];
+                insert_seats($Seat_Number, $Status, $Flights_seats);
                 $thongbao = "Thêm Thành Công";
             }
+            $list_flight = loadAll_flight();
             include "Seats/add.php";
             break;
         case "list_seats":
+            $list_seats = loadAll_seats();
+            include "Seats/list.php";
+            break;
+        case "delete_seats":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                deleta_seats($ID);
+            }
             $list_seats = loadAll_seats();
             include "Seats/list.php";
             break;

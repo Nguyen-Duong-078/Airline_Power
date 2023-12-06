@@ -10,6 +10,7 @@
                                 <th>Seat_ID</th>
                                 <th>Seat_Number</th>
                                 <th>Status</th>
+                                <th>Flights_Seats</th>
                                 <th>Users_ID</th>
                                 <th>Chức Năng</th>
                             </tr>
@@ -17,14 +18,15 @@
                         <?php
                         foreach ($list_seats as $seats) {
                             extract($seats);
-                            $delete_flight = "index.php?act=delete_flight&id=" . $Seat_ID;
+                            $delete_Seat = "index.php?act=delete_seats&id=" . $Seat_ID;
                             echo '<tr>
                                     <td>' . $Seat_ID  . '</td>
                                     <td>' . $Seat_Number . '</td>
                                     <td>' . $status . '</td>
+                                    <td>' . $Flights_seats . '</td>
                                     <td>' . $user_id . '</td>
                                     <td>
-                                     <a href="' . $delete_flight . '"><input class="btn btn-primary btn-sm" type="button" value="Xóa"></a>                           
+                                     <a href="' . $delete_Seat . '"><input class="btn btn-primary btn-sm" type="button" value="Xóa"></a>                           
                                     </td>
                                     </tr>';
                         }

@@ -168,7 +168,18 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
                 $User_ID = $_GET['id'];
                 $loadAll_book_user = loadAll_book_user($User_ID);
             }
+        case "delete_book":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                deleta_book($ID);
+            }
+            $loadAll_book_user = loadAll_book_user($User_ID);
             include "view/Unity/booking_history.php";
+            break;
+        case "check_in":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+            }
+            include "view/Unity/check_in.php";
             break;
         default:
             include "View/home.php";

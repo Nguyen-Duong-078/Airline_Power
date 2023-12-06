@@ -102,7 +102,7 @@ if (is_array($loadAll_book_user)) {
     th,
     td {
         padding: 12px;
-        text-align: left;
+        text-align: center;
         border-bottom: 1px solid #ddd;
     }
 
@@ -114,11 +114,32 @@ if (is_array($loadAll_book_user)) {
     tr:hover {
         background-color: #f5f5f5;
     }
+
+    .product_rightst th {
+        text-align: center;
+    }
+
+    .bold {
+        font-weight: bold;
+        color: red;
+    }
+
+    .product_rightst .btn {
+        border-radius: 5px;
+    }
+
+    .product_rights .active {
+        color: red;
+    }
+
+    .active {
+        color: red;
+    }
 </style>
 <section style="padding:30px;">
     <div class="row">
         <div class="col-3">
-            <div class="product_rights">
+            <nav class="product_rights">
                 <div class="child">
                     <i class="fa-solid fa-house-chimney"></i>
                     <li><a href="index.php?action=booking_history">Trang Chủ</a></li>
@@ -133,7 +154,7 @@ if (is_array($loadAll_book_user)) {
                 <?php } else ?>
                 <div class="child">
                     <i class="fa-solid fa-cart-arrow-down"></i>
-                    <li><a href="index.php?action=user_book&id= <?= $User_ID ?>">Lịch sử đặt vé</a></li>
+                    <li><a href="index.php?action=user_book&id=<?= $User_ID ?>" class="active">Lịch sử đặt vé</a></li>
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-user-shield"></i>
@@ -143,11 +164,7 @@ if (is_array($loadAll_book_user)) {
                     <i class="fa-solid fa-recycle"></i>
                     <li> <a href="index.php?act=update_user">Cập Nhật Thông Tin</a></li>
                 </div>
-                <div class="child">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <li><a href="index.php?act=logout">Thoát tài khoản</a></li>
-                </div>
-            </div>
+            </nav>
         </div>
         <div class="col-9">
             <div class="product_rightst">
@@ -155,38 +172,78 @@ if (is_array($loadAll_book_user)) {
                     <table>
                         <thead>
                             <tr>
-                                <th>User_ID</th>
-                                <th>CCCD</th>
-                                <th>birth</th>
+                                <th>Name</th>
+                                <th>Birth</th>
                                 <th>Flight</th>
+                                <th>Start</th>
+                                <th>End</th>
                                 <th>Loại Vé</th>
                                 <th>Ghế</th>
                                 <th>Date_Book</th>
                                 <th>Giá vé</th>
+                                <th>Set</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Dữ liệu lịch sử đặt vé máy bay sẽ được hiển thị ở đây -->
-
                             <?php
                             foreach ($loadAll_book_user as $user) {
                                 extract($user);
-                                echo " <tr>
-                                          <td>$User_ID</td>
-                                          <td>$CCCD</td>
-                                          <td>$birth</td>
-                                          <td>$Flight_ID</td>
-                                          <td>$Ticket</td>
-                                         <td>$Seat_Number</td>
-                                         <td>$Booking_Date</td>
-                                         <td>$Total_Price</td>
-                                   </tr> ";
+                                $formatBirth = date("d/m/Y", strtotime($birth));
+                                $delete_book = "index.php?action=delete_book&id=" . $Booking_ID;
+                                echo "<tr>
+                                          <td>$Name</td>
+                                          <td>$formatBirth</td>
+                                          <td class='bold'>$Flight_ID</td>
+                                          <td>$Start_city<br>$Departure_Time</td>
+                                          <td>$End_city<br>$Arrival_Time</td>
+                                          <td class='bold'>$Ticket</td>
+                                          <td class='bold'>$Seat_Number</td>
+                                          <td>$Booking_Date</td>
+                                          <td>$Total_Price</td>
+                                          <td>
+                                       <a href='#' onclick='confirmCancelTicket(this);' data-id='$Booking_ID'><input class='btn btn-primary btn-sm' type='button' value='Hủy Vé'>
+                                       </a>
+                                          </td>
+                                     </tr> ";
                             }
                             ?>
-                            <!-- Thêm các dòng khác tương tự nếu có nhiều lịch sử đặt vé -->
                         </tbody>
                     </table>
                 </main>
             </div>
         </div>
 </section>
+<script>
+    // Chức năng xử lý sự kiện click vào liên kết
+    function confirmCancelTicket(link) {
+        var dataId = link.getAttribute("data-id");
+        Swal.fire({
+            icon: "question",
+            title: "Xác nhận hủy vé",
+            text: "Bạn có chắc chắn muốn hủy vé?",
+            showCancelButton: true,
+            confirmButtonText: "Đồng ý",
+            cancelButtonText: "Hủy bỏ",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // window.location.href = 'index.php?action=delete_book&id=' + dataId; // Thay thế bằng URL
+                // Gọi hàm thông báo Ajax
+                simulateDeleteSuccess(dataId);
+            }
+        });
+    }
+
+    function simulateDeleteSuccess(dataId) {
+        // Hiển thị thông báo thành công bằng SweetAlert2
+        Swal.fire({
+            icon: "success",
+            title: "Hủy thành công",
+            text: "Vé đã được hủy thành công.",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Nếu người dùng xác nhận, bạn có thể chuyển hướng hoặc thực hiện bất kỳ hành động nào khác
+                window.location.href = 'index.php?action=delete_book&id=' + dataId;
+            }
+        });
+    }
+</script>

@@ -16,11 +16,15 @@ if (isset($_POST['book']) && ($_POST['book'])) {
     $Sex = $_POST['Sex'];
     $CCCD = $_POST['cccd'];
     $birth = $_POST['birth'];
-    $Booking_Date = date('H:i d/m/Y');
+    $Start_city = $_POST['Start_city'];
+    $End_city = $_POST['End_city'];
+    $Departure_Time = $_POST['Departure_Time'];
+    $Arrival_Time = $_POST['Arrival_time'];
+    $Booking_Date = date('Y/m/d');
     $Total_Price = $_POST['Price'];
     $Seat_Number = $_POST['seats'];
     $Ticket = $_POST['Ticker'];
-    insert_book($Flight_Number, $User_ID, $Name, $Sex, $CCCD, $birth, $Booking_Date, $Total_Price, $Seat_Number, $Ticket);
+    insert_book($Flight_Number, $User_ID, $Name, $Sex, $CCCD, $birth, $Start_city, $End_city, $Departure_Time, $Arrival_Time, $Booking_Date, $Total_Price, $Seat_Number, $Ticket);
     header("location: index.php?action=payment&Flight=" . $Flight_ID);
 }
 ?>
@@ -218,6 +222,11 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                     <input type="hidden" name="Flight_IDs" value="<?= $Flight_Number ?>">
                                     <input type="hidden" name="Price" value="<?= $thue ?>">
                                     <input type="hidden" name="seats" value="<?= $seat ?>">
+                                    <input type="hidden" name="Start_city" value="<?= $Start_City ?>">
+                                    <input type="hidden" name="End_city" value="<?= $Arrival_City ?>">
+                                    <input type="hidden" name="Departure_Time" value="<?= $Departure_Times ?>">
+                                    <input type="hidden" name="Arrival_time" value="<?= $Arrival_Times ?>">
+                                    <input type="hidden" name="flight_id" value="<?= $Flight_ID ?>">
                                 </div>
                             </div>
                         </div>
@@ -255,6 +264,15 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                     <div class="dtc-base-content">
                         <div class="grid-container">
                             <?php
+                            $Flights_seats  = $Flight_ID;
+                            // Hàm để lấy danh sách ghế cho một chuyến bay
+                            function get_seats_for_flight($Flights_seats)
+                            {
+                                $query = "SELECT Seat_number, status FROM seats WHERE Flights_seats  =" . $Flights_seats;
+                                $loadAll_seats_Flight = pdo_query($query);
+                                return $loadAll_seats_Flight;
+                            }
+                            $seats = get_seats_for_flight($Flights_seats);
                             foreach ($seats as $seat) {
                                 extract($seat);
                                 // Kiểm tra trạng thái ghế và hiển thị nút đặt hoặc hủy
@@ -262,13 +280,13 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                     echo "<form method='post'>";
                                     echo "<input type='hidden' name='seat' value='$Seat_number'>";
                                     echo "<input type='hidden' name='action' value='book'>";
-                                    echo "<button onclick='confirmSeat()' type='submit'></button>";
+                                    echo "<button onclick='confirmSeat()' type='submit'>$Seat_number</button>";
                                     echo "</form>";
-                                } elseif ($seat['status'] == 'booked' && checkSeatAvailability($seat['Seat_number'], $conn, false)) {
+                                } elseif ($seat['status'] == 'booked') {
                                     echo "<form method='post'>";
                                     echo "<input type='hidden' name='seat' value='$Seat_number'>";
                                     echo "<input type='hidden' name='action' value='cancel'>";
-                                    echo "<button class='huy' type='submit'></button>";
+                                    echo "<button class='huy' type='submit'>$Seat_number</button>";
                                     echo "</form>";
                                 }
                             }

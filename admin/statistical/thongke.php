@@ -2,30 +2,28 @@
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
-                <h3 class="tile-title">Danh sách chuyến bay</h3>
+                <h3 class="tile-title">Thống kê</h3>
                 <div class="tile-body">
                     <table class="table table-hover table-bordered" id="sampleTable">
                         <thead>
                             <tr>
-                                <th>Mã Loại Vé</th>
-                                <th>Tên Loại Vé</th>
-                                <th>Số Lượng Chuyến Bay</th>
-                                <th>Giá Thấp Nhất</th>
-                                <th>Giá Cao Nhất</th>
-                                <th>Giá Trung Bình</th>
+                                <th>Chuyến Bay</th>
+                                <th>Số Vé</th>
+                                <th>Doanh Thu</th>
+                                <th>Ngày</th>
                             </tr>
                         </thead>
                         <?php
                         foreach ($listthongke as $tk) {
                             extract($tk);
+                            $Price = $Sum_price;
+                            $formattedPrice = number_format($Price, 0, ',', '.');
+                            $Booking_Dates = date("d/m/Y", strtotime($Booking_Date));
                             echo '<tr>
-                                    <td>' . $mave . '</td>
-                                    <td>' . $tenve . '</td>
-                                    <td>' . $countflight . '</td>
-                                    <td>' . $mingia . '</td>
-                                    <td>' . $maxgia . '</td>
-                                    <td>' . $avggia . '</td>
-                                    <td> 
+                                    <td>' . $Flight_ID . '</td>
+                                    <td>' . $Count_Flight . '</td>
+                                    <td>' . $formattedPrice . '</td>
+                                    <td>' . $Booking_Dates . '</td> 
                                     </tr>';
                         }
                         ?>

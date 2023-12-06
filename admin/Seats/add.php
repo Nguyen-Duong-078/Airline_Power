@@ -6,15 +6,26 @@
                     <h3 class="tile-title">Thêm Ghế</h3>
                     <div class="tile-body row">
                         <div class="form-group col-md-3">
-                            <label class="control-label">Số Ghế</label>
-                            <input class="form-control" type="text" name="Seat_Number">
-                        </div>
-                        <div class="form-group col-md-3">
                             <label class="control-label">Trạng Thái</label>
                             <select name="status" class="form-control_1">
                                 <option value="available">available</option>
                                 <option value="booked">booked</option>
                             </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="control-label">Flight_ID</label>
+                            <select name="Flights_seats" class="form-control_1">
+                                <?php
+                                foreach ($list_flight as $flight) {
+                                    extract($flight);
+                                    echo '<option value="' . $Flight_ID . '">' . $Flight_Number . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="control-label">Số Ghế</label>
+                            <input class="form-control" type="text" name="Seat_Number">
                         </div>
                     </div>
                     <input class="btn btn-save" type="submit" value="Thêm Mới" name="themmoi"></input>

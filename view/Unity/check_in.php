@@ -98,7 +98,7 @@
             <div class="product_rights">
                 <div class="child">
                     <i class="fa-solid fa-house-chimney"></i>
-                    <li><a href="index.php?action=booking_history" class="active">Trang Chủ</a></li>
+                    <li><a href="index.php?action=booking_history">Trang Chủ</a></li>
                 </div>
                 <?php
                 if ($role == 1) {
@@ -114,7 +114,7 @@
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-paper-plane"></i>
-                    <li><a href="index.php?action=check_in">Check In</a></li>
+                    <li><a href="index.php?action=check_in" class="active">Check In</a></li>
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-user-shield"></i>
@@ -129,39 +129,9 @@
         <div class="col-4">
             <div class="product_rightst">
                 <div class="conts">
-                    <div class="image_user">
-                        <img src="image/Shipper_CPS3.77d4065.png" alt="">
-                    </div>
-                    <?php
-                    if (isset($_SESSION['username'])) {
-                        extract($_SESSION['username']);
-                    ?>
-                        <h4>Xin Chào</h4>
-                        <h3> <?= $User ?></h3>
-                    <?php
-                    } else {
-                    ?>
-                        <h4>Xin Chào</h4>
-                    <?php }
-                    ?>
+
                 </div>
-                <div class="smember">
-                    <div class="date">
-                        <h5>Ngày Tham Gia</h5>
-                        <i class="fa-regular fa-calendar-check"></i>
-                        <h6>12/10/2023</h6>
-                    </div>
-                    <div class="member_class">
-                        <h5>Hạng Thành Viên</h5>
-                        <i class="fa-solid fa-medal"></i>
-                        <h6>Null</h6>
-                    </div>
-                    <div class="point">
-                        <h5>Điểm Tích Lũy</h5>
-                        <i class="fa-regular fa-sun"></i>
-                        <h6>0</h6>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

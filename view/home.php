@@ -81,9 +81,9 @@
                          <label>Hành Khách</label>
                          <div class="book-quantity">
                              <div class="book-plus-minus">
-                                 <div class="dec qtybutton">-</div>
+                                 <!-- <div class="dec qtybutton">-</div> -->
                                  <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
-                                 <div class="inc qtybutton">+</div>
+                                 <!-- <div class="inc qtybutton">+</div> -->
                              </div>
                          </div>
                      </div>

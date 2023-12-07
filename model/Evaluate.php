@@ -1,7 +1,7 @@
 <?php
-function inser_comment($noidung, $ID_User, $idpro, $Evaluate_Date)
+function inser_comment($noidung, $ID_User, $idpro, $Name, $Evaluate_Date)
 {
-    $sql = "INSERT INTO evaluate(Comment, ID_User, ID_pro, Evaluate_Date) VALUE('$noidung','$ID_User','$idpro','$Evaluate_Date')";
+    $sql = "INSERT INTO evaluate(Comment, ID_User, ID_pro, Name, Evaluate_Date) VALUE('$noidung','$ID_User','$idpro', '$Name','$Evaluate_Date')";
     pdo_execute($sql);
 }
 function loadAll_comment($idpro)

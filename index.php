@@ -11,6 +11,7 @@ include "model/blog.php";
 include "model/Evaluate.php";
 include "model/seats.php";
 include "model/book_flight.php";
+include "model/check_in.php";
 include "View/header.php";
 $listvoucher = loadall_voucher();
 $list_type_ticket = loadAll_type_ticket();
@@ -177,10 +178,18 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             include "view/Unity/booking_history.php";
             break;
         case "check_in":
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-            }
             include "view/Unity/check_in.php";
             break;
+            // case 'check_in':
+            //     if (isset($_POST['checkin']) && $_POST['checkin']) {
+            //         $Booking_ID = $_POST['checkin'];
+            //         // echo $Booking_ID;
+            //         // die;
+            //         check_in($Booking_ID);
+            //     }
+            //     $load_check = loadall_book_check();
+            //     include "view/Unity/check_in.php";
+            //     break;
         default:
             include "View/home.php";
             break;

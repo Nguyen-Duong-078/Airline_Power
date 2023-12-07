@@ -50,19 +50,22 @@ function checkSeatAvailability($seat, $conn, $forBooking = true)
 }
 
 // Hàm để đặt hoặc hủy một ghế
-function processSeat($seat, $action, $conn)
+function processSeat($seat, $action, $conn, $Flights_seats)
 {
     if ($action == "book") {
         // Đặt ghế mới
         if (checkSeatAvailability($seat, $conn)) {
             // Kiểm tra xem người dùng đã đặt ghế chưa
-            $userSeatQuery = "SELECT seat_number FROM seats WHERE User_ID = :user_id";
-            $userSeatStmt = $conn->prepare($userSeatQuery);
-            $userSeatStmt->bindParam(':user_id', $_SESSION['User_ID']);
-            $userSeatStmt->execute();
-            $userSeatResult = $userSeatStmt->fetch(PDO::FETCH_ASSOC);
+            $queryCheck = "SELECT * FROM seats WHERE Flights_seats  = :Flights_seats  AND User_ID = :user_id";
+            $stmtCheck = $conn->prepare($queryCheck);
+            $stmtCheck->bindParam(':Flights_seats', $Flights_seats);
+            $stmtCheck->bindParam(':user_id', $_SESSION['User_ID']);
+            $stmtCheck->execute();
+            $resultCheck = $stmtCheck->fetch(PDO::FETCH_ASSOC);
 
-            if (!$userSeatResult) {
+
+
+            if (!$resultCheck) {
                 $updateQuery = "UPDATE seats SET status = 'booked', User_ID = :user_id WHERE seat_number = :seat";
                 $updateStmt = $conn->prepare($updateQuery);
                 $updateStmt->bindParam(':seat', $seat);
@@ -95,14 +98,15 @@ if (!isset($_SESSION['User_ID'])) {
 }
 
 // Kiểm tra xem người dùng đã gửi yêu cầu đặt hoặc hủy ghế chưa
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["seat"], $_POST["action"])) {
-        $seat = $_POST["seat"];
-        $action = $_POST["action"];
-        // Xử lý ghế dựa trên hành động của người dùng
-        processSeat($seat, $action, $conn);
-    }
-}
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     if (isset($_POST["seat"], $_POST["action"])) {
+//         $seat = $_POST["seat"];
+//         $action = $_POST["action"];
+//         $Flights_seats  = $Flight_ID;
+//         // Xử lý ghế dựa trên hành động của người dùng
+//         processSeat($seat, $action, $conn, $Flights_seats);
+//     }
+// }
 
 // // Hiển thị tất cả các ghế
 // $query = "SELECT Seat_number, status FROM seats WHERE Flights_seats";
@@ -110,11 +114,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // $stmt->execute();
 // $seats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-function getBookedSeats($user_id, $conn)
+function getBookedSeats($user_id, $conn, $Flights_seats)
 {
-    $query = "SELECT seat_number FROM seats WHERE User_ID = :user_id AND status = 'booked'";
+    $query = "SELECT seat_number FROM seats WHERE user_id = :user_id AND status = 'booked' AND Flights_seats = :Flights_seats";
     $stmt = $conn->prepare($query);
     $stmt->bindParam(':user_id', $user_id);
+    $stmt->bindParam(':Flights_seats', $Flights_seats);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_COLUMN);
     return $result;

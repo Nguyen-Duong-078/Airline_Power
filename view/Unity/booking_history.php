@@ -157,6 +157,10 @@ if (is_array($loadAll_book_user)) {
                     <li><a href="index.php?action=user_book&id=<?= $User_ID ?>" class="active">Lịch sử đặt vé</a></li>
                 </div>
                 <div class="child">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <li><a href="index.php?action=check_in">Check In</a></li>
+                </div>
+                <div class="child">
                     <i class="fa-solid fa-user-shield"></i>
                     <li> <a href="index.php?act=your">Tài khoản của bạn</a></li>
                 </div>
@@ -172,6 +176,7 @@ if (is_array($loadAll_book_user)) {
                     <table>
                         <thead>
                             <tr>
+                                <th>Mã_ĐC</th>
                                 <th>Name</th>
                                 <th>Birth</th>
                                 <th>Flight</th>
@@ -181,6 +186,7 @@ if (is_array($loadAll_book_user)) {
                                 <th>Ghế</th>
                                 <th>Date_Book</th>
                                 <th>Giá vé</th>
+                                <th>Trạng Thái</th>
                                 <th>Set</th>
                             </tr>
                         </thead>
@@ -189,8 +195,10 @@ if (is_array($loadAll_book_user)) {
                             foreach ($loadAll_book_user as $user) {
                                 extract($user);
                                 $formatBirth = date("d/m/Y", strtotime($birth));
+                                $formatBooking_Date = date("d/m/Y", strtotime($Booking_Date));
                                 $delete_book = "index.php?action=delete_book&id=" . $Booking_ID;
                                 echo "<tr>
+                                          <td>$Booking_ID</td>
                                           <td>$Name</td>
                                           <td>$formatBirth</td>
                                           <td class='bold'>$Flight_ID</td>
@@ -198,8 +206,9 @@ if (is_array($loadAll_book_user)) {
                                           <td>$End_city<br>$Arrival_Time</td>
                                           <td class='bold'>$Ticket</td>
                                           <td class='bold'>$Seat_Number</td>
-                                          <td>$Booking_Date</td>
+                                          <td>$formatBooking_Date</td>
                                           <td>$Total_Price</td>
+                                          <td>$Check_InFL</td>
                                           <td>
                                        <a href='#' onclick='confirmCancelTicket(this);' data-id='$Booking_ID'><input class='btn btn-primary btn-sm' type='button' value='Hủy Vé'>
                                        </a>

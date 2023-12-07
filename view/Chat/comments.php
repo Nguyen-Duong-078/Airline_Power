@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (isset($_SESSION['username'])) {
+    extract($_SESSION['username']);
+}
 $ID_user = $_SESSION['username']['User_ID'];
 include "../../model/pdo.php";
 include "../../model/Evaluate.php";
@@ -11,8 +14,9 @@ if (isset($_POST['guibl']) && ($_POST['guibl'])) {
     $noidung = $_POST['msg'];
     $idpro = $_POST['idpro'];
     $ID_User = $_POST['User_ID'];
+    $Name = $_POST['FullName'];
     $Evaluate_Date = date('H:i d/m/Y');
-    inser_comment($noidung, $ID_User, $idpro, $Evaluate_Date);
+    inser_comment($noidung, $ID_User, $idpro, $Name, $Evaluate_Date);
     header("location: " . $_SERVER['HTTP_REFERER']);
 }
 ?>
@@ -40,6 +44,7 @@ if (isset($_POST['guibl']) && ($_POST['guibl'])) {
 
         .conent_bl table th {
             padding: 5px;
+            text-align: center;
         }
 
         .conent_bl table th:nth-child(1) {
@@ -47,19 +52,24 @@ if (isset($_POST['guibl']) && ($_POST['guibl'])) {
         }
 
         .conent_bl table td {
-            padding: 10px 15px;
+            padding: 7px;
+            text-align: center;
         }
 
         .conent_bl table td:nth-child(1) {
-            width: 10%;
+            width: 5%;
         }
 
         .conent_bl table td:nth-child(2) {
-            width: 30%;
+            width: 24%;
         }
 
         .conent_bl table td:nth-child(3) {
-            width: 30%;
+            width: 10%;
+        }
+
+        .conent_bl table td:nth-child(4) {
+            width: 60%;
         }
 
         .titles {
@@ -108,17 +118,18 @@ if (isset($_POST['guibl']) && ($_POST['guibl'])) {
             <table>
                 <tr>
                     <th>User</th>
+                    <th>Name</th>
                     <th>Blog_ID</th>
                     <th>Comment</th>
                     <th>Date</th>
                 </tr>
-            </table>
-            <table>
+
                 <?php
                 foreach ($list_comment as $comment) {
                     extract($comment);
                     echo  '<tr>
                 <td>' . $ID_user . '</td>
+                <td>' . $Name . '</td>
                 <td>' . $idpro . '</td>
                 <td>' . $Comment . '</td>
                 <td>' . $Evaluate_Date . '</td>
@@ -131,6 +142,7 @@ if (isset($_POST['guibl']) && ($_POST['guibl'])) {
             <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
                 <input type="hidden" name="idpro" value="<?= $idpro ?>">
                 <input type="hidden" name="User_ID" value="<?= $ID_user ?>">
+                <input type="hidden" name="FullName" value="<?= $FullName ?>">
                 <div class="titles">
                     <input name="msg" type="text" placeholder="Viết bình luận">
                     <input name="guibl" type="submit" value="Gửi">

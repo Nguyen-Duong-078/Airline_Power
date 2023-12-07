@@ -94,7 +94,7 @@ body {
 .input-box input {
     width: 100%;
     height: 100%;
-    background: transparent;
+    background-color: transparent;
     border: none;
     outline: none;
     border-bottom: 2px solid #fff;
@@ -102,7 +102,9 @@ body {
     color: #fff;
     font-size: 16px;
     font-weight: 500;
+    border-radius: 10px;
     transition: .5s;
+    margin-top: 3px;
 }
 
 .input-box input:focus,
@@ -123,7 +125,7 @@ body {
 
 .input-box input:focus~label,
 .input-box input:valid~label {
-    top: -5px;
+    top: -7px;
     color: #0ef;
 }
 

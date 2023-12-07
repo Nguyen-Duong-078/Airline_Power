@@ -94,7 +94,7 @@
 </style>
 <section style="padding:30px;">
     <div class="row">
-        <div class="col-6">
+        <div class="col-5">
             <div class="product_rights">
                 <div class="child">
                     <i class="fa-solid fa-house-chimney"></i>

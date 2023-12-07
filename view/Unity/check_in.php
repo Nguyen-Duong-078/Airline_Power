@@ -91,10 +91,71 @@
     .active {
         color: red;
     }
+
+    .containers {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+        overflow: hidden;
+        width: 500px;
+
+    }
+
+
+    .form-header {
+        background: repeating-linear-gradient(to right, red 0, rgb(9, 58, 237) 50%, red 100%);
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        background-size: 200% auto;
+        background-position: 0 100%;
+        animation: 5s linear infinite forwards gradient;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0 0
+        }
+
+        100% {
+            background-position: -200% 0
+        }
+    }
+
+    .form-header h3 {
+        color: #fff;
+    }
+
+    .form-group {
+        padding: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    .form-group button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
 </style>
 <section style="padding:30px;">
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             <div class="product_rights">
                 <div class="child">
                     <i class="fa-solid fa-house-chimney"></i>
@@ -126,13 +187,36 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
-            <div class="product_rightst">
-                <div class="conts">
+        <div class="col-6" style="display: flex;justify-content: center;align-items: center;">
+            <!-- <form method="post">
+                <label for="bookingId">ID đặt chỗ:</label>
+                <input type="text" name="Booking_ID" required>
 
+                <label for="lastName">Họ và tên đệm:</label>
+                <input type="text" name="Name" required>
+
+                <button type="submit">Check-in</button>
+            </form>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+            <?php include 'process.php'; ?> -->
+            <div class="containers">
+                <div class="form-header">
+                    <h3>Check-in chuyến bay</h3>
                 </div>
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
 
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="flightNumber">Flight Number:</label>
+                    <input type="text" id="flightNumber" name="flightNumber" required>
+
+                    <button type="submit">Check-in</button>
+                </div>
             </div>
+
         </div>
     </div>
 </section>

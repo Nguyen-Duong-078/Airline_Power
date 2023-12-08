@@ -63,6 +63,51 @@
                     <span class="app-menu__label">Khách hàng</span>
                 </a>
             </li>
+<<<<<<< Updated upstream
+=======
+            <li>
+                <a class="app-menu__item" href="index.php?act=book_flight">
+                    <i class='app-menu__icon bx bx bxl-paypal'></i>
+                    <span class="app-menu__label">Đặt Chỗ</span>
+                </a>
+            </li>
+            <!-- <li>
+                <a class="app-menu__item" href="index.php?act=pay">
+                    <i class='app-menu__icon bx bxl-paypal'></i>
+                    <span class="app-menu__label">Thanh Toán</span>
+                </a>
+            </li> -->
+            <li>
+                <a class="app-menu__item" href="index.php?act=bill">
+                    <i class='app-menu__icon bx bxs-user-check'></i>
+                    <span class="app-menu__label">Hóa Đơn</span>
+                </a>
+            </li>
+     
+            <li>
+                <a class="app-menu__item" href="index.php?act=blog">
+                    <i class='app-menu__icon bx bxs-bookmark-alt-plus'></i>
+                    <span class="app-menu__label">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=Evaluate">
+                    <i class='app-menu__icon bx bx-chat'></i>
+                    <span class="app-menu__label">Đánh giá</span>
+                </a>
+            </li>
+            <?php
+            if ($_SESSION['role'] == 1) {
+            ?>
+                <li>
+                    <a class="app-menu__item" href="index.php?act=account">
+                        <i class='app-menu__icon bx bx-user-voice'></i>
+                        <span class="app-menu__label">Khách hàng</span>
+                    </a>
+                </li>
+            <?php
+            } ?>
+>>>>>>> Stashed changes
 
             <li>
                 <a class="app-menu__item" href="index.php?act=statistical">

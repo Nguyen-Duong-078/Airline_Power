@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,6 +110,29 @@
                                 </tr>
                             </thead>
                             <?php
+=======
+ <main class="app-content">
+     <div class="row">
+         <div class="col-md-12">
+             <div class="tile">
+                 <h3 class="tile-title">Danh sách Voucher</h3>
+                 <div class="tile-body">
+                     <table class="table table-hover table-bordered" id="sampleTable">
+                         <thead>
+                             <tr>
+                                 <!-- <th width="10"><input type="checkbox" id="all"></th> -->
+                                 <th>ID VOUCHER</th>
+                                 <th>VOUCHER NAME</th>
+                                 <th>VOUCHER VALUE</th>
+                                 <th>VOUCHER START</th>
+                                 <th>VOUCHER END</th>
+                                 <th>Image</th>
+                                 <th>Chức Năng</th>
+                             </tr>
+                         </thead>
+                         <?php
+                         // Hiển thị danh sách Voucher
+>>>>>>> Stashed changes
                             foreach ($listvoucher as $voucher) {
                                 extract($voucher);
                                 $edit_voucher = "index.php?act=edit_voucher&id_voucher=" . $Voucher_ID;

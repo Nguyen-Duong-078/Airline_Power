@@ -86,6 +86,7 @@
                     <span class="app-menu__label">Ghế Ngồi</span>
                 </a>
             </li>
+
             <li>
                 <a class="app-menu__item" href="index.php?act=book_flight">
                     <i class='app-menu__icon bx bx bxl-paypal'></i>
@@ -152,5 +153,33 @@
                     <span class="app-menu__label">Thống kê</span>
                 </a>
             </li>
+<<<<<<< Updated upstream
+=======
+            <li>
+                <a class="app-menu__item" href="index.php?act=add_voucher">
+                    <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
+                    <span class="app-menu__label">Voucher</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=add_type_ticket">
+                    <i class='app-menu__icon bx bx-bar-chart-alt-2'></i>
+                    <span class="app-menu__label">Type_ticket</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="index.php?act=commnet">
+                    <i class='app-menu__icon bx bx bx-chat'></i>
+                    <span class="app-menu__label">Comment</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="../index.php">
+                    <i class='app-menu__icon bx bx bx bxl-unity'></i>
+                    <span class="app-menu__label">Public</span>
+                </a>
+            </li>
+
+>>>>>>> Stashed changes
         </ul>
     </aside>

@@ -83,9 +83,6 @@ if (is_array($loadAll_book_user)) {
     extract($loadAll_book_user);
 }
 ?>
-<?php
-
-?>
 <section style="padding:30px;">
     <div class="row">
         <div class="col-2">

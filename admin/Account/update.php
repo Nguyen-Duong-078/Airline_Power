@@ -9,6 +9,7 @@ if (is_array($update_account)) {
 //     $Image = "No image found";
 // }
 ?>
+
 <main class="app-content">
     <div class="row">
         <div class="col-md-12">

@@ -51,7 +51,16 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             header('location: index.php?act=home ');
             break;
         case 'forgot':
-            include "View/Client/forgot.php";
+            if (isset($_POST['forgot']) && ($_POST['forgot'])) {
+                $Email = $_POST['email'];
+                $check_pass = check_Pass($Email);
+                if (is_array($check_pass)) {
+                    $Thongbao = "Mật khẩu của bạn là: " . $check_pass['Password'];
+                } else {
+                    $Thongbao = "Email không tồn tại";
+                }
+            }
+            include "View/client/forgot.php";
             break;
         case '404':
             include "View/404.php";
@@ -169,10 +178,18 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
                 $User_ID = $_GET['id'];
                 $loadAll_book_user = loadAll_book_user($User_ID);
             }
-        case "delete_book":
+            // case "delete_book":
+            //     if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+            //         $ID = $_GET['id'];
+            //         deleta_book($ID);
+            //     }
+            //     $loadAll_book_user = loadAll_book_user($User_ID);
+            //     include "view/Unity/booking_history.php";
+            //     break;
+        case "huy_book":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                $ID = $_GET['id'];
-                deleta_book($ID);
+                $Booking_ID = $_GET['id'];
+                update_book($Booking_ID);
             }
             $loadAll_book_user = loadAll_book_user($User_ID);
             include "view/Unity/booking_history.php";
@@ -180,16 +197,6 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
         case "check_in":
             include "view/Unity/check_in.php";
             break;
-            // case 'check_in':
-            //     if (isset($_POST['checkin']) && $_POST['checkin']) {
-            //         $Booking_ID = $_POST['checkin'];
-            //         // echo $Booking_ID;
-            //         // die;
-            //         check_in($Booking_ID);
-            //     }
-            //     $load_check = loadall_book_check();
-            //     include "view/Unity/check_in.php";
-            //     break;
         default:
             include "View/home.php";
             break;

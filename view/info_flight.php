@@ -25,6 +25,7 @@ if (isset($_POST['book']) && ($_POST['book'])) {
     $Sex = $_POST['Sex'];
     $CCCD = $_POST['cccd'];
     $birth = $_POST['birth'];
+    $Flight_date = $_POST['Flight_date'];
     $Start_city = $_POST['Start_city'];
     $End_city = $_POST['End_city'];
     $Departure_Time = $_POST['Departure_Time'];
@@ -34,7 +35,7 @@ if (isset($_POST['book']) && ($_POST['book'])) {
     $Seat_Number = $_POST['seats'];
     $Ticket = $_POST['Ticker'];
     $Check_In = $_POST['Check_In'];
-    insert_book($Flight_Number, $User_ID, $Name, $Sex, $CCCD, $birth, $Start_city, $End_city, $Departure_Time, $Arrival_Time, $Booking_Date, $Total_Price, $Seat_Number, $Ticket, $Check_In);
+    insert_book($Flight_Number, $User_ID, $Name, $Sex, $CCCD, $birth, $Flight_date, $Start_city, $End_city, $Departure_Time, $Arrival_Time, $Booking_Date, $Total_Price, $Seat_Number, $Ticket, $Check_In);
     header("location: index.php?action=payment&Flight=" . $Flight_ID);
 }
 ?>
@@ -242,6 +243,7 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                     <input type="hidden" name="End_city" value="<?= $Arrival_City ?>">
                                     <input type="hidden" name="Departure_Time" value="<?= $Departure_Times ?>">
                                     <input type="hidden" name="Arrival_time" value="<?= $Arrival_Times ?>">
+                                    <input type="hidden" name="Flight_date" value="<?= $Flight_date ?>">
                                     <input type="hidden" name="flight_id" value="<?= $Flight_ID ?>">
                                 </div>
                             </div>

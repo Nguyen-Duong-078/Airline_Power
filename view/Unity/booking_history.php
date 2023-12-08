@@ -1,8 +1,3 @@
-<?php
-if (is_array($loadAll_book_user)) {
-    extract($loadAll_book_user);
-}
-?>
 <style>
     .child {
         width: 250px;
@@ -35,62 +30,8 @@ if (is_array($loadAll_book_user)) {
     .product_rights {
         float: left;
         border-radius: 10px;
+        width: 230px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
-    }
-
-    .image_user img {
-        width: 70px;
-        margin-top: 10px;
-    }
-
-    .product_rightst {
-        padding: 10px;
-        width: 100%;
-        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
-    }
-
-    .conts {
-        text-align: center;
-    }
-
-    .conts h4 {
-        text-align: center;
-        font-size: 17px;
-    }
-
-    .conts h3 {
-        margin-bottom: 50px;
-    }
-
-    .smember_info {
-        display: grid;
-        width: 400px;
-        margin-top: -75px;
-        margin-bottom: 30px;
-    }
-
-    .smember {
-        display: flex;
-        justify-content: center;
-    }
-
-    .date,
-    .member_class,
-    .point {
-        text-align: center;
-        font-size: 18px;
-        padding: 15px;
-    }
-
-    .smember i {
-        margin-top: 10px;
-        font-size: 30px;
-        color: red;
-    }
-
-    .smember h6 {
-        margin-top: 12px;
-        font-size: 15px;
     }
 
     table {
@@ -122,6 +63,7 @@ if (is_array($loadAll_book_user)) {
     .bold {
         font-weight: bold;
         color: red;
+        cursor: pointer;
     }
 
     .product_rightst .btn {
@@ -136,9 +78,17 @@ if (is_array($loadAll_book_user)) {
         color: red;
     }
 </style>
+<?php
+if (is_array($loadAll_book_user)) {
+    extract($loadAll_book_user);
+}
+?>
+<?php
+
+?>
 <section style="padding:30px;">
     <div class="row">
-        <div class="col-3">
+        <div class="col-2">
             <nav class="product_rights">
                 <div class="child">
                     <i class="fa-solid fa-house-chimney"></i>
@@ -170,50 +120,77 @@ if (is_array($loadAll_book_user)) {
                 </div>
             </nav>
         </div>
-        <div class="col-9">
+        <div class="col-10">
             <div class="product_rightst">
                 <main>
                     <table>
                         <thead>
                             <tr>
+                                <?php
+                                foreach ($loadAll_book_user as $user) {
+                                    extract($user);
+                                }
+                                ?>
                                 <th>Mã_ĐC</th>
                                 <th>Name</th>
-                                <th>Birth</th>
                                 <th>Flight</th>
+                                <th>Ngày Bay</th>
                                 <th>Start</th>
                                 <th>End</th>
                                 <th>Loại Vé</th>
                                 <th>Ghế</th>
                                 <th>Date_Book</th>
                                 <th>Giá vé</th>
+                                <th>Pay</th>
                                 <th>Trạng Thái</th>
-                                <th>Set</th>
+                                <?php
+                                if ($Check_InFL == 'Chưa check in') {
+                                    echo "<th>Set</th>";
+                                } ?>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             foreach ($loadAll_book_user as $user) {
                                 extract($user);
-                                $formatBirth = date("d/m/Y", strtotime($birth));
+                                $formatFlight_date = date("d/m/Y", strtotime($Flight_date));
                                 $formatBooking_Date = date("d/m/Y", strtotime($Booking_Date));
-                                $delete_book = "index.php?action=delete_book&id=" . $Booking_ID;
-                                echo "<tr>
+                                $formattedPrice = number_format($Total_Price, 0, ',', '.');
+                                if ($Check_InFL == 'Chưa check in') {
+                                    echo "<tr>
                                           <td>$Booking_ID</td>
                                           <td>$Name</td>
-                                          <td>$formatBirth</td>
                                           <td class='bold'>$Flight_ID</td>
+                                          <td>$formatFlight_date</td>
                                           <td>$Start_city<br>$Departure_Time</td>
                                           <td>$End_city<br>$Arrival_Time</td>
                                           <td class='bold'>$Ticket</td>
                                           <td class='bold'>$Seat_Number</td>
                                           <td>$formatBooking_Date</td>
-                                          <td>$Total_Price</td>
-                                          <td>$Check_InFL</td>
+                                          <td>$formattedPrice</td>   
+                                          <td class='bold text-danger'>$Pay</td>                                    
+                                          <td class='bold text-danger'>$Check_InFL</td>
                                           <td>
-                                       <a href='#' onclick='confirmCancelTicket(this);' data-id='$Booking_ID'><input class='btn btn-primary btn-sm' type='button' value='Hủy Vé'>
-                                       </a>
+                                          <a href='#' onclick='confirmCancelTicket(this);' data-id='$Booking_ID'><input class='btn btn-primary btn-sm' type='button' value='Hủy Vé'>
+                                          </a>
                                           </td>
                                      </tr> ";
+                                } else {
+                                    echo "<tr>
+                                          <td>$Booking_ID</td>
+                                          <td>$Name</td>
+                                          <td class='bold'>$Flight_ID</td>
+                                          <td>$formatFlight_date</td>
+                                          <td>$Start_city<br>$Departure_Time</td>
+                                          <td>$End_city<br>$Arrival_Time</td>
+                                          <td class='bold'>$Ticket</td>
+                                          <td class='bold'>$Seat_Number</td>
+                                          <td>$formatBooking_Date</td>
+                                          <td>$formattedPrice</td>
+                                          <td class='bold text-danger'>$Pay</td>
+                                          <td class=' bold text-primary'>$Check_InFL</td>
+                                     </tr> ";
+                                }
                             }
                             ?>
                         </tbody>
@@ -251,7 +228,7 @@ if (is_array($loadAll_book_user)) {
         }).then((result) => {
             if (result.isConfirmed) {
                 // Nếu người dùng xác nhận, bạn có thể chuyển hướng hoặc thực hiện bất kỳ hành động nào khác
-                window.location.href = 'index.php?action=delete_book&id=' + dataId;
+                window.location.href = 'index.php?action=huy_book&id=' + dataId;
             }
         });
     }

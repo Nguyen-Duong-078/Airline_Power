@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
-                <h3 class="tile-title">Danh sách chuyến bay được đặt</h3>
+                <h3 class="tile-title">Danh sách vé bị hủy</h3>
                 <div class="tile-body">
                     <table class="table table-hover table-bordered" id="sampleTable">
                         <thead>
@@ -29,7 +29,7 @@
                             $Booking_Dates = date("d/m/Y", strtotime($Booking_Date));
                             $Price = number_format($Total_Price, 0, ',', '.');
                             $edit_book = "index.php?act=edit_book&id=" . $Booking_ID;
-                            if ($Check_InFL != 'Hủy') {
+                            if ($Check_InFL == 'Hủy') {
                                 echo '<tr>
                                     <td>' . $Booking_ID . '</td>
                                     <td>' . $Name . '</td>
@@ -52,7 +52,7 @@
                         }
                         ?>
                     </table>
-                    <a href="index.php?act=Book_cancel"><input class="btn btn-save" type="button" value="Vé đã hủy"></input></a>
+                    <a href="index.php?act=book_flight"><input class="btn btn-save" type="button" value="Vé Đã Đặt"></input></a>
                 </div>
             </div>
         </div>

@@ -87,16 +87,16 @@
             </li>
             <li>
                 <a class="app-menu__item" href="index.php?act=book_flight">
-                    <i class='app-menu__icon bx bx-cloud-upload'></i>
+                    <i class='app-menu__icon bx bx bxl-paypal'></i>
                     <span class="app-menu__label">Đặt Chỗ</span>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a class="app-menu__item" href="index.php?act=pay">
                     <i class='app-menu__icon bx bxl-paypal'></i>
                     <span class="app-menu__label">Thanh Toán</span>
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a class="app-menu__item" href="index.php?act=bill">
                     <i class='app-menu__icon bx bxs-user-check'></i>

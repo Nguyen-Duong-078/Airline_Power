@@ -144,7 +144,6 @@
     }
 
     .form-group button {
-        background-color: #4CAF50;
         color: #fff;
         padding: 10px;
         border: none;
@@ -188,35 +187,22 @@
             </div>
         </div>
         <div class="col-6" style="display: flex;justify-content: center;align-items: center;">
-            <!-- <form method="post">
-                <label for="bookingId">ID đặt chỗ:</label>
-                <input type="text" name="Booking_ID" required>
-
-                <label for="lastName">Họ và tên đệm:</label>
-                <input type="text" name="Name" required>
-
-                <button type="submit">Check-in</button>
-            </form>
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-            <?php include 'process.php'; ?> -->
+            <?php include 'process.php'; ?>
             <div class="containers">
                 <div class="form-header">
                     <h3>Check-in chuyến bay</h3>
                 </div>
-                <div class="form-group">
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" required>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="flightNumber">Flight Number:</label>
-                    <input type="text" id="flightNumber" name="flightNumber" required>
-
-                    <button type="submit">Check-in</button>
-                </div>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="Booking_ID">ID Đặt Chỗ</label>
+                        <input type="text" id="Booking_ID" name="Booking_ID" required>
+                        <label for="Name">Họ và Tên</label>
+                        <input type="text" id="Name" name="Name" required>
+                        <button type="submit" class="btn btn-primary">Check-in</button>
+                    </div>
+                </form>
             </div>
-
         </div>
     </div>
 </section>

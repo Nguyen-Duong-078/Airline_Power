@@ -33,6 +33,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         text: 'Bạn đã check-in rồi.',
                     });
                   </script>";
+        } elseif ($checkinStatus == 'Hủy') {
+            echo "<script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Thông Báo',
+                        text: 'Vé đã hủy không thể check in',
+                    });
+                  </script>";
         } else {
             // Cập nhật trạng thái check-in trong cơ sở dữ liệu
             $updateSql = "UPDATE bookings SET Check_InFL = 'Check-in' WHERE Booking_ID = '$Booking_ID' AND Name = '$Name'";

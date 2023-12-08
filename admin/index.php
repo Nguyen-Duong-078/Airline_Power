@@ -260,10 +260,12 @@ if (isset($_GET['act'])) {
             }
             include "Blog/add.php";
             break;
+
         case 'list_blog':
             $list_blog = loadAll_blog();
             include "Blog/list.php";
             break;
+
         case 'delete_blog':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];
@@ -272,10 +274,12 @@ if (isset($_GET['act'])) {
             $list_blog = loadAll_blog();
             include "Blog/list.php";
             break;
+
         case 'Evaluate':
             $list_evaluate =  loadAll_comments(0);
             include "Evaluate/list.php";
             break;
+
         case 'delete_evaluate':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];
@@ -284,6 +288,7 @@ if (isset($_GET['act'])) {
             $list_evaluate =  loadAll_comments(0);
             include "Evaluate/list.php";
             break;
+
         case "seat":
             if (isset($_POST['themmoi']) && $_POST['themmoi']) {
                 $Seat_Number = $_POST['Seat_Number'];
@@ -295,10 +300,12 @@ if (isset($_GET['act'])) {
             $list_flight = loadAll_flight();
             include "Seats/add.php";
             break;
+
         case "list_seats":
             $list_seats = loadAll_seats();
             include "Seats/list.php";
             break;
+
         case "delete_seats":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];
@@ -307,10 +314,35 @@ if (isset($_GET['act'])) {
             $list_seats = loadAll_seats();
             include "Seats/list.php";
             break;
+
         case "book_flight":
             $listbook = loadAll_book();
             include "Book/list.php";
             break;
+
+        case "Book_cancel":
+            $listbook = loadAll_book();
+            include "Book/list_cancel.php";
+            break;
+
+        case 'edit_book':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                $loadOne_book = loadOne_book($ID);
+            }
+            include "Book/update.php";
+            break;
+
+        case 'update_pay':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $Booking_ID = $_POST['id'];
+                $Pay = $_POST['Pay'];
+                update_pay($Booking_ID, $Pay);
+            }
+            $listbook = loadAll_book();
+            include "Book/list.php";
+            break;
+
         case "bill":
             $list_bill = loadAll_bill();
             include "Bill/list.php";
@@ -328,12 +360,25 @@ if (isset($_GET['act'])) {
             include "Payments/list.php";
             break;
         case "statistical":
-            $listthongke = thongke();
+            $Booking_Dates = date("Y-m-d");
+            $listthongke = thongke($Booking_Dates);
             include "statistical/thongke.php";
             break;
         case "chart":
-            $listthongke = thongke();
+            $Booking_Dates = date("Y-m-d");
+            $listthongke = thongke($Booking_Dates);
             include "statistical/chart.php";
+            break;
+        case "chart_week":
+            $currentDate = date("Y-m-d");
+            $firstDayOfWeek = date('Y-m-d', strtotime('last monday', strtotime($currentDate)));
+            $list_week = chart_week($firstDayOfWeek, $currentDate);
+            include "statistical/week.php";
+            break;
+        case "chart_month":
+            $currentMonth = date("Y-m");
+            $list_Month = chart_month($currentMonth);
+            include "statistical/month.php";
             break;
         default:
             include "home.php";

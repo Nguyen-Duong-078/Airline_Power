@@ -39,3 +39,10 @@ function loadOne_account($ID)
     $update_account = pdo_query_one($sql);
     return $update_account;
 }
+
+function check_Pass($Email)
+{
+    $sql = "SELECT * FROM users WHERE Email='" . $Email . "'";
+    $Check_pass = pdo_query_one($sql);
+    return $Check_pass;
+}

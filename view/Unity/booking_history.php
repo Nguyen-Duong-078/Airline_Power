@@ -112,11 +112,11 @@ if (is_array($loadAll_book_user)) {
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-user-shield"></i>
-                    <li> <a href="index.php?act=your">Tài khoản của bạn</a></li>
+                    <li> <a href="index.php?action=your">Tài khoản của bạn</a></li>
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-recycle"></i>
-                    <li> <a href="index.php?act=update_user">Cập Nhật Thông Tin</a></li>
+                    <li> <a href="index.php?action=update_user">Cập Nhật Thông Tin</a></li>
                 </div>
             </nav>
         </div>

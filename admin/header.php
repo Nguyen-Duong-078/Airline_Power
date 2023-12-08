@@ -47,7 +47,8 @@
     </header>
     <!-- Sidebar menu-->
     <aside class="app-sidebar">
-        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../image/Shipper_CPS3.77d4065.png" width="50px" alt="User Image">
+        <div class="app-sidebar__user">
+            <img class="app-sidebar__user-avatar" src="../image/Shipper_CPS3.77d4065.png" width="50px" alt="User Image">
             <div>
                 <p class="app-sidebar__user-name"><b style="color:yellow;">Airline Power</b></p>
                 <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>

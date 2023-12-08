@@ -34,6 +34,9 @@ include "../model/statistical.php";
 include "../model/momo.php";
 include "header.php";
 
+$listbook = loadAll_book();
+$list_account = loadAll_User();
+
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {

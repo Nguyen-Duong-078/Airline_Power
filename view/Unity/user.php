@@ -29,6 +29,7 @@
 
     .product_rights {
         float: left;
+        width: 300px;
         border-radius: 10px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
     }
@@ -42,6 +43,7 @@
         padding: 10px;
         width: 100%;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+        border-radius: 5px;
     }
 
     .conts {
@@ -54,7 +56,7 @@
     }
 
     .conts h3 {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 
     .smember_info {
@@ -118,11 +120,11 @@
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-user-shield"></i>
-                    <li> <a href="index.php?act=your">Tài khoản của bạn</a></li>
+                    <li> <a href="index.php?action=your">Tài khoản của bạn</a></li>
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-recycle"></i>
-                    <li> <a href="index.php?act=update_user">Cập Nhật Thông Tin</a></li>
+                    <li> <a href="index.php?action=update_user">Cập Nhật Thông Tin</a></li>
                 </div>
             </div>
         </div>

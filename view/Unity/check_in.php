@@ -30,62 +30,8 @@
     .product_rights {
         float: left;
         border-radius: 10px;
+        width: 300px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
-    }
-
-    .image_user img {
-        width: 70px;
-        margin-top: 10px;
-    }
-
-    .product_rightst {
-        padding: 10px;
-        width: 100%;
-        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
-    }
-
-    .conts {
-        text-align: center;
-    }
-
-    .conts h4 {
-        text-align: center;
-        font-size: 17px;
-    }
-
-    .conts h3 {
-        margin-bottom: 20px;
-    }
-
-    .smember_info {
-        display: grid;
-        width: 400px;
-        margin-top: -75px;
-        margin-bottom: 30px;
-    }
-
-    .smember {
-        display: flex;
-        justify-content: center;
-    }
-
-    .date,
-    .member_class,
-    .point {
-        text-align: center;
-        font-size: 18px;
-        padding: 15px;
-    }
-
-    .smember i {
-        margin-top: 10px;
-        font-size: 30px;
-        color: red;
-    }
-
-    .smember h6 {
-        margin-top: 12px;
-        font-size: 15px;
     }
 
     .active {
@@ -178,11 +124,11 @@
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-user-shield"></i>
-                    <li> <a href="index.php?act=your">Tài khoản của bạn</a></li>
+                    <li> <a href="index.php?action=your">Tài khoản của bạn</a></li>
                 </div>
                 <div class="child">
                     <i class="fa-solid fa-recycle"></i>
-                    <li> <a href="index.php?act=update_user">Cập Nhật Thông Tin</a></li>
+                    <li> <a href="index.php?action=update_user">Cập Nhật Thông Tin</a></li>
                 </div>
             </div>
         </div>

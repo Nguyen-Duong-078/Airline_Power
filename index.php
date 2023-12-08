@@ -178,14 +178,6 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
                 $User_ID = $_GET['id'];
                 $loadAll_book_user = loadAll_book_user($User_ID);
             }
-            // case "delete_book":
-            //     if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-            //         $ID = $_GET['id'];
-            //         deleta_book($ID);
-            //     }
-            //     $loadAll_book_user = loadAll_book_user($User_ID);
-            //     include "view/Unity/booking_history.php";
-            //     break;
         case "huy_book":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $Booking_ID = $_GET['id'];
@@ -193,6 +185,23 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
             }
             $loadAll_book_user = loadAll_book_user($User_ID);
             include "view/Unity/booking_history.php";
+            break;
+        case "your":
+            include "view/Unity/your.php";
+            break;
+        case "update_user":
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $Email = $_POST['email'];
+                $Tel = $_POST['tel'];
+                $FullName = $_POST['FullName'];
+                $User = $_POST['user'];
+                $Password = $_POST['password'];
+                $id = $_POST['id'];
+                update_user($id, $User, $Email, $Password, $Tel, $FullName);
+                $_SESSION['username'] = check_user($User, $Password);
+                $Thongbao = "Cập nhật thành công";
+            }
+            include "view/Unity/update.php";
             break;
         case "check_in":
             include "view/Unity/check_in.php";

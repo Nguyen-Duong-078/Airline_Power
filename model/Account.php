@@ -13,10 +13,15 @@ function check_user($User, $Password)
     return $User;
 }
 
+function  update_user($id, $User, $Email, $Password, $Tel, $FullName)
+{
+    $sql = "UPDATE users SET User = '" . $User . "', Password ='" . $Password . "', Email ='" . $Email . "', Tel ='" . $Tel . "',FullName ='" . $FullName . "' WHERE User_ID=" . $id;
+    pdo_execute($sql);
+}
 
 function loadAll_User()
 {
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT * FROM users ORDER BY User_ID DESC LIMIT 3";
     $list_user = pdo_query($sql);
     return $list_user;
 }

@@ -7,7 +7,7 @@ function insert_book($Flight_ID, $User_ID, $Name, $Sex, $CCCD, $birth, $Flight_d
 
 function loadAll_book()
 {
-    $sql = "SELECT * FROM bookings order by Booking_ID desc";
+    $sql = "SELECT * FROM bookings order by Booking_ID desc limit 7";
     $listbook = pdo_query($sql);
     return $listbook;
 }

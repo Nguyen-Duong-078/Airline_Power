@@ -1,0 +1,357 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1520px;
+    height: 100vh;
+}
+
+.wapper {
+    width: 70%;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #33FFCC;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 1063.6px;
+    z-index: 9999;
+}
+
+.image,
+.images {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo {
+    display: flex;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 220px;
+}
+
+.search {
+    border-radius: 13px;
+    height: 30px;
+    margin-right: 50px;
+    min-height: 30px;
+    position: relative;
+}
+
+.search input {
+    width: 300px;
+    border-radius: 7px;
+    border: 3px solid #ffff;
+    height: 30px;
+    min-height: 30px;
+}
+
+.search button {
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+}
+
+.synthetic {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.synthetic:hover {
+    color: blue;
+}
+
+.phone {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.txt {
+    background: yellow;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.menu {
+    background-color: #000;
+    padding: 15px;
+    position: fixed;
+    width: 1063.6px;
+    top: 50px;
+    z-index: 9999;
+}
+
+.menu ul {
+    padding: 0 15px;
+}
+
+.menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #e8e0e0;
+    font-weight: 600;
+}
+
+.menu ul li a:hover {
+    color: yellow;
+}
+
+.menu ul li a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: red;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* hết */
+
+.images img {
+    width: 70px;
+    margin-top: 10px;
+}
+
+.product_left {
+    margin-left: 0;
+    min-height: 250px;
+    margin-top: 120px;
+    border-radius: 10px;
+    position: fixed;
+    width: 300px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+}
+
+.child {
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.child a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #080808;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.child a:hover {
+    color: rgb(38, 0, 253);
+}
+
+.child li {
+    list-style: none;
+    display: inline-block;
+}
+
+.child .active {
+    color: rgb(255, 21, 0);
+}
+
+.product_rights {
+    width: 500px;
+    position: absolute;
+    top: 120px;
+    right: 120px;
+    height: 300px;
+    float: right;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+}
+
+.product_right {
+    width: 500px;
+    position: absolute;
+    top: 120px;
+    right: 120px;
+    float: right;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+}
+
+.conts h4 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 17px;
+}
+
+.smember {
+    display: flex;
+}
+
+.date,
+.member_class,
+.point {
+    text-align: center;
+    font-size: 18px;
+}
+
+.smember i {
+    margin-top: 10px;
+    font-size: 30px;
+    color: red;
+}
+
+.smember h6 {
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+
+/* Cập nhật thông tin */
+
+.register {
+    position: relative;
+    width: 500px;
+    border-radius: 15px;
+    color: #000000;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    font-size: 15px;
+}
+
+.row {
+    text-align: center;
+}
+
+.check {
+    margin-top: 20px;
+}
+
+.kt {
+    text-align: center;
+}
+
+.kt input {
+    width: 300px;
+    border: 2px solid rgb(6, 112, 241);
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: rgb(6, 112, 241);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: transparent;
+    transition: 0.5s ease-in-out;
+}
+
+td {
+    width: 300px;
+}
+
+.group {
+    padding: 8px;
+    margin-right: 235px;
+}
+
+.form-control {
+    width: 300px;
+    height: 33px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.sp {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.sp>a {
+    color: rgb(255, 0, 38);
+    text-decoration: none;
+}
+
+.sp>a:hover {
+    color: blue;
+    font-weight: bold;
+}
+
+.kt input:hover {
+    color: rgb(5, 5, 6);
+    background-color: rgb(6, 112, 241);
+}
+
+.group1 {
+    padding: 8px;
+    margin-right: 261px;
+}
+
+.group2 {
+    padding: 8px;
+    margin-right: 210px;
+}
+
+.group3 {
+    padding: 8px;
+    margin-right: 250px;
+}
+
+.text h2 {
+    color: yellow;
+}
+
+.thongbao h2 {
+    font-size: 14px;
+    color: red;
+    margin-top: -50px;
+}
+
+.image img {
+    width: 150px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.order {
+    display: flex;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.order_1,
+.order_2 {
+    text-align: center;
+}

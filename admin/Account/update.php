@@ -9,8 +9,10 @@ if (is_array($update_account)) {
 //     $Image = "No image found";
 // }
 ?>
+
 <main class="app-content">
     <div class="row">
+        
         <div class="col-md-12">
             <form action="index.php?act=update_account" method="post" enctype="multipart/form-data">
                 <div class="tile">
@@ -39,4 +41,5 @@ if (is_array($update_account)) {
             </form>
         </div>
     </div>
+    
 </main>

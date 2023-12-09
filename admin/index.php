@@ -21,6 +21,7 @@ if (isset($_SESSION['User'])) {
     exit();
 }
 include "../model/pdo.php";
+<<<<<<< Updated upstream
 include "../model/flight.php";
 include "../model/type_ticket.php";
 include "../model/voucher.php";
@@ -32,6 +33,10 @@ include "../model/seats.php";
 include "../model/book_flight.php";
 include "../model/statistical.php";
 include "../model/momo.php";
+=======
+include "../model/danhmuc.php";
+include "../model/type_ticket.php";
+>>>>>>> Stashed changes
 include "header.php";
 
 $listbook = loadAll_book();
@@ -90,10 +95,60 @@ if (isset($_GET['act'])) {
             include "Flight/list.php";
             break;
 
+<<<<<<< Updated upstream
         case 'delete_flight';
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $ID = $_GET['id'];
                 deleta_flight($ID);
+=======
+            case 'add_type_ticket':
+                // kt xem người dùng có click vào nút add hay không
+                if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                    $Ticket_name = $_POST['ticket_name'];
+                    $Status = $_POST['status'];
+                    insert_type_ticket($Ticket_name,$Status);
+                    $thongbao = "Thêm Thành Công";
+                }
+                include "Ticket/add.php";
+                break;
+
+            case 'list_type_ticket':
+                $list_type_ticket = loadAll_type_ticket();
+                include "Ticket/list.php";
+                break;
+
+            case 'delete_type_ticket';
+            if (isset($_POST['id']) && ($_POST['id'] > 0)) {
+                $Ticket_ID = $_GET['id'];
+                delete_type_ticket($Ticket_ID);
+            }
+            $list_type_ticket =  loadAll_type_ticket();
+            include "Ticket/list.php";
+            break;
+              
+            case 'update_type_ticket':
+                if (isset($_POST['id']) && ($_POST['id'])) {
+                    $Ticket_ID = $_POST['ticket_id'];
+                    $Ticket_name = $_POST['ticket_name'];
+                    $Status = $_POST['status'];
+                    Update_type_ticket($Ticket_ID, $Ticket_name, $Status);
+                    $thongbao = "Cập nhật thành công";
+                }
+                $list_type_ticket = loadAll_type_ticket();
+                include "Ticket/list.php";
+                break;
+
+                case 'sua_type_ticket':
+                    $update_type_ticket = loadOne_type_ticket();
+                    $list_type_ticket = loadAll_type_ticket();
+                    include "Ticket/update.php";
+                    break;
+
+        case 'delete_flight';
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ID = $_GET['id'];
+                delete_danhmuc($ID);
+>>>>>>> Stashed changes
             }
             $list_flight = loadAll_flight();
             include "Flight/list.php";

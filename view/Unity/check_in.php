@@ -139,6 +139,7 @@
                 <div class="form-header">
                     <h3>Check-in chuyến bay</h3>
                 </div>
+                <!-- Nhập dữ liệu người dùng muốn check in để thực hiện sử lý -->
                 <form method="post">
                     <div class="form-group">
                         <label for="Booking_ID">ID Đặt Chỗ</label>

@@ -19,3 +19,10 @@ function chart_month($currentMonth)
     $listthongke = pdo_query($sql);
     return $listthongke;
 }
+
+function revenue()
+{
+    $sql = "SELECT SUM(Total_Price) as SumPrice, count(Ticket) as SumTicket FROM bookings WHERE 1";
+    $revenue = pdo_query($sql);
+    return $revenue;
+}

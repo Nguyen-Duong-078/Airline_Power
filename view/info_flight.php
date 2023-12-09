@@ -278,24 +278,6 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                     </div>
                 </div>
                 <div id="dtc-base-cart" class="dtc-box-temp dtc-mob">
-                    <div class="dtc-base-header dtc-color-theme"><i class="fa-solid fa-gears" aria-hidden="true"></i> <span>Ghế đã chọn</span></div>
-                    <div class="dtc-base-content">
-                        <div class="text-center" style="padding: 10px;">
-                            <?php
-                            // Lấy danh sách các ghế đã chọn của người dùng hiện tại
-                            $bookedSeats = getBookedSeats($_SESSION['User_ID'], $conn, $Flights_seats);
-                            if (!empty($bookedSeats)) {
-                                foreach ($bookedSeats as $seat) {
-                                    echo "<strong>Ghế bạn đã chọn: $seat</strong>";
-                                }
-                            } else {
-                                echo "<strong>Chưa có ghế nào được chọn.</strong>";
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-                <div id="dtc-base-cart" class="dtc-box-temp dtc-mob">
                     <div class="dtc-base-header dtc-color-theme"><i class="fa-solid fa-gears" aria-hidden="true"></i> <span>Chọn chỗ</span></div>
                     <div class="dtc-base-content">
                         <div class="grid-container">
@@ -325,6 +307,24 @@ if (isset($_POST['book']) && ($_POST['book'])) {
                                     echo "<button class='huy' type='submit'>$Seat_number</button>";
                                     echo "</form>";
                                 }
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="dtc-base-cart" class="dtc-box-temp dtc-mob">
+                    <div class="dtc-base-header dtc-color-theme"><i class="fa-solid fa-gears" aria-hidden="true"></i> <span>Ghế đã chọn</span></div>
+                    <div class="dtc-base-content">
+                        <div class="text-center" style="padding: 10px;">
+                            <?php
+                            // Lấy danh sách các ghế đã chọn của người dùng hiện tại
+                            $bookedSeats = getBookedSeats($_SESSION['User_ID'], $conn, $Flights_seats);
+                            if (!empty($bookedSeats)) {
+                                foreach ($bookedSeats as $seat) {
+                                    echo "<strong>Ghế bạn đã chọn: $seat</strong>";
+                                }
+                            } else {
+                                echo "<strong>Chưa có ghế nào được chọn.</strong>";
                             }
                             ?>
                         </div>

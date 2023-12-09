@@ -5,6 +5,11 @@ if (is_array($listbook)) {
 if (is_array($list_account)) {
     extract($list_account);
 }
+foreach ($revenue as $revenue) {
+    extract($revenue);
+    $formatSumPrice = number_format($SumPrice, 0, ',', '.');
+}
+?>
 ?>
 <!-- APP CSS -->
 <link rel="stylesheet" type="text/css" href="../style/app.css">
@@ -47,7 +52,7 @@ if (is_array($list_account)) {
                                             </div>
                                             <div class="row">
                                                 <div class="col-6 col-md-12 col-xl-5">
-                                                    <h3 style="font-size: calc(1.275rem + .3vw);" class="mb-2">5,084</h3>
+                                                    <h3 style="font-size: calc(1.275rem + .3vw);" class="mb-2"><?= $SumTicket ?></h3>
                                                     <div class="d-flex align-items-baseline">
                                                         <p style="margin-bottom: 0; margin-top: 0;" class="text-danger">
                                                             <span>-2.8%</span>
@@ -66,11 +71,11 @@ if (is_array($list_account)) {
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-baseline">
-                                                <h6 class="card-title mb-0">SỰ PHÁT TRIỂN</h6>
+                                                <h6 class="card-title mb-0">Doanh Thu</h6>
                                             </div>
                                             <div class="row">
                                                 <div class="col-6 col-md-12 col-xl-5">
-                                                    <h3 style="font-size: calc(1.275rem + .3vw);" class="mb-2">89.87%</h3>
+                                                    <h3 style="font-size: calc(1.275rem + .3vw);" class="mb-2"><?= $formatSumPrice ?></h3>
                                                     <div class="d-flex align-items-baseline">
                                                         <p style="margin-bottom: 0; margin-top: 0;" class="text-success">
                                                             <span>+2.8%</span>

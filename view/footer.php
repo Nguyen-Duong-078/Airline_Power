@@ -160,6 +160,7 @@
 <script src="assets/js/jquery.nice-select.js"></script>
 <!-- main -->
 <script src="assets/js/main.js"></script>
+<script src="javascript/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
         document.getElementById('datePicker').addEventListener('change', function() {
@@ -200,6 +201,22 @@
                 }
         });
 </script>
+<!-- <script>
+        function confirmForgot() {
+                // Hiển thị thông báo xác nhận
+                Swal.fire({
+                        icon: 'success',
+                        title: 'Gửi mật khẩu thành công',
+                        text: 'Mật khẩu đã được gửi về Mail',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'OK'
+                }).then((result) => {
+                        if (result.isConfirmed) {
+                                // window.location.href = 'index.php?action=booking_history';
+                        }
+                });
+        }
+</script> -->
 </body>
 
 </html>

@@ -53,7 +53,7 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
                                         <div class="dtc-flight-date"><?= $formattedDate ?></div>
                                     </li>
                                     <li>
-                                        <a href="index.php?action=search_flight">
+                                        <a href="index.php?action=book_flight&Flight=<?= $Flight_ID ?>">
                                             <button type="button" class="dtc-btn-return dtc-color-button">Chọn lại</button>
                                         </a>
                                     </li>
@@ -73,10 +73,7 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
                                             </li>
                                             <li>
                                                 <span>
-                                                    <b>Hà Nội - HAN</b>
-                                                </span>
-                                                <span>
-                                                    <i>Sân bay Nội Bài</i>
+                                                    <b><?= $Start_City ?></b>
                                                 </span>
                                                 <span>Cất cánh: <b><?= $Departure_Times ?></b>
                                                 </span>
@@ -85,10 +82,7 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
                                             </li>
                                             <li>
                                                 <span>
-                                                    <b>Hồ Chí Minh - SGN</b>
-                                                </span>
-                                                <span>
-                                                    <i>Sân bay Tân Sơn Nhất </i>
+                                                    <b><?= $Arrival_City ?></b>
                                                 </span>
                                                 <span>Hạ cánh: <b><?= $Departure_Times ?></b>
                                                 </span>
@@ -180,6 +174,9 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
                                                 <input type="hidden" name="Arrival_Times" value="<?= $Arrival_Times ?>">
                                                 <input type="hidden" name="formattedDate" value="<?= $formattedDate ?>">
                                             </form>
+                                            <div class="dtc-fare-booking">
+                                                <input onclick="confirm()" class="dtc-btn-booking btn-warning" type="button" name="book" value="Hoàn Tất">
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -218,6 +215,7 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
             </div>
         </div>
     </div>
+
 </section>
 <script>
     function confirmPayment_vnpay() {
@@ -249,6 +247,22 @@ $Arrival_Times = date("H:i", strtotime($Arrival_Time));
             if (result.isConfirmed) {
                 // Nếu người dùng đồng ý, chuyển hướng đến trang thanh toán
                 window.location.href = 'view/noti_pay.php';
+            }
+        });
+    }
+
+    function confirm() {
+        // Hiển thị thông báo xác nhận
+        Swal.fire({
+            title: 'Bạn đã thanh toán',
+            text: 'Đồng ý để xem lịch sử đặt vé',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Đồng ý',
+            cancelButtonText: 'Hủy bỏ'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = 'index.php?action=booking_history';
             }
         });
     }

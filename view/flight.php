@@ -93,9 +93,26 @@ if (!isset($_SESSION['username'])) {
                             <li><img src="assets/images/logo-two.png">
                                 <p>Airline Power</p>
                             </li>
-                            <li> <span><b>Hà Nội - HAN</b></span> <span><i>Sân bay Nội Bài</i></span> <span>Cất cánh: <b> 20:50</b></span> <span>Ngày: <b>25-11-2023</b></span> </li>
-                            <li> <span><b>Hồ Chí Minh - SGN</b></span> <span><i>Sân bay Tân Sơn Nhất </i></span> <span>Hạ cánh: <b> 23:05</b></span> <span>Ngày: <b>25-11-2023</b></span> </li>
-                            <li> <span>Chuyến bay: <b>' . $Flight_Number . '</b></span> <span>Thời gian bay:<b> ' . $Flight_time . '</b></span> <span>Hạng chỗ:<b> K1_ECO</b></span> <span>FareBasic:<b> </b></span> <span>Máy bay: <b></b></span> <span>Hành lý xách tay:<b> 7kg</b></span> <span>Hành lý ký gửi:<b> 0 Kg</b></span> </li>
+                            <li> 
+                            <span><b>' . $Start_City . '</b></span>
+                             <span>Cất cánh: <b> ' . $Departure_Times . '</b></span>
+                              <span>Ngày: <b>' . $formattedDate . '</b></span> 
+                              </li>
+                            <li> 
+                            <span>
+                            <b>' . $Arrival_City . '</b>
+                            </span> 
+                            <span>Hạ cánh: <b> ' . $Arrival_Times . '</b>
+                            </span> 
+                            <span>Ngày: <b>' . $formattedDate . '</b></span> 
+                            </li>
+                            <li>
+                             <span>Chuyến bay: <b>' . $Flight_Number . '</b>
+                             </span> 
+                             <span>Thời gian bay:<b> ' . $Flight_time . '</b>
+                             </span> 
+                             <span>FareBasic:<b>' . $Price . ' </b></span>      
+                             </li>
                         </ul>
                     </div>
                     <div class="dtc-box-item">

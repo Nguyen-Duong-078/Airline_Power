@@ -12,6 +12,7 @@ include "model/Evaluate.php";
 include "model/seats.php";
 include "model/book_flight.php";
 include "model/check_in.php";
+include "model/Mail.php";
 include "View/header.php";
 $listvoucher = loadall_voucher();
 $list_type_ticket = loadAll_type_ticket();
@@ -53,12 +54,23 @@ if ((isset($_GET['action'])) && $_GET['action'] != "") {
         case 'forgot':
             if (isset($_POST['forgot']) && ($_POST['forgot'])) {
                 $Email = $_POST['email'];
+                $tieude = "FORGOT PASSWORD";
                 $check_pass = check_Pass($Email);
                 if (is_array($check_pass)) {
-                    $Thongbao = "Mật khẩu của bạn là: " . $check_pass['Password'];
+                    $password = "<p>Cảm ơn bạn đã sử dụng 𝑨𝒊𝒓𝒍𝒊𝒏𝒆 𝑷𝒐𝒘𝒆𝒓</p>
+                                 Mật khẩu của bạn là: <strong>" . $check_pass['Password'] . "</strong>
+                                 <p style='color:red'>𝑨𝒊𝒓𝒍𝒊𝒏𝒆 𝑷𝒐𝒘𝒆𝒓</p>
+                                 <p>Developer</p>
+                                 <p style='color:red'>----------------------------------------------------------------------------------------------</p>
+                                 <p>Số điện thoại: 034-3456-981 | 0876-55-2004</p>
+                                 <p>Email: airlinepower08@gmail.com</p>
+                                 <p style='color:red'>----------------------------------------------------------------------------------------------</p>
+                                 ";
                 } else {
                     $Thongbao = "Email không tồn tại";
                 }
+                $mail = new Mailer();
+                $mail->forgot($tieude, $password, $Email);
             }
             include "View/client/forgot.php";
             break;

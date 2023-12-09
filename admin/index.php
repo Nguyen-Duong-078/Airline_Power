@@ -36,6 +36,7 @@ include "header.php";
 
 $listbook = loadAll_book();
 $list_account = loadAll_User();
+$revenue = revenue();
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
